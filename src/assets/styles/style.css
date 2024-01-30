@@ -1,8 +1,49 @@
+
+/* ===========================================================================navbar styling */
+
+.navbar-vertical-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+#navbar {
+    background-color: #333;
+    padding: 10px;
+    height: 100vh;
+    width: 10.5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.nav-list-items {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.nav-item:hover {
+    color: rgb(206, 206, 206);
+}
+
+/* ========================================================================container styling */
+
 .main-container {
-    width: 100%; 
+    width: calc(100% + 10.5%);
+    position: fixed;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black; 
+    background-color: black;
 }
+
+/* ===========================================================================button styling */

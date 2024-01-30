@@ -1,6 +1,8 @@
 <template>
-  <NavBar />
-  <router-view />
+  <div>
+    <NavBar />
+    <router-view />
+  </div>
 </template>
 
 <script>
@@ -14,12 +16,11 @@ import NavBar from './components/navigation/NavBar.vue'
 </script>
 
 <style>
-#app {
-  font-family: 'Poppins', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #ffffff;
-  margin-top: 60px;
-}
+  #app {
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #ffffff;
+  }
 </style>

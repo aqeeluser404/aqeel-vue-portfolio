@@ -1,10 +1,18 @@
 <template>
-    <nav>
-        <router-link to="/">Home</router-link>
-        <router-link to="/about-card">About</router-link>
-        <router-link to="/skills-card">Skills</router-link>
-        <router-link to="/projects-card">Projects</router-link>
-    </nav>
+    <div class="navbar-vertical-fixed">
+        <nav id="navbar">
+            <div class="nav-header">
+                <div class="nav-logo"></div>
+                <div class="nav-title"></div>
+            </div>
+            <div class="nav-list-items">
+                <router-link to="/" class="nav-item">Home</router-link>
+                <router-link to="/about-card" class="nav-item">About</router-link>
+                <router-link to="/skills-card" class="nav-item">Skills</router-link>
+                <router-link to="/projects-card" class="nav-item">Projects</router-link>
+            </div>
+        </nav>
+    </div>
 </template>
 
 <script>
@@ -14,15 +22,5 @@ export default {
 </script>
 
 <style scoped>
-    nav {
-        background-color: #333;
-        padding: 10px;
-        display: flex;
-        justify-content: space-around;
-    }
 
-    router-link {
-        color: white;
-        text-decoration: none;
-    }
 </style>
