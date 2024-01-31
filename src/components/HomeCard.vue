@@ -11,37 +11,34 @@
             </p>
         </div>
         <div class="links-container">
-
-            <button>Get In Touch</button>
-
-        <!-- <div class="styled-button">
-            <div class="left">
-                <div class="line-1"></div>
-                <div class="line-2"></div>
-                <div class="line-3"></div>
-            </div>
-                <div class="middle">
-                    <div class="line-4"></div>
-                    <div class="line-5"><button class="button">Get In Touch</button></div>
-                    <div class="line-6"></div>
+            <!-- custom button -->
+            <div class="styled-button">
+                <div class="left">
+                    <div class="line-1"></div>
+                    <div class="line-2"></div>
+                    <div class="line-3"></div>
                 </div>
-            <div class="right">
-                <div class="line-7"></div>
-                <div class="line-8"></div>
-                <div class="line-9"></div>
+                    <div class="middle">
+                        <div class="line-4"></div>
+                        <div class="line-5"><button class="button">Get In Touch</button></div>
+                        <div class="line-6"></div>
+                    </div>
+                <div class="right">
+                    <div class="line-7"></div>
+                    <div class="line-8"></div>
+                    <div class="line-9"></div>
+                </div>
             </div>
-        </div> -->
-
-
+            <!-- social links -->
             <div class="social-links">
                 <a href="https://github.com/aqeeluser404">
-                    <img src="../assets/logo/github.png" alt="github logo" class="social-link-img">
+                    <img src="@/assets/logo/github.svg" alt="github-logo" class="social-link-img">
                 </a>
-                <a href="#">
-                    <img src="../assets/logo/github.png"  alt="instagram logo" class="social-link-img">
-                    </a>
-                <a href="https://www.linkedin.com/in/aqeel-hanslo-234961210/">
-                    <img src="../assets/logo/github.png" alt="linkedin logo" class="social-link-img">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <img src="@/assets/logo/instagram.svg" alt="instagram-logo" class="social-link-img">
+                </a>
+                <a :href="'https://www.linkedin.com/in/aqeel-hanslo-234961210'" target="_blank" rel="noopener noreferrer">
+                    <img src="@/assets/logo/linkedin.svg" alt="linkedin-logo" class="social-link-img">
                 </a>
             </div>
         </div>
@@ -116,6 +113,8 @@
         min-width: 50px;
         min-height: 50px;
     }
+
+    /* text container============================================================================== */
     .text-container {
         width: 50vw;
         line-height: 1.2;
@@ -127,10 +126,20 @@
         text-align: right;
     }
 
+    /* links container============================================================================== */
+    .links-container {
+        width: 50vw;
+        display: flex;
+        justify-content: flex-start;
+        gap: 7rem;
+    }
+    .social-links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 8rem;
+    }
     .social-link-img {
         width: 2.813rem;
-    }
-    .links-container {
-        display: flex;
     }
 </style>

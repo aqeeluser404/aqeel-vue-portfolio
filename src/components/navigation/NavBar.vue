@@ -5,7 +5,7 @@
                 <div class="nav-logo">
                     <picture>
                         <router-link to="/">
-                            <img src="@/assets/logo/a.png" alt="A logo" class="logo">
+                            <img src="@/assets/logo/a.png" alt="a-logo" class="logo">
                         </router-link>
                     </picture>
                 </div>

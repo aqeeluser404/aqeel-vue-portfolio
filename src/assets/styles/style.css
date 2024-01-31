@@ -39,7 +39,8 @@
 /* ========================================================================container styling */
 
 .main-container {
-    width: calc(100% + 10.5%);
+    width: calc(100% - 10.5%);
+    width: 100vw;
     position: fixed;
     height: 100vh;
     display: flex;
