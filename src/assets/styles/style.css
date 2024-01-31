@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content:space-between;
 }
 .nav-list-items {
     display: flex;
@@ -28,7 +28,9 @@
 .nav-item {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Koulen', sans-serif;
+
 }
 .nav-item:hover {
     color: rgb(206, 206, 206);
@@ -41,9 +43,53 @@
     position: fixed;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: black;
 }
 
 /* ===========================================================================button styling */
+
+/* ============================================================================font styling  */
+.font-xxs {
+    font-size: 1rem;
+}
+.font-xs {
+    font-size: 1.5rem;
+}
+.font-s {
+    font-size: 2.25rem;
+}
+.font-m {
+    font-size: 3rem;
+}
+.font-l {
+    font-size: 6rem;
+}
+.color-black {
+    color: #0E0E0E;
+}
+.color-white {
+    color: #FFFFFF;
+}
+.color-blue {
+    color: #5E9FFF;
+}
+.family-plus-code {
+    font-family: 'M PLUS 1 Code', monospace;
+    font-weight: 400;
+}
+.family-koulen {
+    font-family: 'Koulen', sans-serif;
+    font-weight: 400;
+}
+.family-lekton {
+    font-family: 'Lekton', sans-serif;
+    font-weight: 400;
+}
+.opacity-full { opacity: 100%; }
+.opacity-half { opacity: 50%; }
+.opacity-quarter { opacity: 25%; }
+
+.line-height-low {line-height: 1;}

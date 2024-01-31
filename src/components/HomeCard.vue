@@ -1,28 +1,18 @@
 <template>
     <div class="main-container">
-        <h1>Home</h1>
-        <!-- <div class="text-container">
-            <h3>Hi there,</h3>
-            <h1>I'm Aqeel Hanslo</h1>
-            <h2>Software Developer Intern</h2>
-            <p>The design of an application or website usually mirrors the thought process of the creator. Tell me what to do, and I'll try to visualise your ideas.</p>
-            <div class="links-container">
-                <button>Get In Touch</button>
-                <div class="social-links">
-                    <a href="https://github.com/aqeeluser404">
-                        <img src="../assets/logo/github.png" alt="github logo" class="social-link-img">
-                    </a>
-                    <a href="#">
-                        <img src="../assets/logo/instagram.png"  alt="instagram logo" class="social-link-img">
-                    </a>
-                    <a href="https://www.linkedin.com/in/aqeel-hanslo-234961210/">
-                        <img src="../assets/logo/linkedin.png" alt="linkedin logo" class="social-link-img">
-                    </a>
+        <div class="text-container">
+            <h1 class="font-xs color-blue family-lekton">Hi there,</h1>
+            <h1 class="font-l color-white family-koulen">I'm Aqeel Hanslo</h1>
+            <h1 class="font-m color-blue family-lekton">Software Developer</h1>
+            <p class="font-s color-white family-plus-code">
+                <span class="opacity-full"><br> The design of an application or website usually </span>
+                <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
+                <span class="opacity-quarter"><br> what to do and I'll try to visualize your ideas</span>
+            </p>
+        </div>
+        <div class="links-container">
 
-
-                </div>
-            </div>
-        </div> -->
+            <button>Get In Touch</button>
 
         <!-- <div class="styled-button">
             <div class="left">
@@ -41,6 +31,20 @@
                 <div class="line-9"></div>
             </div>
         </div> -->
+
+
+            <div class="social-links">
+                <a href="https://github.com/aqeeluser404">
+                    <img src="../assets/logo/github.png" alt="github logo" class="social-link-img">
+                </a>
+                <a href="#">
+                    <img src="../assets/logo/github.png"  alt="instagram logo" class="social-link-img">
+                    </a>
+                <a href="https://www.linkedin.com/in/aqeel-hanslo-234961210/">
+                    <img src="../assets/logo/github.png" alt="linkedin logo" class="social-link-img">
+                </a>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -113,13 +117,16 @@
         min-height: 50px;
     }
     .text-container {
-        width: 28rem;
-        line-height: 1.5;
+        width: 50vw;
+        line-height: 1.2;
     }
-    .text-container h3 {text-align: right;}
-    .text-container h1 {text-align: left;}
-    .text-container h2 {text-align: right;}
-    .text-container p {text-align: left;}
+    .text-container h1 {
+        text-align: right;
+    }
+    .text-container p {
+        text-align: right;
+    }
+
     .social-link-img {
         width: 2.813rem;
     }

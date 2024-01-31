@@ -2,8 +2,19 @@
     <div class="navbar-vertical-fixed">
         <nav id="navbar">
             <div class="nav-header">
-                <div class="nav-logo"></div>
-                <div class="nav-title"></div>
+                <div class="nav-logo">
+                    <picture>
+                        <router-link to="/">
+                            <img src="@/assets/logo/a.png" alt="A logo" class="logo">
+                        </router-link>
+                    </picture>
+                </div>
+                <hr>
+                <div class="nav-title">
+                    <h1 class="font-m color-white family-koulen line-height-low">DEV</h1>
+                    <h1 class="font-xxs color-blue family-koulen line-height-low">INTERN</h1>
+
+                </div>
             </div>
             <div class="nav-list-items">
                 <router-link to="/" class="nav-item">Home</router-link>
@@ -21,4 +32,19 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+
+    .nav-header {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .logo {
+        width: 5rem;
+        filter: hue-rotate(90deg);
+    }
+    .nav-title {
+        text-align: left;
+        padding: 0.5rem;
+    }
+</style>
