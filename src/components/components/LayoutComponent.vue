@@ -18,4 +18,9 @@
   .darkmode img {
     filter: brightness(1) invert(0);
   }
+  .page-number {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
 </style>

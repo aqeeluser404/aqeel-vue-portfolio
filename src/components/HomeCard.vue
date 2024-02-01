@@ -20,7 +20,9 @@
                 </div>
                     <div class="middle">
                         <div class="line-4"></div>
-                        <div class="line-5"><button class="button">Get In Touch</button></div>
+                        <div class="line-5">
+                            <button class="button">Get In Touch</button>
+                        </div>
                         <div class="line-6"></div>
                     </div>
                 <div class="right">
