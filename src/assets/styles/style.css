@@ -1,58 +1,88 @@
 
+.page-number {position: fixed;bottom: 10px;right: 10px;}
+
 /* ===========================================================================navbar styling */
 
-.navbar-vertical-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-#navbar {
-    background-color: #0E0E0E;
-    padding: 10px;
-    height: 100vh;
-    width: 10.5%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content:space-between;
-}
-.nav-list-items {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-.nav-item {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-family: 'Koulen', sans-serif;
-
-}
-.nav-item:hover {
-    color: rgb(206, 206, 206);
-}
 
 /* ========================================================================container styling */
 
+.wrapper-container {
+    background-color: none;
+    display: flex;
+    justify-content: flex-end;
+}
 .main-container {
-    width: calc(100% - 10.5%);
-    width: 100vw;
-    position: fixed;
+    width: calc(100vw - 8vw);
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    padding: 10%;
 }
 
 /* ===========================================================================button styling */
 
+.styled-button {
+    display: flex;
+    flex-direction: row;
+}
+.button {
+    min-width: 100px;
+    min-height: 50px;
+    border: 1px #0084ff solid;
+}
+.left {
+    min-width: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.box-1 {
+    min-width: 50px;
+    min-height: 50px;
+    border-right: 1px solid;
+    border-image: linear-gradient(to bottom, rgba(161, 161, 161, 0) 40%, #0084ff 60%) 1;
+}
+/* to top: Bottom to top.
+to right: Left to right.
+to bottom: Top to bottom (which you have already used).
+to left: Right to left.
+to top right: Bottom-left to top-right.
+to top left: Bottom-right to top-left.
+to bottom right: Top-left to bottom-right.
+to bottom left: Top-right to bottom-left. */
+.box-2 {
+    min-width: 50px;
+    min-height: 50px;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to bottom left, #0084ff 40%, rgba(161, 161, 161, 0) 60%) 1;
+}
+.box-3 {
+    min-width: 50px;
+    min-height: 50px;
+/* border-image: linear-gradient(to bottom left, rgba(161, 161, 161, 0) 40%, #0084ff 60%) 1; */
+}
+.middle {
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.box-4, .box-5, .box-6 {
+    min-width: 100px;
+    min-height: 50px;
+}
+.right {
+    min-width: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.box-7, .box-8, .box-9 {
+    min-width: 50px;
+    min-height: 50px;
+}
+
 /* ============================================================================font styling  */
+
 .font-xxs {
     font-size: 1rem;
 }

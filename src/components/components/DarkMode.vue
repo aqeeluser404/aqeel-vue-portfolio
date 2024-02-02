@@ -3,9 +3,7 @@
     <div class="darkmode">
       <img src="@/assets/logo/darkmode.svg" alt="dark-mode">
     </div>
-    <div class="page-number">
-      <h1 class="font-xs color-blue family-lekton">01</h1>
-    </div>
+
   </div>
 </template>
 
@@ -17,10 +15,5 @@
   }
   .darkmode img {
     filter: brightness(1) invert(0);
-  }
-  .page-number {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
   }
 </style>

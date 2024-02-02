@@ -1,50 +1,56 @@
 <template>
-    <div class="main-container">
-        <div class="text-container">
-            <h1 class="font-xs color-blue family-lekton">Hi there,</h1>
-            <h1 class="font-l color-white family-koulen">I'm Aqeel Hanslo</h1>
-            <h1 class="font-m color-blue family-lekton">Software Developer</h1>
-            <p class="font-s color-white family-plus-code">
-                <span class="opacity-full"><br> The design of an application or website usually </span>
-                <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
-                <span class="opacity-quarter"><br> what to do and I'll try to visualize your ideas</span>
-            </p>
-        </div>
-        <div class="links-container">
-            <!-- custom button -->
-            <div class="styled-button">
-                <div class="left">
-                    <div class="line-1"></div>
-                    <div class="line-2"></div>
-                    <div class="line-3"></div>
-                </div>
-                    <div class="middle">
-                        <div class="line-4"></div>
-                        <div class="line-5">
-                            <button class="button">Get In Touch</button>
-                        </div>
-                        <div class="line-6"></div>
+    <div class="wrapper-container">
+        <div class="main-container">
+            <div class="text-container">
+                <h1 class="font-xs color-blue family-lekton">Hi there,</h1>
+                <h1 class="font-l color-white family-koulen">I'm Aqeel Hanslo</h1>
+                <h1 class="font-m color-blue family-lekton">Software Developer</h1>
+                <p class="font-s color-white family-plus-code">
+                    <span class="opacity-full"><br> The design of an application or website usually </span>
+                    <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
+                    <span class="opacity-quarter"><br> what to do and I'll try to visualize your ideas</span>
+                </p>
+            </div>
+            <div class="links-container">
+                <!-- custom button -->
+                <div class="styled-button">
+                    <div class="left">
+                        <div class="box-1"></div>
+                        <div class="box-2"></div>
+                        <div class="box-3"></div>
                     </div>
-                <div class="right">
-                    <div class="line-7"></div>
-                    <div class="line-8"></div>
-                    <div class="line-9"></div>
+                        <div class="middle">
+                            <div class="box-4"></div>
+                            <div class="box-5">
+                                <button class="button">Get In Touch</button>
+                            </div>
+                            <div class="box-6"></div>
+                        </div>
+                    <div class="right">
+                        <div class="box-7"></div>
+                        <div class="box-8"></div>
+                        <div class="box-9"></div>
+                    </div>
+                </div>
+                <!-- social links -->
+                <div class="social-links">
+                    <a href="https://github.com/aqeeluser404">
+                        <img src="@/assets/logo/github.svg" alt="github-logo" class="social-link-img">
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="@/assets/logo/instagram.svg" alt="instagram-logo" class="social-link-img">
+                    </a>
+                    <a :href="'https://www.linkedin.com/in/aqeel-hanslo-234961210'" target="_blank" rel="noopener noreferrer">
+                        <img src="@/assets/logo/linkedin.svg" alt="linkedin-logo" class="social-link-img">
+                    </a>
                 </div>
             </div>
-            <!-- social links -->
-            <div class="social-links">
-                <a href="https://github.com/aqeeluser404">
-                    <img src="@/assets/logo/github.svg" alt="github-logo" class="social-link-img">
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                    <img src="@/assets/logo/instagram.svg" alt="instagram-logo" class="social-link-img">
-                </a>
-                <a :href="'https://www.linkedin.com/in/aqeel-hanslo-234961210'" target="_blank" rel="noopener noreferrer">
-                    <img src="@/assets/logo/linkedin.svg" alt="linkedin-logo" class="social-link-img">
-                </a>
+            <div class="page-number">
+                <h1 class="font-xs color-blue family-lekton">01</h1>
             </div>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -54,77 +60,16 @@
 </script>
 
 <style scoped>
-    .styled-button {
-        display: flex;
-        flex-direction: row;
+    .wrapper-container {
+        background-color: black;
     }
-    .button {
-        min-width: 100px;
-        min-height: 50px;
-        border: 1px #0084ff solid;
+    .main-container {
+        align-items: flex-end;
+        justify-content: flex-end;
     }
-    .left {
-        min-width: 50px;
-        display: flex;
-        flex-direction: column;
-    }
-    .line-1 {
-        min-width: 50px;
-        min-height: 50px;
-        border-right: 1px solid;
-        border-image: linear-gradient(to bottom, rgba(161, 161, 161, 0) 40%, #0084ff 60%) 1;
-    }
-
-    /* to top: Bottom to top.
-    to right: Left to right.
-    to bottom: Top to bottom (which you have already used).
-    to left: Right to left.
-    to top right: Bottom-left to top-right.
-    to top left: Bottom-right to top-left.
-    to bottom right: Top-left to bottom-right.
-    to bottom left: Top-right to bottom-left. */
-
-    .line-2 {
-        min-width: 50px;
-        min-height: 50px;
-        border-bottom: 1px solid;
-        border-image: linear-gradient(to bottom left, #0084ff 40%, rgba(161, 161, 161, 0) 60%) 1;
-
-    }
-
-    .line-3 {
-        min-width: 50px;
-        min-height: 50px;
-    /* border-image: linear-gradient(to bottom left, rgba(161, 161, 161, 0) 40%, #0084ff 60%) 1; */
-    }
-    .middle {
-        min-width: 100px;
-        display: flex;
-        flex-direction: column;
-    }
-    .line-4, .line-5, .line-6 {
-        min-width: 100px;
-        min-height: 50px;
-    }
-    .right {
-        min-width: 50px;
-        display: flex;
-        flex-direction: column;
-    }
-    .line-7, .line-8, .line-9 {
-        min-width: 50px;
-        min-height: 50px;
-    }
-
-    /* text container============================================================================== */
     .text-container {
-        width: 50vw;
+        width: auto;
         line-height: 1.2;
-    }
-    .text-container h1 {
-        text-align: right;
-    }
-    .text-container p {
         text-align: right;
     }
 
@@ -132,14 +77,14 @@
     .links-container {
         width: 50vw;
         display: flex;
-        justify-content: flex-start;
-        gap: 7rem;
+        justify-content: flex-end;
+        gap: 9rem;
     }
     .social-links {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        gap: 8rem;
+        gap: 9rem;
     }
     .social-link-img {
         width: 2.813rem;
