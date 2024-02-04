@@ -33,6 +33,8 @@ export default {
     .main-container {
         background-color: white;
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
         gap: 5%;
     }
     .container-one {
@@ -41,5 +43,11 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 3rem;
+    }
+    .container-two {
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
     }
 </style>

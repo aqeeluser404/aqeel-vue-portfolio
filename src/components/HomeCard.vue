@@ -65,9 +65,12 @@
     }
     .main-container {
         align-items: flex-end;
-        justify-content: flex-end;
+        justify-content: center;
+        padding-top: 8%;
+        padding-right: 8%;
     }
     .text-container {
+        height: auto;
         width: auto;
         line-height: 1.2;
         text-align: right;

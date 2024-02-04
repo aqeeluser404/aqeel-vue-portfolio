@@ -19,4 +19,9 @@ export default {
     .wrapper-container {
         background-color: black;
     }
+    .main-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
 </style>

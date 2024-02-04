@@ -12,13 +12,13 @@
     justify-content: flex-end;
 }
 .main-container {
-    width: calc(100vw - 8vw);
+    width: calc(100% - 8vw);
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10%;
+
 }
 
 /* ===========================================================================button styling */
@@ -87,10 +87,10 @@ to bottom left: Top-right to bottom-left. */
     font-size: 1rem;
 }
 .font-xs {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 .font-s {
-    font-size: 2.25rem;
+    font-size: 2rem;
 }
 .font-m {
     font-size: 3rem;
