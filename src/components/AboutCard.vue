@@ -36,7 +36,7 @@
                 typeArray: ['Creative.', 'Innovative.', 'Humble.', 'Curious.'],
                 typingSpeed: 200,
                 erasingSpeed: 100,
-                newTextDelay: 2000,
+                newTextDelay: 500,
                 typeArrayIndex: 0,
                 charIndex: 0
             }

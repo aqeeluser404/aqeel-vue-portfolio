@@ -4,7 +4,7 @@
             <div class="text-container">
                 <h1 class="font-xs color-blue family-lekton">Hi there,</h1>
                 <h1 class="font-l color-white family-koulen">I'm Aqeel Hanslo</h1>
-                <h1 class="font-m color-blue family-lekton">Software Developer</h1>
+                <h1 class="font-m color-blue family-lekton">  &lt;Software Developer/&gt; </h1>
                 <p class="font-s color-white family-plus-code">
                     <span class="opacity-full"><br> The design of an application or website usually </span>
                     <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
