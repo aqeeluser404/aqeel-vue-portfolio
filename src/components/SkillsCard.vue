@@ -80,7 +80,7 @@ export default {
 
 <style scoped>
     .wrapper-container {
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0);
     }
     .main-container {
         align-items: center;

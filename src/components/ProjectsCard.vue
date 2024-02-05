@@ -5,7 +5,7 @@
             <div class="text-container line-height-low">
                 <h1 class="font-l color-white family-koulen">Projects</h1>
             
-                <h1 class="typing-text-animation font-m color-blue family-lekton">
+                <h1 class="typing-text-animation font-m color-blue family-lekton weight-bold">
                     <span class="typed-text">{{ typeValue }}</span>
                     <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
                 </h1>
@@ -73,7 +73,7 @@
 
 <style scoped>
     .wrapper-container {
-        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
     }
     .main-container {
         align-items: center;

@@ -4,7 +4,7 @@
             <div class="container-one line-height-low">
                 <div>
                     <h1 class="font-l color-black family-koulen">About Me</h1>
-                    <h1 class="typing-text-animation font-m color-blue family-lekton">
+                    <h1 class="typing-text-animation font-m color-blue family-lekton weight-bold">
                         <span class="typed-text">{{ typeValue }}</span>
                         <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
                     </h1>

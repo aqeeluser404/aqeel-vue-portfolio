@@ -55,10 +55,10 @@ export default {
         z-index: 1000;
     }
     #navbar {
-        background-color: #0E0E0E;
+        background-color: #111111;
         padding: 2%;
         height: 100vh;
-        width: 8vw;
+        width: 6vw;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
