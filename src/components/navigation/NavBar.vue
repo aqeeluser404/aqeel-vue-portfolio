@@ -33,13 +33,16 @@ export default {
 </script>
 
 <style scoped>
+    hr {
+        width: 2rem;
+    }
     .nav-header {
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
     }
     .logo {
-        width: 5rem;
+        width: 4.2rem;
         filter: brightness(2) invert(1);
 
     }
@@ -56,7 +59,7 @@ export default {
     }
     #navbar {
         background-color: #111111;
-        padding: 2%;
+        padding: 1rem;
         height: 100vh;
         width: 6vw;
         display: flex;
