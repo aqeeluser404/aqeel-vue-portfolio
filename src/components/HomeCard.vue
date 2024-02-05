@@ -94,8 +94,10 @@ export default {
         justify-content: space-around;
         align-items: center;
         gap: 9rem;
+        
     }
     .social-link-img {
         width: 2.813rem;
+        filter: invert(30%) sepia(100%) saturate(1500%) hue-rotate(200deg);
     }
 </style>
