@@ -124,3 +124,6 @@ to bottom left: Top-right to bottom-left. */
 .opacity-quarter { opacity: 25%; }
 
 .line-height-low {line-height: 1;}
+.align-left {
+    text-align: left;
+}

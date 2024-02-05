@@ -54,9 +54,9 @@
 </template>
 
 <script>
-    export default {
-        name: 'HomeCard'
-    }
+export default {
+    name: 'HomeCard',
+};
 </script>
 
 <style scoped>
