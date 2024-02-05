@@ -22,7 +22,7 @@
                         <div class="middle">
                             <div class="box-4"></div>
                             <div class="box-5">
-                                <button class="button">Get In Touch</button>
+                                <button class="button" @click="GotoContact">Get In Touch</button>
                             </div>
                             <div class="box-6"></div>
                         </div>
@@ -56,6 +56,12 @@
 <script>
 export default {
     name: 'HomeCard',
+    methods: {
+        GotoContact() {
+            console.log('GotoContact method called');
+            this.$router.push('/contact');
+        }
+    },
 };
 </script>
 

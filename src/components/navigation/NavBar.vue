@@ -18,10 +18,12 @@
 
             <div class="nav-list-items">
                 <router-link to="/" class="nav-item">Home</router-link>
-                <router-link to="/about-card" class="nav-item">About</router-link>
-                <router-link to="/skills-card" class="nav-item">Skills</router-link>
-                <router-link to="/projects-card" class="nav-item">Projects</router-link>
+                <router-link to="/about" class="nav-item">About</router-link>
+                <router-link to="/skills" class="nav-item">Skills</router-link>
+                <router-link to="/projects" class="nav-item">Projects</router-link>
             </div>
+
+            <div class="empty-container"></div>
         </nav>
     </div>
 </template>
@@ -64,8 +66,8 @@ export default {
         width: 6vw;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        gap: 10rem;
+        justify-content: space-between;
+        /* gap: 10rem; */
     }
     .nav-list-items {
         display: flex;

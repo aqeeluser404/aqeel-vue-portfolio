@@ -1,7 +1,8 @@
 import HomeCard from './components/HomeCard.vue'
 import AboutCard from './components/AboutCard.vue'
 import SkillsCard from './components/SkillsCard.vue'
-import ProjectsCard from './components/ProjectsCard.vue';
+import ProjectsCard from './components/ProjectsCard.vue'
+import ContactCard from './components/ContactCard.vue'
 
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -14,18 +15,23 @@ const routes = [
     {
         name : 'AboutCard',
         component : AboutCard,
-        path : '/about-card'
+        path : '/about'
     },
     {
         name : 'SkillsCard',
         component : SkillsCard,
-        path : '/skills-card'
+        path : '/skills'
     },
     {
         name : 'ProjectsCard',
         component : ProjectsCard,
-        path : '/projects-card'
+        path : '/projects'
     },
+    {
+        name : 'ContactCard',
+        component : ContactCard,
+        path : '/contact'
+    }
 ];
 
 const router = createRouter({
