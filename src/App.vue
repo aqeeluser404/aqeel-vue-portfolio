@@ -1,7 +1,6 @@
 <template>
   <div>
     <WallpaperComponent />
-
     <router-view />
     <NavBar />
     <DarkMode />
@@ -18,10 +17,10 @@ import WallpaperComponent from './components/components/WallpaperComponent.vue';
   export default {
     name: 'App',
     components: {
-    NavBar,
-    DarkMode,
-    WallpaperComponent
-}
+      NavBar,
+      DarkMode,
+      WallpaperComponent
+    }
   }
 </script>
 

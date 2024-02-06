@@ -101,11 +101,6 @@ export default {
     }
     .social-icon {
         text-decoration: none;
-        /* filter: invert(30%) sepia(100%) saturate(1500%) hue-rotate(200deg); */
-    }
-    .social-links .social-icon {
-        border: none;
-        text-decoration: none;
-        color: blue;
+        filter: invert(30%) sepia(100%) saturate(1500%) hue-rotate(200deg);
     }
 </style>

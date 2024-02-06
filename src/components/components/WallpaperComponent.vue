@@ -44,7 +44,7 @@ export default {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    z-index: -1002;
+    z-index: -1001;
     background-repeat: repeat;
 }
 </style>
