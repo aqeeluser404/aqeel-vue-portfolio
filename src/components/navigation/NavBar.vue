@@ -68,7 +68,7 @@
         position: absolute;
         top: 1rem;
         left: 1rem;
-        z-index: 1001;
+        z-index: 1000;
     }
     /* make nav bar responsive and hidden when button pressed */
     .hidden {

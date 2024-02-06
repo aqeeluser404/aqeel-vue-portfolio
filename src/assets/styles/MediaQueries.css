@@ -16,5 +16,8 @@
     .font-l {
         font-size: 5.25rem;
     }
+    .links-container {
+        flex-direction: column;
+    }
 
 }
