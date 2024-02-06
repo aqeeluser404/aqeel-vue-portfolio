@@ -35,13 +35,13 @@
                 <!-- social links -->
                 <div class="social-links">
                     <a href="https://github.com/aqeeluser404">
-                        <img src="@/assets/logo/github.svg" alt="github-logo" class="social-link-img">
+                        <img src="@/assets/logo/github.svg" alt="github-logo" class="social-icon">
                     </a>
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="@/assets/logo/instagram.svg" alt="instagram-logo" class="social-link-img">
+                        <img src="@/assets/logo/instagram.svg" alt="instagram-logo" class="social-icon">
                     </a>
                     <a :href="'https://www.linkedin.com/in/aqeel-hanslo-234961210'" target="_blank" rel="noopener noreferrer">
-                        <img src="@/assets/logo/linkedin.svg" alt="linkedin-logo" class="social-link-img">
+                        <img src="@/assets/logo/linkedin.svg" alt="linkedin-logo" class="social-icon">
                     </a>
                 </div>
             </div>
@@ -64,6 +64,9 @@ export default {
     },
 };
 </script>
+
+<style src="../assets/styles/MediaQueries.css"></style>
+<style src="../assets/styles/Styles.css"></style>
 
 <style scoped>
     .wrapper-container {
@@ -96,8 +99,13 @@ export default {
         gap: 9rem;
         
     }
-    .social-link-img {
-        width: 2.813rem;
-        filter: invert(30%) sepia(100%) saturate(1500%) hue-rotate(200deg);
+    .social-icon {
+        text-decoration: none;
+        /* filter: invert(30%) sepia(100%) saturate(1500%) hue-rotate(200deg); */
+    }
+    .social-links .social-icon {
+        border: none;
+        text-decoration: none;
+        color: blue;
     }
 </style>

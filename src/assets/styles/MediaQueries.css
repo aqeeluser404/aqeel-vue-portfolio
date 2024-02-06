@@ -1,0 +1,20 @@
+
+@media only screen and (max-width: 1440px) {
+    /* fonts */
+    .font-xxs {
+        font-size: 0.5rem;
+    }
+    .font-xs {
+        font-size: 1rem;
+    }
+    .font-s {
+        font-size: 1.25rem;
+    }
+    .font-m {
+        font-size: 2.25rem;
+    }
+    .font-l {
+        font-size: 5.25rem;
+    }
+
+}

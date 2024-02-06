@@ -1,0 +1,127 @@
+
+.page-number {position: fixed;bottom: 10px;right: 10px;}
+
+/* ========================================================================container styling */
+
+.wrapper-container {
+    background-color: none;
+    display: flex;
+    justify-content: flex-end;
+}
+.main-container {
+    width: calc(100% - 6vw);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===========================================================================button styling */
+
+.styled-button {
+    display: flex;
+    flex-direction: row;
+}
+.button {
+    min-width: 110px;
+    min-height: 50px;
+    background: none;
+    color: #0084ff;
+    font-weight: 700;
+    border: 2px #0084ff solid;
+    font-family: 'M PLUS 1 Code', monospace;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+}
+.middle {
+    min-width: 110px;
+    display: flex;
+    flex-direction: column;
+}
+.left {
+    min-width: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.right {
+    min-width: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.box-1, .box-3, .box-5, .box-7, .box-9  {
+    min-width: 50px;
+    min-height: 50px;
+}
+.box-2 {
+    min-width: 50px;
+    min-height: 50px;
+    border-bottom: 1.6px solid;
+    border-image: linear-gradient(to right, rgba(161, 161, 161, 0) 10%, #0084ff 90%) 1;
+}
+.box-4 {
+    min-width: 100px;
+    min-height: 50px;
+    border-left: 1.6px solid;
+    border-image: linear-gradient(to bottom, rgba(161, 161, 161, 0) 10%, #0084ff 90%) 1;
+}
+.box-6 {
+    min-width: 100px;
+    min-height: 50px;
+    border-right: 1.6px solid;
+    border-image: linear-gradient(to top, rgba(161, 161, 161, 0) 10%, #0084ff 90%) 1;
+}
+.box-8 {
+    min-width: 50px;
+    min-height: 50px;
+    border-top: 1.6px solid;
+    border-image: linear-gradient(to left, rgba(161, 161, 161, 0) 10%, #0084ff 90%) 1;
+}
+
+/* ============================================================================font styling  */
+
+.font-xxs {
+    font-size: 1rem;
+}
+.font-xs {
+    font-size: 1.75rem;
+}
+.font-s {
+    font-size: 2rem;
+}
+.font-m {
+    font-size: 3rem;
+}
+.font-l {
+    font-size: 6rem;
+}
+.color-black {
+    color: #0E0E0E;
+}
+.color-white {
+    color: #FFFFFF;
+}
+.color-blue {
+    color: #5E9FFF;
+}
+.family-plus-code {
+    font-family: 'M PLUS 1 Code', monospace;
+    font-weight: 400;
+}
+.family-koulen {
+    font-family: 'Koulen', sans-serif;
+    font-weight: 400;
+}
+.family-lekton {
+    font-family: 'Lekton', sans-serif;
+    font-weight: 400;
+}
+.opacity-full { opacity: 100%; }
+.opacity-half { opacity: 50%; }
+.opacity-quarter { opacity: 25%; }
+
+.line-height-low {line-height: 1;}
+
+.weight-bold {
+    font-weight: 700;
+}
