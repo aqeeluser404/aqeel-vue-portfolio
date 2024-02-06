@@ -1,105 +1,67 @@
 <template>
     <!-- logo nav button to appear when nav container is hidden -->
     <picture v-if="!isNavbarVisible">
-      <img
-        src="@/assets/logo/a.png"
-        alt="a-logo"
-        class="logo logo-container"
-        @click="toggleNavbar"
-      />
+      <img src="@/assets/logo/a.png" alt="a-logo" class="logo logo-container" @click="toggleNavbar"/>
     </picture>
   
     <!-- container to make navbar visible/not visible -->
     <div class="navbar-vertical-fixed" :class="{ 'hidden': !isNavbarVisible }">
-      <!-- navbar -->
-      <nav id="navbar">
-        <div class="nav-header">
-          <div class="nav-logo">
-            <picture>
-              <img
-                src="@/assets/logo/a.png"
-                alt="a-logo"
-                class="logo"
-                @click="toggleNavbar"
-              />
-            </picture>
-          </div>
-          <div class="header-divider">
-            <hr />
-          </div>
+        <!-- navbar -->
+        <nav id="navbar">
+            <div class="nav-header">
+                <div class="nav-logo">
+                    <picture>
+                        <img src="@/assets/logo/a.png" alt="a-logo" class="logo"/>
+                    </picture>
+                </div>
+                <div class="header-divider"><hr/></div>
+
+                <div class="nav-title">
+                    <h1 class="font-m color-white family-koulen line-height-low">DEV</h1>
+                    <h1 class="font-xs color-blue family-koulen line-height-low">INTERN</h1>
+                </div>
+            </div>
   
-          <div class="nav-title">
-            <h1 class="font-m color-white family-koulen line-height-low">DEV</h1>
-            <h1 class="font-xs color-blue family-koulen line-height-low">
-              INTERN
-            </h1>
-          </div>
-        </div>
+            <div class="nav-list-items">
+                <router-link to="/" class="nav-item" @click="hideNavbarOnSmallScreens">Home</router-link>
+                <router-link to="/about" class="nav-item" @click="hideNavbarOnSmallScreens" >About</router-link>
+                <router-link to="/skills" class="nav-item" @click="hideNavbarOnSmallScreens">Skills</router-link>
+                <router-link to="/projects" class="nav-item" @click="hideNavbarOnSmallScreens">Projects</router-link>
+            </div>
   
-        <div class="nav-list-items">
-          <router-link
-            to="/"
-            class="nav-item"
-            @click="hideNavbarOnSmallScreens"
-          >
-            Home
-          </router-link>
-          <router-link
-            to="/about"
-            class="nav-item"
-            @click="hideNavbarOnSmallScreens"
-          >
-            About
-          </router-link>
-          <router-link
-            to="/skills"
-            class="nav-item"
-            @click="hideNavbarOnSmallScreens"
-          >
-            Skills
-          </router-link>
-          <router-link
-            to="/projects"
-            class="nav-item"
-            @click="hideNavbarOnSmallScreens"
-          >
-            Projects
-          </router-link>
-        </div>
-  
-        <div class="empty-container"></div>
-      </nav>
+            <div class="empty-container"></div>
+        </nav>
     </div>
-  </template>
+</template>
   
-  <script>
-  export default {
-    name: 'NavBar',
-    data() {
-      return {
-        isNavbarVisible: true,
-      };
-    },
-    methods: {
-      toggleNavbar() {
-        this.isNavbarVisible = !this.isNavbarVisible;
-      },
-      hideNavbarOnSmallScreens() {
-        if (window.innerWidth <= 900) {
-          this.isNavbarVisible = false;
-        }
-      },
-    },
-    mounted() {
-      this.hideNavbarOnSmallScreens();
-      window.addEventListener('resize', this.hideNavbarOnSmallScreens);
-    },
-    beforeUnmount() {
-      // Removes the event listener when the component is destroyed
-      window.removeEventListener('resize', this.hideNavbarOnSmallScreens);
-    },
-  };
-  </script>
+<script>
+    export default {
+        name: 'NavBar',
+        data() {
+            return {
+                isNavbarVisible: true,
+            };
+        },
+        methods: {
+            toggleNavbar() {
+                this.isNavbarVisible = !this.isNavbarVisible;
+            },
+            hideNavbarOnSmallScreens() {
+                if (window.innerWidth <= 900) {
+                    this.isNavbarVisible = false;
+                }
+            },
+        },
+        mounted() {
+            this.hideNavbarOnSmallScreens();
+            window.addEventListener('resize', this.hideNavbarOnSmallScreens);
+        },
+        beforeUnmount() {
+            // Removes the event listener when the component is destroyed
+            window.removeEventListener('resize', this.hideNavbarOnSmallScreens);
+        },
+    };
+</script>
 
 <style scoped>
     .logo-container {
