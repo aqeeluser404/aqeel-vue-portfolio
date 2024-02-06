@@ -11,7 +11,7 @@
             <div class="nav-header">
                 <div class="nav-logo">
                     <picture>
-                        <img src="@/assets/logo/a.png" alt="a-logo" class="logo"/>
+                        <img src="@/assets/logo/a.png" alt="a-logo" class="logo" @click="toggleNavbar"/>
                     </picture>
                 </div>
                 <div class="header-divider"><hr/></div>
