@@ -34,14 +34,14 @@
                 </div>
                 <!-- social links -->
                 <div class="social-links">
-                    <a href="https://github.com/aqeeluser404">
+                    <a href="https://github.com/aqeeluser404" target="_blank" rel="noopener noreferrer">
                         <img src="@/assets/logo/github.svg" alt="github-logo" class="social-icon">
                     </a>
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="@/assets/logo/instagram.svg" alt="instagram-logo" class="social-icon">
+                        <img src="@/assets/logo/instagram.svg" alt="github-logo" class="social-icon">
                     </a>
-                    <a :href="'https://www.linkedin.com/in/aqeel-hanslo-234961210'" target="_blank" rel="noopener noreferrer">
-                        <img src="@/assets/logo/linkedin.svg" alt="linkedin-logo" class="social-icon">
+                    <a href="https://www.linkedin.com/in/aqeel-hanslo-234961210" target="_blank" rel="noopener noreferrer">
+                        <img src="@/assets/logo/linkedin.svg" alt="linkedin-logo" class="social-icon unique">
                     </a>
                 </div>
             </div>
@@ -97,7 +97,11 @@ export default {
         
     }
     .social-icon {
+        width: 2rem;
         text-decoration: none;
         filter: invert(30%) sepia(100%) saturate(1500%) hue-rotate(200deg);
+    }
+    .unique {
+        width: 2.5rem;
     }
 </style>

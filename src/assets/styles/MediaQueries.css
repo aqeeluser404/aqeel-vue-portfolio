@@ -1,5 +1,6 @@
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (min-width: 1441px) and (max-width: 1500px) {
+
     /* fonts */
     .font-xxs {
         font-size: 0.5rem;
@@ -15,11 +16,5 @@
     }
     .font-l {
         font-size: 5.25rem;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    #navbar {
-        width: 100vw;
     }
 }
