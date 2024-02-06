@@ -62,7 +62,7 @@
     };
 </script>
 
-<style>
+<style scoped>
     .logo-container {
         position: absolute;
         top: 1rem;

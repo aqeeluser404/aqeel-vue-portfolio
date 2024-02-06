@@ -65,9 +65,6 @@ export default {
 };
 </script>
 
-<style src="../assets/styles/MediaQueries.css"></style>
-<style src="../assets/styles/Styles.css"></style>
-
 <style scoped>
     .wrapper-container {
         background-color: rgba(0, 0, 0, 0);

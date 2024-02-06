@@ -14,10 +14,11 @@ export default {
 
 <style scoped>
     .wrapper-container {
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
     }
     .main-container {
         align-items: center;
         justify-content: center;
+        padding: 0;
     }
 </style>
