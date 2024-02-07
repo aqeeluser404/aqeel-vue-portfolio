@@ -16,7 +16,7 @@
             </div>
             <div class="container-two">
                 <div class="contact-form">
-                <form @submit.prevent="">
+                <form @submit.prevent="handleSubmit">
                     <div class="form-group">
                         <label for="name">NAME</label>
                         <input type="text" id="name" name="name" required placeholder="Type Here" v-model="name">
@@ -46,6 +46,7 @@
 </template>
 
 <script>
+import { projectFirestore } from '../firebase/config'
     export default {
         name : 'ContactCard',
         data() {
@@ -55,6 +56,17 @@
                 message : ''
             }
 
+        },
+        methods: {
+            handleSubmit() {
+                let userMessage = {
+                    name: this.name,
+                    email: this.email,
+                    message: this.message
+                }
+                projectFirestore.collection('userMessages').add(userMessage)
+
+            }
         }
 
     }
