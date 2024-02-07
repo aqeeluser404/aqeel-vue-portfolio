@@ -97,11 +97,29 @@ export default {
         
     }
     .social-icon {
-        width: 2rem;
+        width: 2.2rem;
         text-decoration: none;
-        filter: invert(30%) sepia(100%) saturate(1500%) hue-rotate(200deg);
+        filter: invert(30%) sepia(130%) saturate(1000%) hue-rotate(200deg);
     }
     .unique {
-        width: 2.5rem;
+        width: 2.7rem;
+    }
+    @media only screen and (max-width: 1441px) and (max-width: 1500px) {
+        .links-container {
+            /* width: 25vw; */
+            gap: 5rem;
+        }
+        .social-links {
+            gap: 5rem;
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        .main-container {
+            padding: 1.2rem;
+            
+        }
+        .wrapper-container {
+            margin-top: 3rem;
+        }
     }
 </style>

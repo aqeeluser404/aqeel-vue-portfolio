@@ -1,4 +1,4 @@
-import HomeCard from './components/HomeCard.vue'
+import HomeCard from './components/components/HomeCard.vue'
 import AboutCard from './components/AboutCard.vue'
 import SkillsCard from './components/SkillsCard.vue'
 import ProjectsCard from './components/ProjectsCard.vue'

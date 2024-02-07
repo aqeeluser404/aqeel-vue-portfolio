@@ -1,7 +1,14 @@
 <template>
     <div class="wrapper-container">
         <div class="main-container">
-            <h1>Contact</h1>
+            <div class="container-one line-height-low">
+                <div>
+                    <h1 class="font-l color-black family-koulen">Contact</h1>
+                </div>
+            </div>
+            <div class="container-two">
+                
+            </div>
         </div>
     </div>
 </template>
@@ -14,7 +21,7 @@ export default {
 
 <style scoped>
     .wrapper-container {
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
     }
     .main-container {
         align-items: center;

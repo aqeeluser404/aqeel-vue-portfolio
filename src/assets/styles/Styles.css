@@ -11,7 +11,7 @@
     justify-content: flex-end;
 }
 .main-container {
-    width: calc(100% - 8vw);
+    width: calc(100vw - 6.5rem);
     height: 100vh;
     display: flex;
     flex-direction: column;

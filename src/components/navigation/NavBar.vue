@@ -17,19 +17,19 @@
                 <div class="header-divider"><hr/></div>
 
                 <div class="nav-title">
-                    <h1 class="font-m color-white family-koulen line-height-low">DEV</h1>
-                    <h1 class="font-xs color-blue family-koulen line-height-low">INTERN</h1>
+                    <h1 class="font-s color-white family-koulen line-height-low">DEV</h1>
+                    <h1 class="font-xxs color-blue family-koulen line-height-low">INTERN</h1>
                 </div>
             </div>
   
             <div class="nav-list-items">
-                <router-link to="/" class="nav-item" @click="hideNavbarOnSmallScreens">Home</router-link>
-                <router-link to="/about" class="nav-item" @click="hideNavbarOnSmallScreens" >About</router-link>
-                <router-link to="/skills" class="nav-item" @click="hideNavbarOnSmallScreens">Skills</router-link>
-                <router-link to="/projects" class="nav-item" @click="hideNavbarOnSmallScreens">Projects</router-link>
+                <router-link to="/" class="nav-item" @click="hideNavbarOnSmallScreens">HOME</router-link>
+                <router-link to="/about" class="nav-item" @click="hideNavbarOnSmallScreens" >ABOUT</router-link>
+                <router-link to="/skills" class="nav-item" @click="hideNavbarOnSmallScreens">SKILLS</router-link>
+                <router-link to="/projects" class="nav-item" @click="hideNavbarOnSmallScreens">PROJECTS</router-link>
             </div>
   
-            <div class="empty-container"></div>
+            <div class="fidget-container"></div>
         </nav>
     </div>
 </template>
@@ -67,7 +67,7 @@
     .logo-container {
         position: absolute;
         top: 1rem;
-        left: 2rem;
+        left: 1rem;
         z-index: 999;
     }
     /* make nav bar responsive and hidden when button pressed */
@@ -91,6 +91,8 @@
     }
     .nav-header {
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         gap: 0.8rem;
     }
@@ -98,7 +100,7 @@
         background-color: #111111;
         padding: 1rem;
         height: 100vh;
-        width: 8vw;
+        width: 6.5rem;
         position: fixed;
         display: flex;
         flex-direction: column;
@@ -109,7 +111,7 @@
         justify-content: space-around;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 1.5rem;
     }
     .logo {
         width: 4.2rem;
@@ -120,17 +122,20 @@
         padding: 0.5rem;
     }
     hr {
-        width: 100%;
+        width: 4rem;
     }
     .nav-item {
-        color: white;
+        color: rgb(153, 153, 153);
         text-decoration: none;
-
-        font-size: 1.2rem;
+        font-weight: 600;
+        font-size: .9rem;
         font-family: 'Inter', sans-serif;
     }
     .nav-item:hover {
         color: rgb(206, 206, 206);
+    }
+    .fidget-container {
+        height: 3rem;
     }
     @media only screen and (max-width: 900px) {
         .nav-header {
