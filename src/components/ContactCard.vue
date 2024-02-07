@@ -16,23 +16,29 @@
             </div>
             <div class="container-two">
                 <div class="contact-form">
-                <form action="#" method="#">
+                <form @submit.prevent="">
                     <div class="form-group">
                         <label for="name">NAME</label>
-                        <input type="text" id="name" name="name" required placeholder="Type Here" >
+                        <input type="text" id="name" name="name" required placeholder="Type Here" v-model="name">
                     </div>
                     <div class="form-group">
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email" required placeholder="Type Here" >
+                        <input type="email" id="email" name="email" required placeholder="Type Here" v-model="email">
                     </div>
                     <div class="form-group">
                         <label for="message">MESSAGE</label>
-                        <textarea id="message" name="message" required placeholder="Type Here" ></textarea>
+                        <textarea id="message" name="message" required placeholder="Type Here" v-model="message"></textarea>
                     </div>
                     <div class="form-group">
                         <input id="submit" type="submit" value="Submit" class="btn">
                     </div>
                 </form>
+                <!-- <div>
+                    <p>Result</p>
+                    <p>name: {{ name }}</p>
+                    <p>email: {{ email }}</p>
+                    <p>message: {{ message }}</p>
+                </div> -->
             </div>
             </div>
         </div>
@@ -42,6 +48,14 @@
 <script>
     export default {
         name : 'ContactCard',
+        data() {
+            return {
+                name : '',
+                email : '',
+                message : ''
+            }
+
+        }
 
     }
 </script>
@@ -66,7 +80,6 @@
     .container-two {
         width: 22vw;
     }
-
     /* form styling */
     .contact-form {
         text-align: left;
@@ -89,7 +102,6 @@
         font-weight: 600;
         padding-bottom: 0.3rem;
     }
- 
     textarea::placeholder {
         font-family: 'Inter', sans-serif;
         font-size: .9rem;
@@ -116,5 +128,4 @@
     #message {
         min-height: 90px;
     }
-
 </style>
