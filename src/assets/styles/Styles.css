@@ -113,11 +113,17 @@
 .color-black {
     color: #0E0E0E;
 }
+.color-black {
+    color: #0E0E0E;
+}
 .color-white {
     color: #FFFFFF;
 }
 .color-blue {
     color: #5E9FFF;
+}
+.color-blue-darker {
+    color: #2b80ff;
 }
 .family-plus-code {
     font-family: 'M PLUS 1 Code', monospace;
@@ -136,7 +142,7 @@
 .opacity-quarter { opacity: 25%; }
 
 .line-height-low {line-height: 1;}
-
+.line-height-med {line-height: 1.5;}
 .weight-bold {
     font-weight: 700;
 }

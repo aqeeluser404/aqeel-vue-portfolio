@@ -73,7 +73,7 @@
     /* make nav bar responsive and hidden when button pressed */
     .hidden {
         transform: translateX(-100%);
-        /* transition: all 1s; */
+        transition: all 1s;
     }
     .navbar-vertical-fixed {
         position: fixed;
