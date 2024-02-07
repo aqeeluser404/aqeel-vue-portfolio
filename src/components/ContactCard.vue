@@ -19,15 +19,15 @@
                 <form action="#" method="#">
                     <div class="form-group">
                         <label for="name">NAME</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" required placeholder="Type Here" >
                     </div>
                     <div class="form-group">
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required placeholder="Type Here" >
                     </div>
                     <div class="form-group">
                         <label for="message">MESSAGE</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" name="message" required placeholder="Type Here" ></textarea>
                     </div>
                     <div class="form-group">
                         <input id="submit" type="submit" value="Submit" class="btn">
@@ -64,34 +64,52 @@
         max-width: 60vw;
     }
     .container-two {
-        max-width: 40vw;
+        width: 22vw;
     }
 
     /* form styling */
     .contact-form {
-        width: auto;
         text-align: left;
         margin: 0 auto;
         color: #0E0E0E;
     }
+    .contact-form form {
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+    }
     .form-group {
-        /* width: 100%; */
         font-size: 1.25rem;
     }
     .form-group label {
         display: block;
         color: #424242;
-        margin-bottom: 1rem;
-        font-size: 1rem;
+        font-size: .9rem;
         font-family: 'Inter', sans-serif;
         font-weight: 600;
+        padding-bottom: 0.3rem;
+    }
+ 
+    textarea::placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: .9rem;
+        color: #999; 
+        padding: 0.5rem;
+        font-weight: 500;
+    }
+    input::placeholder {
+        font-family: 'Inter', sans-serif;
+        font-size: .9rem;
+        color: #999; 
+        padding: 0.5rem;
+        font-weight: 500;
     }
     .form-group input[type="text"],
     .form-group input[type="email"],
     .form-group textarea {
-        /* width: 100%; */
+        width: 22vw;
         padding: 8px;
-        border: 1px solid #0E0E0E;
+        border: 2px solid #0E0E0E;
         resize: vertical;
         min-height: 60px;
     }
