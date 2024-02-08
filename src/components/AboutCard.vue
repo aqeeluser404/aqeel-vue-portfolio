@@ -144,14 +144,30 @@
     }
     .item-decorated {
         list-style-type: disc;
+        color: #0084ff;
     }
     .item-decorated h3 {
-        color: #5E9FFF;
+        color: #0084ff;
         font-family: 'Inter', sans-serif;
         font-size: 1.5rem
     }
     .item-none {
         list-style-type: none;
+    }
+    .item-none h3 {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.1rem;
+        color: #0E0E0E;
+        font-weight: 500;
+    }
+    .item-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .left-border {
+        padding-left: 1rem;
+        border-left: 1px #0084ff solid;
     }
     .wrapper-container {
         background-color: white;

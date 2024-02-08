@@ -113,10 +113,13 @@ export default {
             gap: 5rem;
         }
     }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 611px) {
         .main-container {
             padding: 1.2rem;
-            
+            justify-content: flex-end;
+        }
+        .links-container {
+            flex-direction: column-reverse;
         }
         .wrapper-container {
             margin-top: 3rem;
