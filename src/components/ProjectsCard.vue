@@ -17,26 +17,26 @@
                     <div class="card-body">
                         <h1 class="card-title">First Portfolio</h1>
                         <p class="card-sub-title">HTML CSS and JavaScript</p>
-                        <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate, culpa cumque eaque ipsa quaerat optio, dignissimos tempore nostrum in? Recusandae!</p>
+                        <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
                         
                         <button class="card-btn">Source Code</button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="../assets/projects/project1.png" class="card-img" alt="#">
+                    <img src="../assets/projects/animeapp.png" class="card-img" alt="#">
                     <div class="card-body">
-                        <h1 class="card-title">Project 1</h1>
-                        <p class="card-sub-title">Sub heading</p>
-                        <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate, culpa cumque eaque ipsa quaerat optio, dignissimos tempore nostrum in? Recusandae!</p>
+                        <h1 class="card-title">Anime List Application</h1>
+                        <p class="card-sub-title">Java Springboot and Vue.js</p>
+                        <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
                         <button class="card-btn">Source Code</button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="../assets/projects/project1.png" class="card-img" alt="#">
+                    <img src="../assets/projects/bankapp2.png" class="card-img" alt="#">
                     <div class="card-body">
                         <h1 class="card-title">Project 1</h1>
                         <p class="card-sub-title">Sub heading</p>
-                        <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate, culpa cumque eaque ipsa quaerat optio, dignissimos tempore nostrum in? Recusandae!</p>
+                        <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
                         <button class="card-btn">Source Code</button>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
     }
     .card {
         width: 320px;
-        height: 450px;
+        height: 400px;
         /* border-radius: 20px; */
         overflow: hidden;
         border: 4px solid #ffffff2d;
