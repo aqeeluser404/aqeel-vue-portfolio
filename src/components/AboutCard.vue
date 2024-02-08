@@ -18,6 +18,65 @@
             <div class="container-two">
                 <h1 class="font-l color-blue family-koulen">Education</h1>
                 <!-- TODO:TIMELINE -->
+                <div class="timeline-container">
+                    <ul>
+                        <div class="item-group">
+                            <li class="item-decorated">
+                                <h3>Oracle Academy High School</h3>
+                            </li>
+                            <li class="item-none">
+                                <div class="left-border">
+                                    <h3>BACHELOR'S DEGREE CERTIFICATION</h3>
+                                    <h3>2013 - 2018</h3>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="item-group">
+                            <li class="item-decorated">
+                                <h3>Gap year at Emcon Construction</h3>
+                            </li>
+                            <li class="item-none">
+                                <div class="left-border">
+                                    <h3>WORK EXPERIENCE</h3>
+                                    <h3>2019 - 2020</h3>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="item-group">
+                            <li class="item-decorated">
+                                <h3>College of Cape Town</h3>
+                            </li>
+                            <li class="item-none">
+                                <div class="left-border">
+                                    <h3>HIGHER CERTIFICATION IN INFO & COM</h3>
+                                    <h3>2020 - 2021</h3>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="item-group">
+                            <li class="item-decorated">
+                                <h3>Cape Peninsula University of Technology</h3>
+                            </li>
+                            <li class="item-none">
+                                <div class="left-border">
+                                    <h3>DIPLOMA IN ICT: APPLICATION DEVELOPMENT</h3>
+                                    <h3>2021 - 2023</h3>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="item-group">
+                            <li class="item-decorated">
+                                <h3>CapaCiTi</h3>
+                            </li>
+                            <li class="item-none">
+                                <div class="left-border">
+                                    <h3>LEARNERSHIP IN FULLSTACK DEVELOPMENT</h3>
+                                    <h3>2023 - 2024</h3>
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
             </div>
             <div class="page-number">
                 <h1 class="font-xs color-blue family-lekton">02</h1>
@@ -80,6 +139,20 @@
 </script>
 
 <style scoped>
+    .timeline-container {
+        color: black;
+    }
+    .item-decorated {
+        list-style-type: disc;
+    }
+    .item-decorated h3 {
+        color: #5E9FFF;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.5rem
+    }
+    .item-none {
+        list-style-type: none;
+    }
     .wrapper-container {
         background-color: white;
     }

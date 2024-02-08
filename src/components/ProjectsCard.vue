@@ -25,7 +25,7 @@
                 <div class="card">
                     <img src="../assets/projects/animeapp.png" class="card-img" alt="#">
                     <div class="card-body">
-                        <h1 class="card-title">Anime List Application</h1>
+                        <h1 class="card-title">Anime Web App</h1>
                         <p class="card-sub-title">Java Springboot and Vue.js</p>
                         <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
                         <button class="card-btn">Source Code</button>

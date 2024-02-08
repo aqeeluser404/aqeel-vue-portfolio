@@ -32,6 +32,7 @@
                     <div class="form-group">
                         <input id="submit" type="submit" value="Submit" class="btn">
                     </div>
+                    <span id="msg">{{ submitMessage }}</span>
                 </form>
                 <!-- <div>
                     <p>Result</p>
@@ -53,7 +54,8 @@ import { projectFirestore } from '../firebase/config'
             return {
                 name : '',
                 email : '',
-                message : ''
+                message : '',
+                submitMessage : '',
             }
 
         },
@@ -66,6 +68,10 @@ import { projectFirestore } from '../firebase/config'
                 }
                 projectFirestore.collection('userMessages').add(userMessage)
 
+                this.name = '';
+                this.email = '';
+                this.message = '';
+                this.submitMessage = 'Message sent';
             }
         }
 
