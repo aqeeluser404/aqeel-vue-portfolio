@@ -1,10 +1,10 @@
 <template>
-    <div class="wrapper-container">
+    <!-- <div class="wrapper-container"> -->
         <div class="main-container">
             <div class="text-container">
-                <h1 class="font-xs color-blue family-lekton">Hi there,</h1>
-                <h1 class="font-l color-white family-koulen">I'm Aqeel Hanslo</h1>
-                <h1 class="font-m color-blue family-lekton">  &lt;Software Developer/&gt; </h1>
+                <h1 class="font-xs color-blue family-lekton line-height-low">Hi there,</h1>
+                <h1 class="font-l color-white family-koulen line-height-low">I'm Aqeel Hanslo</h1>
+                <h1 class="font-m color-blue family-lekton line-height-low">  &lt;Software Developer/&gt; </h1>
                 <p class="font-s color-white family-plus-code">
                     <span class="opacity-full"><br> The design of an application or website usually </span>
                     <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
@@ -48,8 +48,12 @@
             <div class="page-number">
                 <h1 class="font-xs color-blue family-lekton">01</h1>
             </div>
+            <video autoplay muted loop id="video-background">
+                <source src="@/assets/wallpaper/video-wallpaper.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-    </div>
+    <!-- </div> -->
 
 </template>
 
@@ -66,19 +70,20 @@ export default {
 </script>
 
 <style scoped>
-    .wrapper-container {
+    /* .wrapper-container {
         background-color: rgba(0, 0, 0, 0);
-    }
+    } */
     .main-container {
         align-items: flex-end;
         justify-content: center;
         padding-top: 8%;
         padding-right: 8%;
+        position: relative;
     }
     .text-container {
-        height: auto;
-        width: auto;
-        line-height: 1.2;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         text-align: right;
     }
 
@@ -104,6 +109,16 @@ export default {
     .unique {
         width: 2.7rem;
     }
+    #video-background {
+        /* Set video styles */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; /* Place the video behind other content */
+    }
     @media only screen and (max-width: 1441px) and (max-width: 1500px) {
         .links-container {
             /* width: 25vw; */
@@ -115,14 +130,31 @@ export default {
     }
     @media only screen and (max-width: 611px) {
         .main-container {
-            padding: 1.2rem;
-            justify-content: flex-end;
+            padding: 8rem 2rem;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 4rem;
+            height: 100%;
+        }
+        .text-container {
+            width: 100%;
+            line-height: 1.4;
         }
         .links-container {
             flex-direction: column-reverse;
+            gap: 1rem;
+            width: 100%;
         }
-        .wrapper-container {
-            margin-top: 3rem;
+        .social-links {
+            justify-content: center;
+        }
+        /* .wrapper-container {
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        } */
+        .styled-button {
+            justify-content: center;
         }
     }
 </style>

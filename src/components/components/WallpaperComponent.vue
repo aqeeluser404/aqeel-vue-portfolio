@@ -27,17 +27,7 @@ export default {
 };
 </script>
 
-<style scoped>
-.video {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-}
+<style>
 .video-background {
     background: #0E0E0E;
     overflow: hidden;
@@ -46,5 +36,24 @@ export default {
     height: 100vh;
     z-index: -1001;
     background-repeat: repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 611px) {
+    .video-background {
+
+        width: 100vw;
+        height: 120vh;
+
+    }
 }
 </style>
