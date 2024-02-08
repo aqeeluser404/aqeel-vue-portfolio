@@ -17,7 +17,7 @@
             </div>
             <div class="container-two">
                 <h1 class="font-l color-blue family-koulen">Education</h1>
-
+                <!-- TODO:TIMELINE -->
             </div>
             <div class="page-number">
                 <h1 class="font-xs color-blue family-lekton">02</h1>
@@ -104,21 +104,20 @@
     }
     
     /* text animation styling */
-    .typing-text-animation {
-        span.typed-text {
-            color: #0084ff;
-        }
-        span.cursor {
-            display: inline-block;
-            margin-left: 3px;
-            width: 4px;
-            background-color: #0084ff;
-            animation: cursorBlink 1s infinite;
-        }
-        span.cursor.typing {
-            animation: none;
-        }
-    } 
+    span.typed-text {
+        color: #0084ff;
+    }
+    span.cursor {
+        display: inline-block;
+        margin-left: 3px;
+        width: 4px;
+        background-color: #0084ff;
+        animation: cursorBlink 1s infinite;
+    }
+    span.cursor.typing {
+        animation: none;
+    }
+
     @keyframes cursorBlink {
         49% { background-color: #fff; }
         50% { background-color: transparent; }

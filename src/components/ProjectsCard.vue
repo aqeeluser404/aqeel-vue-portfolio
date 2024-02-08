@@ -9,36 +9,39 @@
                     <span class="typed-text">{{ typeValue }}</span>
                     <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
                 </h1>
+            </div>
 
-                <div class="card-row">
-                    <div class="card">
-                        <img src="../assets/logo/vue.png" class="card-img" alt="#">
-                        <div class="card-body">
-                            <h1 class="card-title">Project 1</h1>
-                            <p class="card-sub-title">Sub heading</p>
-                            <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate, culpa cumque eaque ipsa quaerat optio, dignissimos tempore nostrum in? Recusandae!</p>
-                            <button class="card-btn">Preview</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="../assets/logo/vue.png" class="card-img" alt="#">
-                        <div class="card-body">
-                            <h1 class="card-title">Project 1</h1>
-                            <p class="card-sub-title">Sub heading</p>
-                            <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate, culpa cumque eaque ipsa quaerat optio, dignissimos tempore nostrum in? Recusandae!</p>
-                            <button class="card-btn">Preview</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="../assets/logo/vue.png" class="card-img" alt="#">
-                        <div class="card-body">
-                            <h1 class="card-title">Project 1</h1>
-                            <p class="card-sub-title">Sub heading</p>
-                            <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate, culpa cumque eaque ipsa quaerat optio, dignissimos tempore nostrum in? Recusandae!</p>
-                            <button class="card-btn">Preview</button>
-                        </div>
+            <div class="card-row">
+                <div class="card">
+                    <img src="../assets/projects/first-portfolio.png" class="card-img" alt="#">
+                    <div class="card-body">
+                        <h1 class="card-title">First Portfolio</h1>
+                        <p class="card-sub-title">HTML CSS and JavaScript</p>
+                        <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate, culpa cumque eaque ipsa quaerat optio, dignissimos tempore nostrum in? Recusandae!</p>
+                        
+                        <button class="card-btn">Source Code</button>
                     </div>
                 </div>
+                <div class="card">
+                    <img src="../assets/projects/project1.png" class="card-img" alt="#">
+                    <div class="card-body">
+                        <h1 class="card-title">Project 1</h1>
+                        <p class="card-sub-title">Sub heading</p>
+                        <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate, culpa cumque eaque ipsa quaerat optio, dignissimos tempore nostrum in? Recusandae!</p>
+                        <button class="card-btn">Source Code</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../assets/projects/project1.png" class="card-img" alt="#">
+                    <div class="card-body">
+                        <h1 class="card-title">Project 1</h1>
+                        <p class="card-sub-title">Sub heading</p>
+                        <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate, culpa cumque eaque ipsa quaerat optio, dignissimos tempore nostrum in? Recusandae!</p>
+                        <button class="card-btn">Source Code</button>
+                    </div>
+                </div>
+
+
             </div>
 
             <div class="page-number">
@@ -108,6 +111,7 @@
     .main-container {
         align-items: center;
         justify-content: center;
+        gap: 5%;
     }
     .text-container {
         display: flex;
@@ -115,25 +119,18 @@
     }
 
     /* text animation styling */
-    .typing-text-animation {
-        span.typed-text {
-            color: #0084ff;
-        }
-        span.cursor {
-            display: inline-block;
-            margin-left: 3px;
-            width: 4px;
-            background-color: #0084ff;
-            animation: cursorBlink 1s infinite;
-        }
-        span.cursor.typing {
-            animation: none;
-        }
-    } 
-    @keyframes cursorBlink {
-        49% { background-color: #fff; }
-        50% { background-color: transparent; }
-        99% { background-color: transparent; }
+    span.typed-text {
+        color: #0084ff;
+    }
+    span.cursor {
+        display: inline-block;
+        margin-left: 3px;
+        width: 4px;
+        background-color: #0084ff;
+        animation: cursorBlink 1s infinite;
+    }
+    span.cursor.typing {
+        animation: none;
     }
     .card-row {
         display: flex;
@@ -141,27 +138,28 @@
     }
     .card {
         width: 320px;
-        height: 500px;
-        border-radius: 20px;
+        height: 450px;
+        /* border-radius: 20px; */
         overflow: hidden;
-        border: 8px solid #fff;
+        border: 4px solid #ffffff2d;
         position: relative;
     }
     .card-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 15px;
+        object-position: center top;
     }
     .card-body {
+        font-family: 'Koulen', sans-serif;
         width: 100%;
         height: 100%;
-        top: 0;
-        right: -100%;
+        bottom: -100%;
+        right: 0;
         position: absolute;
-        background: #1f3d4738;
+        background: #000000b9;
         backdrop-filter: blur(5px);
-        border-radius: 15px;
+        /* border-radius: 15px; */
         color: #fff;
         padding: 30px;
         text-align: left;
@@ -172,32 +170,33 @@
         transition: ease-in-out 0.5s;
     }
     .card:hover .card-body{
-        right: 0;
+        bottom: 0;
     }
     .card-title {
         text-transform: uppercase;
-        font-size: 50px;
+        font-size: 2rem;
         font-weight: 500;
     }
     .card-sub-title {
-        text-transform: capitalize;
+        text-transform: uppercase;
         font-size: 14px;
         font-weight: 300;
     }
     .card-info {
+        font-family: 'M PLUS 1 Code', monospace;
         font-size: 16px;
         line-height: 25px;
         margin: 40px 0;
         font-weight: 400;
     }
     .card-btn {
-        color: #1f3d47;
-        background: #8fabba;
+        color: #5E9FFF;
+        background: none;
         padding: 10px 20px;
         width: 120px;
-        border-radius: 5px;
+        /* border-radius: 5px; */
         text-transform: capitalize;
-        border: none;
+        border: 1px solid #5E9FFF;
         outline: none;
         font-weight: 500;
         cursor: pointer;

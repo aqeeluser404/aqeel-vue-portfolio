@@ -27,7 +27,7 @@
                     </div>
                     <div class="form-group">
                         <label for="message">MESSAGE</label>
-                        <textarea id="message" name="message" required placeholder="Type Here" v-model="message"></textarea>
+                        <textarea id="message" name="message" required v-model="message"></textarea>
                     </div>
                     <div class="form-group">
                         <input id="submit" type="submit" value="Submit" class="btn">
