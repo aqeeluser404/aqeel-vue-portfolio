@@ -130,7 +130,7 @@ export default {
     }
     @media only screen and (max-width: 611px) {
         .main-container {
-            padding: 8rem 2rem;
+            padding: 9rem 3rem;
             align-items: center;
             justify-content: flex-start;
             gap: 4rem;
@@ -147,6 +147,7 @@ export default {
         }
         .social-links {
             justify-content: center;
+            gap: 2rem;
         }
         /* .wrapper-container {
             justify-content: center;
