@@ -1,78 +1,91 @@
 <template>
-        <div class="main-container">
-            <div class="text-container line-height-low">
-                <h1 class="font-l color-white family-koulen">Skills</h1>
-                <h1 class="font-s color-white family-plus-code">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo fugit animi provident cumque totam recusandae error quaerat atque corporis, porro perferendis incidunt.</h1>
-            </div>
-            <br>
-            
-            <div class="skill-container">
-                <div class="skill">
-                    <div class="skill-name">HTML</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="90%" style="max-width:90%"></div>
-                        </div>
-                </div>
+    <!-- main container -->
+    <div class="main-container">
 
-                <div class="skill">
-                    <div class="skill-name">CSS</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="85%" style="max-width:85%"></div>
-                        </div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">Javascript</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="55%" style="max-width:55%"></div>
-                        </div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">Vue.JS</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="60%" style="max-width:60%"></div>
-                        </div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">SPRINGBOOT</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="70%" style="max-width:70%"></div>
-                        </div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">MYSQL</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="70%" style="max-width:70%"></div>
-                        </div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">JAVA</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="80%" style="max-width:80%"></div>
-                        </div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">GIT</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="90%" style="max-width:90%"></div>
-                        </div>
+        <!-- row 1============================================================================== -->
+        <div class="text-container line-height-low">
+            <h1 class="font-l color-white family-koulen">Skills</h1>
+            <p class="font-s color-white family-plus-code">
+                <span class="opacity-full"><br> The design of an application or website usually </span>
+                <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
+                <span class="opacity-quarter"><br> what to do and I'll try to visualize your ideas</span>
+                <br><br><br>
+                <!-- view projects -->
+                <button class="button">View My work</button>
+            </p>
+        </div>
+        <br>
+        
+        <!-- row 2============================================================================== -->
+        <div class="skill-container">
+            <div class="skill">
+                <div class="skill-name">HTML</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="90%" style="max-width:90%"></div>
                 </div>
             </div>
 
-            <div class="page-number">
-                <h1 class="font-xs color-blue family-lekton">03</h1>
+            <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="85%" style="max-width:85%"></div>
+                </div>
             </div>
-            <video autoplay muted loop id="video-background">
-                <source src="@/assets/wallpaper/video-wallpaper.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+
+            <div class="skill">
+                <div class="skill-name">Javascript</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="55%" style="max-width:55%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">Vue.JS</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="60%" style="max-width:60%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">SPRINGBOOT</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="70%" style="max-width:70%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">MYSQL</div>
+                <div class="skill-bar">
+                        <div class="skill-per" per="70%" style="max-width:70%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">JAVA</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="80%" style="max-width:80%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">GIT</div>
+                <div class="skill-bar">
+                    <div class="skill-per" per="90%" style="max-width:90%"></div>
+                </div>
+            </div>
         </div>
 
+        <!-- components -->
+        <!-- number -->
+        <div class="page-number">
+            <h1 class="font-xs color-blue family-lekton">03</h1>
+        </div>
+        <!-- video wallpaper -->
+        <video autoplay muted loop id="video-background">
+            <source src="@/assets/wallpaper/video-wallpaper.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 </template>
 
 <script>
@@ -82,15 +95,8 @@ export default {
 </script>
 
 <style scoped>
-    .main-container {
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        gap: 5%;
-    }
-    .text-container {
-        width: 70vw;
-    }
+    /* components================================================================================ */
+    
     #video-background {
         position: absolute;
         top: 0;
@@ -100,14 +106,44 @@ export default {
         object-fit: cover;
         z-index: -1;
     }
+
+    /* containers================================================================================ */
+
+    .main-container {
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        gap: 2rem;
+        padding-top: 25vh;
+
+        /* scrolling */
+        height: 100%;
+    }
+
+    .text-container {
+        text-align: right;
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        /* scrolling */
+        height: auto;
+    }
     .skill-container {
-        width: 100%;
-        max-width: 50vh;
+        width: 40vw;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         text-align: left;
+
+        /* scrolling */
+        height: 100%;
     }
+
+    /* content=================================================================================== */
+
+    /* skill progress bars */
     .skill-name{
         font-size: 15px;
         font-weight: 600;
@@ -159,27 +195,28 @@ export default {
             width: 100%;
         }
     }
+
+    /* media queries============================================================================= */
+
     @media only screen and (max-width: 611px) {
         .main-container {
-            /* padding: 9rem 3rem;
+            padding: 9rem 3rem;
             align-items: center;
             justify-content: flex-start;
-            gap: 4rem;
-            height: 100%; */
             flex-direction: column;
             gap: 2rem;
-            padding: 9rem 3rem;
             height: 100%;
-            
+        }
+        .text-container {
+            text-align: right;
+            width: 70vw;
+            padding-top: 100px;
+            height: 100%;
         }
         .skill-container {
             width: 70vw;
-        }
-        .text-container {
-            width: 70vw;
-           
-            line-height: 1.4;
-            text-align: left;
+            padding-top: 75px;
+            height: 100%;
         }
     }
 </style>

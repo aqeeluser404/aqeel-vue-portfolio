@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .darkmode {
     position: fixed;
     top: 10px;

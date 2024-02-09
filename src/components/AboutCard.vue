@@ -1,88 +1,104 @@
 <template>
-    <!-- <div class="wrapper-container"> -->
-        <div class="main-container">
-            <div class="container-one line-height-low">
-                <div>
-                    <h1 class="font-l color-black family-koulen">About Me</h1>
-                    <h1 class="typing-text-animation font-m color-blue family-lekton weight-bold">
-                        <span class="typed-text">{{ typeValue }}</span>
-                        <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
-                    </h1>
-                </div>
-                <div>
-                    <p class="font-s color-black family-plus-code">My name is Aqeel Hanslo, third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. I possess the ability to think outside the box to create innovative solutions for problems.</p>
-                    <br><br>
-                    <button class="button">Download CV</button>
-                </div>
+    <!-- main container -->
+    <div class="main-container">
+
+        <!-- column 1============================================================================== -->
+        <div class="container-one line-height-low">
+
+            <div>
+                <!-- heading -->
+                <h1 class="font-l color-black family-koulen">About Me</h1>
+                <!-- animation text -->
+                <h1 class="typing-text-animation font-m color-blue family-lekton weight-bold">
+                    <span class="typed-text">{{ typeValue }}</span>
+                    <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
+                </h1>
             </div>
-            <div class="container-two  line-height-low">
-                <h1 class="font-l color-blue family-koulen">Education</h1>
-                <!-- TODO:TIMELINE -->
-                <div class="timeline-container">
-                    <ul>
-                        <div class="item-group">
-                            <li class="item-decorated">
-                                <h3>Oracle Academy High School</h3>
-                            </li>
-                            <li class="item-none">
-                                <div class="left-border">
-                                    <h3>BACHELOR'S DEGREE CERTIFICATION</h3>
-                                    <h3>2013 - 2018</h3>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="item-group">
-                            <li class="item-decorated">
-                                <h3>Gap year at Emcon Construction</h3>
-                            </li>
-                            <li class="item-none">
-                                <div class="left-border">
-                                    <h3>WORK EXPERIENCE</h3>
-                                    <h3>2019 - 2020</h3>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="item-group">
-                            <li class="item-decorated">
-                                <h3>College of Cape Town</h3>
-                            </li>
-                            <li class="item-none">
-                                <div class="left-border">
-                                    <h3>HIGHER CERTIFICATION IN INFO & COM</h3>
-                                    <h3>2020 - 2021</h3>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="item-group">
-                            <li class="item-decorated">
-                                <h3>Cape Peninsula University of Technology</h3>
-                            </li>
-                            <li class="item-none">
-                                <div class="left-border">
-                                    <h3>DIPLOMA IN ICT: APPLICATION DEVELOPMENT</h3>
-                                    <h3>2021 - 2023</h3>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="item-group">
-                            <li class="item-decorated">
-                                <h3>CapaCiTi</h3>
-                            </li>
-                            <li class="item-none">
-                                <div class="left-border">
-                                    <h3>LEARNERSHIP IN FULLSTACK DEVELOPMENT</h3>
-                                    <h3>2023 - 2024</h3>
-                                </div>
-                            </li>
-                        </div>
-                    </ul>
-                </div>
+
+            <div>
+                <!-- paragraph -->
+                <p class="font-s color-black family-plus-code">My name is Aqeel Hanslo, third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. I possess the ability to think outside the box to create innovative solutions for problems.</p>
+                <br><br>
+                <!-- download cv button -->
+                <button class="button">Download CV</button>
             </div>
-            <div class="page-number">
-                <h1 class="font-xs color-blue family-lekton">02</h1>
+
+        </div>
+
+        <!-- column 2============================================================================== -->
+        <div class="container-two  line-height-low">
+
+            <!-- heading -->
+            <h1 class="font-l color-blue family-koulen">Education</h1>
+
+            <!-- timeline -->
+            <div class="timeline-container">
+                <ul>
+                    <div class="item-group">
+                        <li class="item-decorated">
+                            <h3>Oracle Academy High School</h3>
+                        </li>
+                        <li class="item-none">
+                            <div class="left-border">
+                                <h3>BACHELOR'S DEGREE CERTIFICATION</h3>
+                                <h3>2013 - 2018</h3>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="item-group">
+                        <li class="item-decorated">
+                            <h3>Gap year at Emcon Construction</h3>
+                        </li>
+                        <li class="item-none">
+                            <div class="left-border">
+                                <h3>WORK EXPERIENCE</h3>
+                                <h3>2019 - 2020</h3>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="item-group">
+                        <li class="item-decorated">
+                            <h3>College of Cape Town</h3>
+                        </li>
+                        <li class="item-none">
+                            <div class="left-border">
+                                <h3>HIGHER CERTIFICATION IN INFO & COM</h3>
+                                <h3>2020 - 2021</h3>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="item-group">
+                        <li class="item-decorated">
+                            <h3>Cape Peninsula University of Technology</h3>
+                        </li>
+                        <li class="item-none">
+                            <div class="left-border">
+                                <h3>DIPLOMA IN ICT: APPLICATION DEVELOPMENT</h3>
+                                <h3>2021 - 2023</h3>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="item-group">
+                        <li class="item-decorated">
+                            <h3>CapaCiTi</h3>
+                        </li>
+                        <li class="item-none">
+                            <div class="left-border">
+                                <h3>LEARNERSHIP IN FULLSTACK DEVELOPMENT</h3>
+                                <h3>2023 - 2024</h3>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
             </div>
         </div>
-    <!-- </div> -->
+
+        <!-- components -->
+        <!-- number -->
+        <div class="page-number">
+            <h1 class="font-xs color-blue family-lekton">02</h1>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -139,9 +155,41 @@
 </script>
 
 <style scoped>
-    .timeline-container {
-        color: black;
+    /* components================================================================================ */
+
+    /* containers================================================================================ */
+
+    .main-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 25vh;
+        height: 100%;
+        gap: 5%;
     }
+    .container-one {
+        text-align: right;
+        width: 40vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding-top: 25vh;
+
+        gap: 3rem;
+    }
+    .container-two {
+        text-align: left;
+        width: 30vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding-top: 25vh;
+        gap: 2rem;
+    }
+
+    /* content=================================================================================== */
+
+    /* timeline */
     .item-decorated {
         list-style-type: disc;
         color: #0084ff;
@@ -174,33 +222,7 @@
     .left-border h3 {
         padding-bottom: 1rem;
     }
-    /* .wrapper-container {
-        background-color: white;
-    } */
-    .main-container {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 5%;
-    }
-    .container-one {
-        text-align: right;
-        width: 40vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        padding-top: 25vh;
-        gap: 3rem;
-    }
-    .container-two {
-        width: 30vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        padding-top: 25vh;
-        text-align: left;
-    }
-    
+
     /* text animation styling */
     span.typed-text {
         color: #0084ff;
@@ -215,29 +237,33 @@
     span.cursor.typing {
         animation: none;
     }
-
     @keyframes cursorBlink {
         49% { background-color: #fff; }
         50% { background-color: transparent; }
         99% { background-color: transparent; }
     }
+
+    /* media queries============================================================================= */
+
     @media only screen and (max-width: 736px) {
         .main-container {
             padding: 9rem 3rem;
             align-items: center;
             justify-content: flex-start;
             flex-direction: column;
+            gap: 4rem;
             height: 100%;
         }
         .container-one {
             text-align: left;
             width: 70vw;
             padding-top: 100px;
+            height: 100%;
         }
         .container-two {
             width: 70vw;
-            padding-top: 100px;
-
+            padding-top: 75px;
+            height: 100%;
         }
     }
 </style>

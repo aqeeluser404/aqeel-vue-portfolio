@@ -1,56 +1,61 @@
 <template>
-        <div class="main-container">
-            
-            <div class="text-container line-height-low">
-                <h1 class="font-l color-white family-koulen">Projects</h1>
-            
-                <h1 class="typing-text-animation font-m color-blue family-lekton weight-bold">
-                    <span class="typed-text">{{ typeValue }}</span>
-                    <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
-                </h1>
-            </div>
-
-            <div class="card-row">
-                <div class="card">
-                    <img src="../assets/projects/first-portfolio.png" class="card-img" alt="#">
-                    <div class="card-body">
-                        <h1 class="card-title">First Portfolio</h1>
-                        <p class="card-sub-title">HTML CSS and JavaScript</p>
-                        <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
-                        
-                        <button class="card-btn">Source Code</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../assets/projects/animeapp.png" class="card-img" alt="#">
-                    <div class="card-body">
-                        <h1 class="card-title">Anime Web App</h1>
-                        <p class="card-sub-title">Java Springboot and Vue.js</p>
-                        <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
-                        <button class="card-btn">Source Code</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../assets/projects/bankapp2.png" class="card-img" alt="#">
-                    <div class="card-body">
-                        <h1 class="card-title">Project 1</h1>
-                        <p class="card-sub-title">Sub heading</p>
-                        <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
-                        <button class="card-btn">Source Code</button>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="page-number">
-                <h1 class="font-xs color-blue family-lekton">04</h1>
-            </div>
-            <video autoplay muted loop id="video-background">
-                <source src="@/assets/wallpaper/video-wallpaper.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    <!-- main container -->
+    <div class="main-container">
+        
+        <!-- row 1============================================================================== -->
+        <div class="text-container line-height-low">
+            <h1 class="font-l color-white family-koulen">Projects</h1>
+            <!-- text animation -->
+            <h1 class="typing-text-animation font-m color-blue family-lekton weight-bold">
+                <span class="typed-text">{{ typeValue }}</span>
+                <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
+            </h1>
         </div>
+
+        <!-- row 2============================================================================== -->
+        <div class="card-row">
+            <div class="card">
+                <img src="../assets/projects/first-portfolio.png" class="card-img" alt="#">
+                <div class="card-body">
+                    <h1 class="card-title">First Portfolio</h1>
+                    <p class="card-sub-title">HTML CSS and JavaScript</p>
+                    <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
+                    
+                    <button class="card-btn">Source Code</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/projects/animeapp.png" class="card-img" alt="#">
+                <div class="card-body">
+                    <h1 class="card-title">Anime Web App</h1>
+                    <p class="card-sub-title">Java Springboot and Vue.js</p>
+                    <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
+                    <button class="card-btn">Source Code</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/projects/bankapp2.png" class="card-img" alt="#">
+                <div class="card-body">
+                    <h1 class="card-title">Project 1</h1>
+                    <p class="card-sub-title">Sub heading</p>
+                    <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
+                    <button class="card-btn">Source Code</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- components -->
+        <!-- number -->
+        <div class="page-number">
+            <h1 class="font-xs color-blue family-lekton">04</h1>
+        </div>
+
+        <!-- video wallpaper -->
+        <video autoplay muted loop id="video-background">
+            <source src="@/assets/wallpaper/video-wallpaper.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 </template>
 
 <script>
@@ -107,12 +112,8 @@
 </script>
 
 <style scoped>
-    .main-container {
-        align-items: center;
-        justify-content: center;
-        gap: 5%;
-        position: relative;
-    }
+    /* components================================================================================ */
+
     #video-background {
         position: absolute;
         top: 0;
@@ -122,10 +123,28 @@
         object-fit: cover;
         z-index: -1;
     }
+
+    /* containers================================================================================ */
+
+    .main-container {
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        gap: 5%;
+        /* padding-top: 25vh; */
+
+    }
     .text-container {
+        text-align: center;
         display: flex;
         flex-direction: column;
     }
+    .card-row {
+        display: flex;
+        gap: 1rem;
+    }
+
+    /* content=================================================================================== */
 
     /* text animation styling */
     span.typed-text {
@@ -140,10 +159,6 @@
     }
     span.cursor.typing {
         animation: none;
-    }
-    .card-row {
-        display: flex;
-        gap: 1rem;
     }
     .card {
         width: 320px;
@@ -201,21 +216,35 @@
         background: none;
         padding: 10px 20px;
         width: 120px;
-        /* border-radius: 5px; */
         text-transform: capitalize;
         border: 1px solid #5E9FFF;
         outline: none;
         font-weight: 500;
         cursor: pointer;
     }
+
+    /* media queries============================================================================= */
+
     @media only screen and (max-width: 984px) {
         .main-container {
-            height: 100%;
             padding: 9rem 3rem;
-            gap: 4rem;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 2rem;
+            height: 100%;
+        }
+        .text-container {
+            text-align: center;
+            width: 70vw;
+            padding-top: 100px;
+            height: 100%;
         }
         .card-row {
             flex-direction: column;
+            width: 70vw;
+            padding-top: 75px;
+            height: 100%;
         }
     }
 </style>
