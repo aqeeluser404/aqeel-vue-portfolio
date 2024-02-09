@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <WallpaperComponent /> -->
+    <WallpaperComponent />
     <router-view />
     <NavBar />
     <DarkMode />
@@ -12,14 +12,14 @@
 // component imports
 import NavBar from './components/navigation/NavBar.vue'
 import DarkMode from './components/components/DarkMode.vue'
-// import WallpaperComponent from './components/components/WallpaperComponent.vue';
+import WallpaperComponent from './components/components/WallpaperComponent.vue';
 
   export default {
     name: 'App',
     components: {
       NavBar,
       DarkMode,
-      // WallpaperComponent
+      WallpaperComponent
     }
   }
 </script>

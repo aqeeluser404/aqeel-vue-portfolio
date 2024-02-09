@@ -80,6 +80,15 @@ export default {
         padding-right: 8%;
         position: relative;
     }
+    #video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
     .text-container {
         display: flex;
         flex-direction: column;
@@ -108,16 +117,6 @@ export default {
     }
     .unique {
         width: 2.7rem;
-    }
-    #video-background {
-        /* Set video styles */
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1; /* Place the video behind other content */
     }
     @media only screen and (max-width: 1441px) and (max-width: 1500px) {
         .links-container {

@@ -1,5 +1,4 @@
 <template>
-    <div class="wrapper-container">
         <div class="main-container">
             
             <div class="text-container line-height-low">
@@ -47,8 +46,11 @@
             <div class="page-number">
                 <h1 class="font-xs color-blue family-lekton">04</h1>
             </div>
+            <video autoplay muted loop id="video-background">
+                <source src="@/assets/wallpaper/video-wallpaper.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-    </div>
 </template>
 
 <script>
@@ -105,13 +107,20 @@
 </script>
 
 <style scoped>
-    .wrapper-container {
-        background-color: rgba(0, 0, 0, 0);
-    }
     .main-container {
         align-items: center;
         justify-content: center;
         gap: 5%;
+        position: relative;
+    }
+    #video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
     }
     .text-container {
         display: flex;
@@ -139,7 +148,6 @@
     .card {
         width: 320px;
         height: 400px;
-        /* border-radius: 20px; */
         overflow: hidden;
         border: 4px solid #ffffff2d;
         position: relative;
@@ -159,7 +167,6 @@
         position: absolute;
         background: #000000b9;
         backdrop-filter: blur(5px);
-        /* border-radius: 15px; */
         color: #fff;
         padding: 30px;
         text-align: left;
@@ -200,5 +207,15 @@
         outline: none;
         font-weight: 500;
         cursor: pointer;
+    }
+    @media only screen and (max-width: 984px) {
+        .main-container {
+            height: 100%;
+            padding: 9rem 3rem;
+            gap: 4rem;
+        }
+        .card-row {
+            flex-direction: column;
+        }
     }
 </style>

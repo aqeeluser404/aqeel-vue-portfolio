@@ -65,10 +65,10 @@
 
 <style scoped>
     .logo-container {
-        position: absolute;
+        position: fixed;
         top: 1rem;
         left: 1rem;
-        z-index: 999;
+        z-index: 1;
     }
     /* make nav bar responsive and hidden when button pressed */
     .hidden {
@@ -80,7 +80,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 1000;
+        z-index: 1;
     }
     .header-divider {
         display: flex;
@@ -117,6 +117,9 @@
         width: 4.2rem;
         filter: brightness(2) invert(1);
     }
+    .logo:hover {
+        color: #0084ff;
+    }
     .nav-title {
         text-align: left;
         padding: 0.5rem;
@@ -137,17 +140,13 @@
     .fidget-container {
         height: 3rem;
     }
-    @media only screen and (max-width: 900px) {
-        .nav-header {
-            justify-content: center;
-            align-items: center;
-        }
-    }
-    @media only screen and (max-width: 899px) {
+    @media only screen and (max-width: 611px) {
         #navbar {
             width: 100vw;
         }
+        .nav-header {
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
     }
-    
-
 </style>

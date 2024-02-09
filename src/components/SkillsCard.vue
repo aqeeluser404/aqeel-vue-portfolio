@@ -1,9 +1,8 @@
 <template>
-    <div class="wrapper-container">
         <div class="main-container">
             <div class="text-container line-height-low">
                 <h1 class="font-l color-white family-koulen">Skills</h1>
-                <h1 class="font-m color-blue family-lekton">Sample Text</h1>
+                <h1 class="font-s color-white family-plus-code">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo fugit animi provident cumque totam recusandae error quaerat atque corporis, porro perferendis incidunt.</h1>
             </div>
             <br>
             
@@ -68,8 +67,12 @@
             <div class="page-number">
                 <h1 class="font-xs color-blue family-lekton">03</h1>
             </div>
+            <video autoplay muted loop id="video-background">
+                <source src="@/assets/wallpaper/video-wallpaper.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-    </div>
+
 </template>
 
 <script>
@@ -79,12 +82,23 @@ export default {
 </script>
 
 <style scoped>
-    .wrapper-container {
-        background-color: rgba(0, 0, 0, 0);
-    }
     .main-container {
         align-items: center;
         justify-content: center;
+        position: relative;
+        gap: 5%;
+    }
+    .text-container {
+        width: 70vw;
+    }
+    #video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
     }
     .skill-container {
         width: 100%;
@@ -143,6 +157,29 @@ export default {
         }
         to{
             width: 100%;
+        }
+    }
+    @media only screen and (max-width: 611px) {
+        .main-container {
+            /* padding: 9rem 3rem;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 4rem;
+            height: 100%; */
+            flex-direction: column;
+            gap: 2rem;
+            padding: 9rem 3rem;
+            height: 100%;
+            
+        }
+        .skill-container {
+            width: 70vw;
+        }
+        .text-container {
+            width: 70vw;
+           
+            line-height: 1.4;
+            text-align: left;
         }
     }
 </style>

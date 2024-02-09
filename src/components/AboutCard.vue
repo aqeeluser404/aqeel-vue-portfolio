@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper-container">
+    <!-- <div class="wrapper-container"> -->
         <div class="main-container">
             <div class="container-one line-height-low">
                 <div>
@@ -15,7 +15,7 @@
                     <button class="button">Download CV</button>
                 </div>
             </div>
-            <div class="container-two">
+            <div class="container-two  line-height-low">
                 <h1 class="font-l color-blue family-koulen">Education</h1>
                 <!-- TODO:TIMELINE -->
                 <div class="timeline-container">
@@ -82,7 +82,7 @@
                 <h1 class="font-xs color-blue family-lekton">02</h1>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 </template>
 
 <script>
@@ -149,7 +149,8 @@
     .item-decorated h3 {
         color: #0084ff;
         font-family: 'Inter', sans-serif;
-        font-size: 1.5rem
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
     }
     .item-none {
         list-style-type: none;
@@ -167,11 +168,15 @@
     }
     .left-border {
         padding-left: 1rem;
-        border-left: 1px #0084ff solid;
+        border-left: 2px #0084ff solid;
+
     }
-    .wrapper-container {
+    .left-border h3 {
+        padding-bottom: 1rem;
+    }
+    /* .wrapper-container {
         background-color: white;
-    }
+    } */
     .main-container {
         flex-direction: row;
         align-items: center;
@@ -181,14 +186,18 @@
     .container-one {
         text-align: right;
         width: 40vw;
+        height: 100vh;
         display: flex;
         flex-direction: column;
+        padding-top: 25vh;
         gap: 3rem;
     }
     .container-two {
         width: 30vw;
+        height: 100vh;
         display: flex;
         flex-direction: column;
+        padding-top: 25vh;
         text-align: left;
     }
     
@@ -211,5 +220,24 @@
         49% { background-color: #fff; }
         50% { background-color: transparent; }
         99% { background-color: transparent; }
+    }
+    @media only screen and (max-width: 736px) {
+        .main-container {
+            padding: 9rem 3rem;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            height: 100%;
+        }
+        .container-one {
+            text-align: left;
+            width: 70vw;
+            padding-top: 100px;
+        }
+        .container-two {
+            width: 70vw;
+            padding-top: 100px;
+
+        }
     }
 </style>
