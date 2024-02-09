@@ -127,6 +127,8 @@
     /* containers================================================================================ */
 
     .main-container {
+        padding-top: 9rem;
+        padding-left: 6.5rem;
         align-items: center;
         justify-content: center;
         position: relative;
@@ -242,6 +244,8 @@
         }
         .card-row {
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             width: 70vw;
             padding-top: 75px;
             height: 100%;

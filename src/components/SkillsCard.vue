@@ -98,9 +98,11 @@ export default {
     /* components================================================================================ */
     
     #video-background {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
+        bottom: 0;
+        right: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -110,6 +112,7 @@ export default {
     /* containers================================================================================ */
 
     .main-container {
+        padding: 9rem 3rem;
         align-items: center;
         justify-content: center;
         position: relative;
@@ -128,7 +131,7 @@ export default {
         gap: 3rem;
 
         /* scrolling */
-        height: auto;
+        /* height: auto; */
     }
     .skill-container {
         width: 40vw;
@@ -138,7 +141,7 @@ export default {
         text-align: left;
 
         /* scrolling */
-        height: 100%;
+        /* height: 100vh; */
     }
 
     /* content=================================================================================== */
@@ -203,9 +206,6 @@ export default {
             padding: 9rem 3rem;
             align-items: center;
             justify-content: flex-start;
-            flex-direction: column;
-            gap: 2rem;
-            height: 100%;
         }
         .text-container {
             text-align: right;
@@ -217,6 +217,9 @@ export default {
             width: 70vw;
             padding-top: 75px;
             height: 100%;
+        }
+        #video-background {
+            position: absolute;
         }
     }
 </style>

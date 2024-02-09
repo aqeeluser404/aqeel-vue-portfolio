@@ -1,6 +1,6 @@
 <template>
   <div>
-    <WallpaperComponent />
+    <MouseCursor />
     <router-view />
     <NavBar />
     <DarkMode />
@@ -10,16 +10,16 @@
 <script>
 
 // component imports
-import NavBar from './components/navigation/NavBar.vue'
-import DarkMode from './components/components/DarkMode.vue'
-import WallpaperComponent from './components/components/WallpaperComponent.vue';
+import NavBar from './components/utilities/NavBar.vue'
+import DarkMode from './components/utilities/DarkMode.vue'
+import MouseCursor from './components/utilities/MouseCursor.vue';
 
   export default {
     name: 'App',
     components: {
       NavBar,
       DarkMode,
-      WallpaperComponent
+      MouseCursor
     }
   }
 </script>

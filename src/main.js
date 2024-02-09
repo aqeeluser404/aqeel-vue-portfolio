@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './routers'
-import NavBar from './components/navigation/NavBar.vue'
+import NavBar from './components/utilities/NavBar.vue'
 import './assets/styles/Styles.css'
 import './assets/styles/MediaQueries.css'
 
