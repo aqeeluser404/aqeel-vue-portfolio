@@ -1,4 +1,4 @@
-// deprecated version of firebase - update to version 10
+// deprecated version of firebase - update to version 10 at a later date
 
 import firebase from 'firebase/app'
 import 'firebase/firestore'
@@ -17,3 +17,4 @@ firebase.initializeApp(firebaseConfig)
 const projectFirestore = firebase.firestore()
 
 export { projectFirestore }
+

@@ -47,35 +47,80 @@
 </template>
 
 <script>
-import { projectFirestore } from '../firebase/config'
-    export default {
-        name : 'ContactCard',
-        data() {
-            return {
-                name : '',
-                email : '',
-                message : '',
-                submitMessage : '',
-            }
+// import { projectFirestore } from '../firebase/config'
+//     export default {
+//         name : 'ContactCard',
+//         data() {
+//             return {
+//                 name : '',
+//                 email : '',
+//                 message : '',
+//                 submitMessage : '',
+//             }
 
-        },
-        methods: {
-            handleSubmit() {
-                let userMessage = {
-                    name: this.name,
-                    email: this.email,
-                    message: this.message
-                }
-                projectFirestore.collection('userMessages').add(userMessage)
+//         },
+//         methods: {
+//             handleSubmit() {
+//                 let userMessage = {
+//                     name: this.name,
+//                     email: this.email,
+//                     message: this.message
+//                 }
+//                 projectFirestore.collection('userMessages').add(userMessage)
 
-                this.name = '';
-                this.email = '';
-                this.message = '';
-                this.submitMessage = 'Message sent';
-            }
-        }
+//                 this.name = '';
+//                 this.email = '';
+//                 this.message = '';
+//                 this.submitMessage = 'Message sent';
+//             }
+//         }
 
-    }
+//     }
+import { projectFirestore } from '../firebase/config';
+
+export default {
+  name: 'ContactCard',
+  data() {
+    return {
+      name: '',
+      email: '',
+      message: '',
+      submitMessage: '',
+    };
+  },
+  methods: {
+    async handleSubmit() {
+      try {
+        let userMessage = {
+          name: this.name,
+          email: this.email,
+          message: this.message,
+        };
+
+        // Save form data to Firestore collection
+        await projectFirestore.collection('userMessages').add(userMessage);
+
+        // Trigger email using the Trigger Email extension
+        await projectFirestore.collection('mail').add({
+          to: 'aqeelhanslo@gmail.com',
+          message: {
+            subject: 'New Form Submission',
+            html: `<p>Name: ${this.name}</p><p>Email: ${this.email}</p><p>Message: ${this.message}</p>`,
+          },
+        });
+
+        // Reset form fields
+        this.name = '';
+        this.email = '';
+        this.message = '';
+        this.submitMessage = 'Message sent successfully';
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        this.submitMessage = 'Error submitting form. Please try again.';
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>
