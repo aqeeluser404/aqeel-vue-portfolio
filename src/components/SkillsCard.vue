@@ -15,7 +15,6 @@
             </p>
         </div>
         <br>
-        
         <!-- row 2============================================================================== -->
         <div class="skill-container">
             <div class="skill">
@@ -122,7 +121,6 @@ export default {
         /* scrolling */
         height: 100%;
     }
-
     .text-container {
         text-align: right;
         width: 40vw;
@@ -156,7 +154,7 @@ export default {
     }
     .skill-bar{
         height: 18px;
-        background: #badeff;
+        background: #44444480;
         border-radius: 3px;
     }
     .skill-per{

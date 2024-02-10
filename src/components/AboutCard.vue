@@ -169,12 +169,11 @@
     }
     .container-one {
         text-align: right;
-        width: 40vw;
+        width: 35vw;
         height: 100vh;
         display: flex;
         flex-direction: column;
         padding-top: 25vh;
-
         gap: 3rem;
     }
     .container-two {
