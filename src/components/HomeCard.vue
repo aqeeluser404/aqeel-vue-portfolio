@@ -6,7 +6,10 @@
         <div class="text-container">
             <h1 class="headline-xsmall">Hi there,</h1>
             <h1 class="headline-large">I'm Aqeel Hanslo</h1>
-            <h1 class="headline-medium">  &lt;Software Developer/&gt; </h1>
+            <div class="circular-animation">
+                <h1 class="headline-medium">  &lt;Software Developer/&gt; </h1>
+            </div>
+
             <p class="headline-small">
                 <span class="opacity-full"><br> The design of an application or website usually </span>
                 <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
@@ -144,27 +147,35 @@ export default {
     }
     @media only screen and (max-width: 611px) {
         .headline-xsmall {
-            font-size: 2rem;
+            font-size: 1.5rem;
+        }
+        .headline-small {
+            font-size: 1.3rem;
+            line-height: 1.2;
         }
         .main-container {
-            padding: 9rem 3rem;
+            padding: 12rem 3rem;
             align-items: center;
-            justify-content: flex-start;
-            gap: 4rem;
-            height: 100vh;
+            justify-content: space-between;
+            gap: 6.5rem;
+            height: 100%;
+        }
+        .headline-large {
+            padding-bottom: 2rem;
         }
         .text-container {
-            width: 100%;
+            width: 70vw;
             line-height: 1.4;
-            /* gap: 2rem; */
-            text-align: center;
+            gap: 1rem;
+            text-align: right;
         }
         .text-container p {
             text-align: center;
         }
         .links-container {
             flex-direction: column;
-            gap: 3rem;
+            justify-content: space-between;
+            gap: 7rem;
             width: 100%;
         }
         .social-icon {
@@ -172,7 +183,7 @@ export default {
         }
         .social-links {
             justify-content: center;
-            gap: 2rem;
+            gap: 5rem;
         }
         .styled-button {
             justify-content: center;

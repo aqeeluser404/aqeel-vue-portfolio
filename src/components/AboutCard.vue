@@ -8,6 +8,7 @@
                 <div>
                     <!-- heading -->
                     <h1 class="headline-large-black">About Me</h1>
+                    <br>
                     <!-- animation text -->
                     <h1 class="typing-text-animation headline-medium weight-bold">
                         <span class="typed-text">{{ typeValue }}</span>
@@ -161,9 +162,9 @@
     .row-1 {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
-        height: 100%;
-        width: 100vw;
+        justify-content: center;
+        min-height: 100vh;
+        width: 100%;
         gap: 5rem;
         padding-bottom: 15vh;
     }
@@ -178,7 +179,10 @@
     }
     .container-two {
         text-align: left;
-        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 35%;
         height: 100%;
         padding-top: 25vh;
         gap: 2rem;
@@ -201,20 +205,24 @@
         position: relative;
         width: 500px;
         height: 500px;
-        border: 3px #0084ff solid;
+        border: 5px #0084ff solid;
         padding: 2rem;
     }
     .image-1 {
         width: 450px;
         height: 450px;
-        border: 1px #1e1f22 solid;
+        border: 9px #ffffff solid;
+        /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); */
     }
     .image-2 {
         position: absolute;
         top: 50px;
         left: 50px;
         width: 480px;
+        border: 9px #ffffff solid;
         z-index: -1;
+        filter: grayscale(100%);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     }
 
     /* timeline styling */
@@ -282,26 +290,21 @@
     /* media queries============================================================================= */
 
     @media only screen and (max-width: 1415px) {
-        .container-two {
-            width: 100%;
-            padding-top: 50px;
-            height: 100%;
-        }
-        .row-1 {
-            flex-direction: column;
-        }
+
+
         .image-container {
-            width: 350px;
-            height: 350px;
+            width: 280px;
+            height: 280px;
         }
         .image-1 {
-            width: 250px;
-            height: 250px;
+            width: 220px;
+            height: 220px;
         }
         .image-2 {
             top: 50px;
             left: 50px;
-            width: 280px;
+            width: 240px;
+            height: 240px;
         }
     }
 
@@ -310,22 +313,24 @@
             align-items: center;
             justify-content: flex-start;
             flex-direction: column;
-            gap: 4rem;
-            height: 100%;
         }
         .row-1 {
             padding: 9rem 3rem;
-            flex-direction: column;
-            
-        }
-        .row-2 {
-            padding: 9rem 0rem;
+            flex-direction: column; 
         }
         .container-one {
             text-align: left;
             width: 70vw;
             padding-top: 100px;
             height: 100%;
+        }
+        .container-two {
+            width: 70vw;
+            padding-top: 50px;
+            height: 100%;
+        }
+        .row-2 {
+            padding: 9rem 3rem;
         }
     }
 

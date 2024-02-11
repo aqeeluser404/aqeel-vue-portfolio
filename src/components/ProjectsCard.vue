@@ -3,8 +3,9 @@
     <div class="main-container">
         
         <!-- row 1============================================================================== -->
-        <div class="text-container line-height-low">
+        <div class="text-container">
             <h1 class="headline-large">Projects</h1>
+            <br>
             <!-- text animation -->
             <h1 class="typing-text-animation headline-medium weight-bold">
                 <span class="typed-text">{{ typeValue }}</span>
@@ -65,7 +66,7 @@
             return {
                 typeValue: '',
                 typeStatus: false,
-                typeArray: ['Back-end.', 'Front-end.'],
+                typeArray: ['Willing to implement new ideas.', 'Learning new things.'],
                 typingSpeed: 200,
                 erasingSpeed: 100,
                 newTextDelay: 500,

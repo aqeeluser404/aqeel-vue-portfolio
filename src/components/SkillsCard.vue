@@ -9,7 +9,7 @@
                 <span class="opacity-full"><br> The design of an application or website usually </span>
                 <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
                 <span class="opacity-quarter"><br> what to do and I'll try to visualize your ideas</span>
-                <br><br><br>
+                <br><br><br><br>
                 <!-- view projects -->
                 <button class="button">View My work</button>
             </p>
@@ -127,7 +127,7 @@ export default {
         width: 40vw;
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 2rem;
 
         /* scrolling */
         /* height: auto; */
@@ -214,7 +214,7 @@ export default {
         }
         .skill-container {
             width: 70vw;
-            padding-top: 75px;
+            padding-top: 50px;
             height: 100%;
         }
         #video-background {

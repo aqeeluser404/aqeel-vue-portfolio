@@ -31,6 +31,11 @@
     font-family: 'M PLUS 1 Code', monospace;
     padding-left: 0.6rem;
     padding-right: 0.6rem;
+    transition: 0.7s ease;
+}
+.button:hover {
+    background: #5E9FFF;
+    color: #000000;
 }
 .middle {
     min-width: 120px;
