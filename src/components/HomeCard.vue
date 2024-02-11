@@ -143,12 +143,15 @@ export default {
         }
     }
     @media only screen and (max-width: 611px) {
+        .headline-xsmall {
+            font-size: 2rem;
+        }
         .main-container {
             padding: 9rem 3rem;
             align-items: center;
             justify-content: flex-start;
             gap: 4rem;
-            height: 100%;
+            height: 100vh;
         }
         .text-container {
             width: 100%;

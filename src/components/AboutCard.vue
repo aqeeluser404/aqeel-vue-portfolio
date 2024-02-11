@@ -26,9 +26,10 @@
             </div>
             <!-- column 2============================================================================== -->
             <div class="container-two  line-height-low">
-                <picture>
-                    <img :src="gifPath" alt="Your Alt Text">                
-                </picture>
+                <div class="image-container">
+                    <img :src="gifPath" alt="#" class="image-1">
+                    <img :src="gifPath" alt="#" class="image-2">               
+                </div>
             </div>
 
         </div>
@@ -103,7 +104,7 @@
                 newTextDelay: 500,
                 typeArrayIndex: 0,
                 charIndex: 0,
-                gifPath: require('@/assets/wallpaper/compiling-code.gif'), 
+                gifPath: require('@/assets/aqeel/me.png'), 
 
             }
         },
@@ -152,7 +153,6 @@
     /* containers================================================================================ */
 
     .main-container {
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 100%;
@@ -161,14 +161,16 @@
     .row-1 {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
         height: 100%;
-        gap: 7rem;
+        width: 100vw;
+        gap: 5rem;
+        padding-bottom: 15vh;
     }
     .container-one {
         text-align: right;
-        width: 35vw;
-        height: 100vh;
+        width: 40%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         padding-top: 25vh;
@@ -176,8 +178,8 @@
     }
     .container-two {
         text-align: left;
-        width: 30vw;
-        height: 100vh;
+        width: 40%;
+        height: 100%;
         padding-top: 25vh;
         gap: 2rem;
     }
@@ -194,6 +196,26 @@
     }
 
     /* content=================================================================================== */
+
+    .image-container {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border: 3px #0084ff solid;
+        padding: 2rem;
+    }
+    .image-1 {
+        width: 450px;
+        height: 450px;
+        border: 1px #1e1f22 solid;
+    }
+    .image-2 {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 480px;
+        z-index: -1;
+    }
 
     /* timeline styling */
     .timeline {
@@ -259,6 +281,30 @@
 
     /* media queries============================================================================= */
 
+    @media only screen and (max-width: 1415px) {
+        .container-two {
+            width: 100%;
+            padding-top: 50px;
+            height: 100%;
+        }
+        .row-1 {
+            flex-direction: column;
+        }
+        .image-container {
+            width: 350px;
+            height: 350px;
+        }
+        .image-1 {
+            width: 250px;
+            height: 250px;
+        }
+        .image-2 {
+            top: 50px;
+            left: 50px;
+            width: 280px;
+        }
+    }
+
     @media only screen and (max-width: 736px) {
         .main-container {
             align-items: center;
@@ -281,12 +327,6 @@
             padding-top: 100px;
             height: 100%;
         }
-        .container-two {
-            width: 70vw;
-            padding-top: 75px;
-            height: 100%;
-            display: none;
-        }
     }
 
     /* timeline */
@@ -300,6 +340,9 @@
             width: 2px;
             height: 100%;
             background-color: gray;
+        }
+        .timeline ul {
+            gap: 1rem;
         }
         .timeline ul li {
             width: 50%;
