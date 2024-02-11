@@ -1,20 +1,81 @@
 
 @media only screen and (max-width: 1441px) and (max-width: 1500px) {
 
-    /* fonts */
-    .font-xxs {
+    /* xsmall fonts */
+    .headline-xsmall {
         font-size: 0.5rem;
+        color: #5E9FFF;
+        font-family: 'Lekton', sans-serif;
+        font-weight: 400;
+        line-height: 1;
     }
-    .font-xs {
+    .headline-xsmall-2 {
         font-size: 1rem;
+        color: #5E9FFF;
+        font-family: 'Koulen', sans-serif;
+        font-weight: 400;
+        line-height: 1;
     }
-    .font-s {
+
+    /* small fonts */
+    .headline-small {
         font-size: 1.5rem;
+        color: #ffffff;
+        font-family: 'M PLUS 1 Code', monospace;
+        font-weight: 400;
+        line-height: 1;
     }
-    .font-m {
+    .headline-small-2 {
+        font-size: 1.5rem;
+        color: #ffffff;
+        font-family: 'Koulen', sans-serif;
+        font-weight: 400;
+        line-height: 1;
+    }
+    .headline-small-black {
+        font-size: 1.5rem;
+        color: #0E0E0E;
+        font-family: 'M PLUS 1 Code', monospace;
+        font-weight: 400;
+        line-height: 1;
+    }
+    .headline-small-blue {
+        font-size: 1.5rem;
+        color: #2b80ff;
+        font-family: 'Lekton', sans-serif;
+        font-weight: 400;
+        line-height: 1;
+    }
+
+    /* medium fonts */
+    .headline-medium {
         font-size: 1.75rem;
+        color: #5E9FFF;
+        font-family: 'Lekton', sans-serif;
+        font-weight: 400;
+        line-height: 1;
     }
-    .font-l {
+
+    /* large fonts */
+    .headline-large {
         font-size: 5.25rem;
+        color: #ffffff;
+        font-family: 'Koulen', sans-serif;
+        font-weight: 400;
+        line-height: 1;
+    }
+    .headline-large-black {
+        font-size: 5.25rem;
+        color: #0E0E0E;
+        font-family: 'Koulen', sans-serif;
+        font-weight: 400;
+        line-height: 1;
+    }
+    .headline-large-blue {
+        font-size: 5.25rem;
+        color: #5E9FFF;
+        font-family: 'Koulen', sans-serif;
+        font-weight: 400;
+        line-height: 1;
     }
 }

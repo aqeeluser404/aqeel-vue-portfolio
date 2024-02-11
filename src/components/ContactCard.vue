@@ -1,21 +1,27 @@
 <template>
-    <div class="wrapper-container">
-        <div class="main-container">
-            <div class="container-one line-height-low">
-                <div>
-                    <h1 class="font-l color-black family-koulen">Contact</h1>
-                    <br>
-                    <h1 class="font-s color-blue-darker weight-bold family-lekton">Let's Talk</h1>
-                    <br>
-                    <p class="font-s color-black family-plus-code line-height-med">
-                        <span><b>Questions</b> or <b>ideas?</b></span><br>
-                        <span>Drop me a message in the form</span><br><br>
-                        <span>Let's talk about your next project!</span>
-                    </p>
-                </div>
+    <!-- main container -->
+    <div class="main-container">
+
+        <!-- column 1============================================================================== -->
+        <div class="container-one line-height-low">
+            <div>
+                <h1 class="headline-large-black">Contact</h1>
+                <br>
+                <h1 class="headline-small-blue weight-bold">Let's Talk</h1>
+                <br>
+                <p class="headline-small-black line-height-med">
+                    <span><b>Questions</b> or <b>ideas?</b></span><br>
+                    <span>Drop me a message in the form</span><br><br>
+                    <span>Let's talk about your next project!</span>
+                </p>
             </div>
-            <div class="container-two">
-                <div class="contact-form">
+        </div>
+
+        <!-- column 2============================================================================== -->
+        <div class="container-two">
+            
+            <!-- form -->
+            <div class="contact-form">
                 <form @submit.prevent="handleSubmit">
                     <div class="form-group">
                         <label for="name">NAME</label>
@@ -30,10 +36,12 @@
                         <textarea id="message" name="message" required v-model="message"></textarea>
                     </div>
                     <div class="form-group">
-                        <input id="submit" type="submit" value="Submit" class="btn">
+                        <input id="submit" type="submit" value="Submit" class="button">
                     </div>
                     <span id="msg">{{ submitMessage }}</span>
                 </form>
+
+                <!-- test code -->
                 <!-- <div>
                     <p>Result</p>
                     <p>name: {{ name }}</p>
@@ -41,7 +49,11 @@
                     <p>message: {{ message }}</p>
                 </div> -->
             </div>
-            </div>
+        </div>
+        <!-- components -->
+        <!-- number -->
+        <div class="page-number">
+            <h1 class="headline-xsmall">05</h1>
         </div>
     </div>
 </template>
@@ -124,9 +136,6 @@ export default {
 </script>
 
 <style scoped>
-    .wrapper-container {
-        background-color: rgb(255, 255, 255);
-    }
     .main-container {
         flex-direction: row;
         align-items: center;

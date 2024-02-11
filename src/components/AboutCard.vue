@@ -7,9 +7,9 @@
             <div class="container-one line-height-low">
                 <div>
                     <!-- heading -->
-                    <h1 class="font-l color-black family-koulen">About Me</h1>
+                    <h1 class="headline-large-black">About Me</h1>
                     <!-- animation text -->
-                    <h1 class="typing-text-animation font-m color-blue family-lekton weight-bold">
+                    <h1 class="typing-text-animation headline-medium weight-bold">
                         <span class="typed-text">{{ typeValue }}</span>
                         <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
                     </h1>
@@ -17,7 +17,7 @@
 
                 <div>
                     <!-- paragraph -->
-                    <p class="font-s color-black family-plus-code">My name is Aqeel Hanslo, third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. I possess the ability to think outside the box to create innovative solutions for problems.</p>
+                    <p class="headline-small-black">My name is Aqeel Hanslo, third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. I possess the ability to think outside the box to create innovative solutions for problems.</p>
                     <br><br>
                     <!-- download cv button -->
                     <button class="button">Download CV</button>
@@ -35,7 +35,7 @@
 
         <div class="row-2">
             <!-- heading -->
-            <h1 class="font-l color-blue family-koulen">Education</h1>
+            <h1 class="headline-large-blue">Education</h1>
 
             <div class="timeline">
                 <ul>
@@ -85,7 +85,7 @@
         <!-- components -->
         <!-- number -->
         <div class="page-number">
-            <h1 class="font-xs color-blue family-lekton">02</h1>
+            <h1 class="headline-xsmall">02</h1>
         </div>
     </div>
 </template>
@@ -146,6 +146,7 @@
 </script>
 
 <style scoped>
+
     /* components================================================================================ */
 
     /* containers================================================================================ */

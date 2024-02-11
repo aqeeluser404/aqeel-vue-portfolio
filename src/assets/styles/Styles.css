@@ -90,51 +90,104 @@
 
 /* ============================================================================font styling  */
 
-.font-xxs {
-    font-size: 1rem;
+/* nav fonts */
+.nav-item {
+    color: rgb(153, 153, 153);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .9rem;
+    font-family: 'Inter', sans-serif;
 }
-.font-xs {
+
+/* xsmall fonts */
+.headline-xsmall {
     font-size: 1.75rem;
-}
-.font-s {
-    font-size: 2rem;
-}
-.font-m {
-    font-size: 3rem;
-}
-.font-l {
-    font-size: 6rem;
-}
-.color-black {
-    color: #0E0E0E;
-}
-.color-white {
-    color: #ffffff;
-}
-.color-blue {
     color: #5E9FFF;
-}
-.color-blue-darker {
-    color: #2b80ff;
-}
-.family-plus-code {
-    font-family: 'M PLUS 1 Code', monospace;
-    font-weight: 400;
-}
-.family-koulen {
-    font-family: 'Koulen', sans-serif;
-    font-weight: 400;
-}
-.family-lekton {
     font-family: 'Lekton', sans-serif;
     font-weight: 400;
+    line-height: 1;
 }
+.headline-xsmall-2 {
+    font-size: 1rem;
+    color: #5E9FFF;
+    font-family: 'Koulen', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* small fonts */
+.headline-small {
+    font-size: 2rem;
+    color: #ffffff;
+    font-family: 'M PLUS 1 Code', monospace;
+    font-weight: 400;
+    line-height: 1;
+}
+.headline-small-2 {
+    font-size: 2rem;
+    color: #ffffff;
+    font-family: 'Koulen', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}
+.headline-small-black {
+    font-size: 2rem;
+    color: #0E0E0E;
+    font-family: 'M PLUS 1 Code', monospace;
+    font-weight: 400;
+    line-height: 1;
+}
+.headline-small-blue {
+    font-size: 2rem;
+    color: #2b80ff;
+    font-family: 'Lekton', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* medium fonts */
+.headline-medium {
+    font-size: 3rem;
+    color: #5E9FFF;
+    font-family: 'Lekton', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* large fonts */
+.headline-large {
+    font-size: 6rem;
+    color: #ffffff;
+    font-family: 'Koulen', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}
+.headline-large-black {
+    font-size: 6rem;
+    color: #0E0E0E;
+    font-family: 'Koulen', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}
+.headline-large-blue {
+    font-size: 6rem;
+    color: #5E9FFF;
+    font-family: 'Koulen', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* ============================================================================font styling  */
+
 .opacity-full { opacity: 100%; }
 .opacity-half { opacity: 50%; }
 .opacity-quarter { opacity: 25%; }
 
+/* ============================================================================font styling  */
+
 .line-height-low {line-height: 1;}
 .line-height-med {line-height: 1.5;}
-.weight-bold {
-    font-weight: 700;
-}
+
+/* ============================================================================font styling  */
+
+.weight-bold {font-weight: 700;}

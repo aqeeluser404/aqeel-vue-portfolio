@@ -17,8 +17,8 @@
                 <div class="header-divider"><hr/></div>
 
                 <div class="nav-title">
-                    <h1 class="font-s color-white family-koulen line-height-low">DEV</h1>
-                    <h1 class="font-xxs color-blue family-koulen line-height-low">INTERN</h1>
+                    <h1 class="headline-small-2 line-height-low">DEV</h1>
+                    <h1 class="headline-xsmall-2 line-height-low">INTERN</h1>
                 </div>
             </div>
   
@@ -72,7 +72,7 @@
     }
     /* make nav bar responsive and hidden when button pressed */
     .hidden {
-        transform: translateX(-100%);
+        transform: translateX(-110%);
         transition: all 1s;
     }
     .navbar-vertical-fixed {
@@ -126,13 +126,6 @@
     }
     hr {
         width: 4rem;
-    }
-    .nav-item {
-        color: rgb(153, 153, 153);
-        text-decoration: none;
-        font-weight: 600;
-        font-size: .9rem;
-        font-family: 'Inter', sans-serif;
     }
     .nav-item:hover {
         color: rgb(206, 206, 206);

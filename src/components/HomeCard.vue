@@ -4,10 +4,10 @@
 
         <!-- row 1============================================================================== -->
         <div class="text-container">
-            <h1 class="font-xs color-blue family-lekton line-height-low">Hi there,</h1>
-            <h1 class="font-l color-white family-koulen line-height-low">I'm Aqeel Hanslo</h1>
-            <h1 class="font-m color-blue family-lekton line-height-low">  &lt;Software Developer/&gt; </h1>
-            <p class="font-s color-white family-plus-code">
+            <h1 class="headline-xsmall">Hi there,</h1>
+            <h1 class="headline-large">I'm Aqeel Hanslo</h1>
+            <h1 class="headline-medium">  &lt;Software Developer/&gt; </h1>
+            <p class="headline-small">
                 <span class="opacity-full"><br> The design of an application or website usually </span>
                 <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
                 <span class="opacity-quarter"><br> what to do and I'll try to visualize your ideas</span>
@@ -54,7 +54,7 @@
         <!-- components -->
         <!-- number -->
         <div class="page-number">
-            <h1 class="font-xs color-blue family-lekton">01</h1>
+            <h1 class="headline-xsmall">01</h1>
         </div>
         <!-- video wallpaper -->
         <video autoplay muted loop id="video-background">
@@ -77,6 +77,7 @@ export default {
 </script>
 
 <style scoped>
+
     /* components================================================================================ */
     
     #video-background {
@@ -152,11 +153,19 @@ export default {
         .text-container {
             width: 100%;
             line-height: 1.4;
+            /* gap: 2rem; */
+            text-align: center;
+        }
+        .text-container p {
+            text-align: center;
         }
         .links-container {
-            flex-direction: column-reverse;
-            gap: 1rem;
+            flex-direction: column;
+            gap: 3rem;
             width: 100%;
+        }
+        .social-icon {
+            width: 2rem;
         }
         .social-links {
             justify-content: center;
@@ -164,6 +173,9 @@ export default {
         }
         .styled-button {
             justify-content: center;
+        }
+        .box-1, .box-2, .box-3, .box-4, .box-6, .box-7, .box-8, .box-9 {
+            display: none;
         }
     }
 </style>

@@ -4,9 +4,9 @@
         
         <!-- row 1============================================================================== -->
         <div class="text-container line-height-low">
-            <h1 class="font-l color-white family-koulen">Projects</h1>
+            <h1 class="headline-large">Projects</h1>
             <!-- text animation -->
-            <h1 class="typing-text-animation font-m color-blue family-lekton weight-bold">
+            <h1 class="typing-text-animation headline-medium weight-bold">
                 <span class="typed-text">{{ typeValue }}</span>
                 <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
             </h1>
@@ -47,7 +47,7 @@
         <!-- components -->
         <!-- number -->
         <div class="page-number">
-            <h1 class="font-xs color-blue family-lekton">04</h1>
+            <h1 class="headline-xsmall">04</h1>
         </div>
 
         <!-- video wallpaper -->
@@ -112,6 +112,7 @@
 </script>
 
 <style scoped>
+
     /* components================================================================================ */
 
     #video-background {

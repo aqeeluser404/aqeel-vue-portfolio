@@ -4,8 +4,8 @@
 
         <!-- row 1============================================================================== -->
         <div class="text-container line-height-low">
-            <h1 class="font-l color-white family-koulen">Skills</h1>
-            <p class="font-s color-white family-plus-code">
+            <h1 class="headline-large">Skills</h1>
+            <p class="headline-small">
                 <span class="opacity-full"><br> The design of an application or website usually </span>
                 <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
                 <span class="opacity-quarter"><br> what to do and I'll try to visualize your ideas</span>
@@ -77,7 +77,7 @@
         <!-- components -->
         <!-- number -->
         <div class="page-number">
-            <h1 class="font-xs color-blue family-lekton">03</h1>
+            <h1 class="headline-xsmall">03</h1>
         </div>
         <!-- video wallpaper -->
         <video autoplay muted loop id="video-background">
@@ -94,6 +94,7 @@ export default {
 </script>
 
 <style scoped>
+
     /* components================================================================================ */
     
     #video-background {
