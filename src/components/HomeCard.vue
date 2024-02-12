@@ -1,6 +1,6 @@
 <template>
     <!-- main container -->
-    <div class="main-container">
+    <div class="main-container" :style="{ marginLeft: navbarWidth }">
 
         <!-- row 1============================================================================== -->
         <div class="text-container">
@@ -170,7 +170,7 @@ export default {
             text-align: right;
         }
         .text-container p {
-            text-align: center;
+            text-align: right;
         }
         .links-container {
             flex-direction: column;

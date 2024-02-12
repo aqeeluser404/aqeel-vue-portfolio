@@ -10,8 +10,8 @@
                     <h1 class="headline-large-black">About Me</h1>
                     <br>
                     <!-- animation text -->
-                    <h1 class="typing-text-animation headline-medium weight-bold">
-                        <span class="typed-text">{{ typeValue }}</span>
+                    <h1 class="typing-text-animation headline-medium">
+                        <span class="typed-text weight-bold">{{ typeValue }}</span>
                         <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
                     </h1>
                 </div>
@@ -182,8 +182,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        /* justify-content: center; */
         width: 35%;
-        height: 100%;
+        height: auto;
         padding-top: 25vh;
         gap: 2rem;
     }
@@ -203,22 +204,24 @@
 
     .image-container {
         position: relative;
-        width: 500px;
-        height: 500px;
+        width: 100%; 
+        height: 100%;
+        max-width: 500px;
         border: 5px #0084ff solid;
         padding: 2rem;
     }
     .image-1 {
-        width: 450px;
-        height: 450px;
+        width: 100%;
+        height: 100%;
         border: 9px #ffffff solid;
         /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); */
     }
     .image-2 {
         position: absolute;
-        top: 50px;
-        left: 50px;
-        width: 480px;
+        top: 15%; 
+        left: 15%; 
+        width: 90%;
+        height: 90%;
         border: 9px #ffffff solid;
         z-index: -1;
         filter: grayscale(100%);
@@ -227,6 +230,7 @@
 
     /* timeline styling */
     .timeline {
+        font-family: 'Inter', sans-serif;
         width: 80%;
         height: auto;
         max-width: 800px;
@@ -244,16 +248,17 @@
         background-color: #1e1f22;
         color: white;
         border-radius: 10px;
-        padding-bottom: 20px;
     }
     .timeline ul li:last-child {
         margin-bottom: 0;
     }
     .timeline-content h1 {
-        font-weight: 500;
-        font-size: 1.6rem;
+        color: #5E9FFF;
+        font-weight: 600;
+        font-size: 1.2rem;
         line-height: 30px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
     }
     .timeline-content p {
         font-size: 16px;
@@ -263,7 +268,7 @@
     .timeline-content .date {
         font-size: 12px;
         font-weight: 300;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         letter-spacing: 2px;
     }
 
@@ -289,25 +294,38 @@
 
     /* media queries============================================================================= */
 
-    @media only screen and (max-width: 1415px) {
-
-
+    @media only screen and (max-width: 1600px) {
+        .container-two {
+            width: 32%;
+        }
         .image-container {
-            width: 280px;
-            height: 280px;
+            width: 100%;
+            height: auto; 
         }
         .image-1 {
-            width: 220px;
-            height: 220px;
+            width: 100%;
+            height: auto; 
         }
         .image-2 {
-            top: 50px;
-            left: 50px;
-            width: 240px;
-            height: 240px;
+            width: 90%; 
+            height: auto; 
         }
     }
 
+/* @media only screen and (max-width: 768px) {
+    .image-container {
+        width: 100%;
+        height: auto; 
+    }
+    .image-1 {
+        width: 100%;
+        height: auto; 
+    }
+    .image-2 {
+        width: 90%; 
+        height: auto; 
+    }
+} */
     @media only screen and (max-width: 736px) {
         .main-container {
             align-items: center;
@@ -346,13 +364,11 @@
             height: 100%;
             background-color: gray;
         }
-        .timeline ul {
-            gap: 1rem;
-        }
         .timeline ul li {
             width: 50%;
             position: relative;
             margin-bottom: 50px;
+            margin-top: 50px;
         }
         .timeline ul li:nth-child(odd) {
             float: left;
@@ -388,7 +404,7 @@
             top: -30px;
         }
         .timeline ul li:hover::before {
-            background-color: aqua;
+            background-color: #5E9FFF;
         }
     }
 </style>

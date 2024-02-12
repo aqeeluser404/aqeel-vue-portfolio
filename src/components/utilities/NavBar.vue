@@ -115,7 +115,9 @@
     }
     .logo {
         width: 4.2rem;
-        filter: brightness(2) invert(1);
+        filter: invert(40%) sepia(130%) saturate(1000%) hue-rotate(200deg);
+
+        /* filter: brightness(2) invert(1); */
     }
     .logo:hover {
         color: #0084ff;

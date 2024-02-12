@@ -7,8 +7,8 @@
             <h1 class="headline-large">Projects</h1>
             <br>
             <!-- text animation -->
-            <h1 class="typing-text-animation headline-medium weight-bold">
-                <span class="typed-text">{{ typeValue }}</span>
+            <h1 class="typing-text-animation headline-medium">
+                <span class="typed-text weight-bold">{{ typeValue }}</span>
                 <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
             </h1>
         </div>
