@@ -303,7 +303,7 @@ import { mapState } from 'vuex';
         font-size: 1.2rem;
         line-height: 30px;
         margin-bottom: 5px;
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
     }
     .timeline-content p {
         font-size: 16px;
@@ -315,6 +315,7 @@ import { mapState } from 'vuex';
         font-weight: 300;
         margin-bottom: 15px;
         letter-spacing: 2px;
+        line-height: 1.8;
     }
 
     /* text animation styling */
