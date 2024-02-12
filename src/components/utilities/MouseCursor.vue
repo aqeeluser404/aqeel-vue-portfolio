@@ -80,7 +80,7 @@ export default {
         position: fixed;
         height: var(--circle-size);
         width: var(--circle-size);
-        border: 1px solid white;
+        border: 2px solid #5E9FFF;
         border-radius: 100%;
         top: calc(var(--circle-size) / 2 * -1);
         left: calc(var(--circle-size) / 2 * -1);
