@@ -35,32 +35,29 @@
 </template>
   
 <script>
-    export default {
-        name: 'NavBar',
-        data() {
-            return {
-                isNavbarVisible: true,
-            };
-        },
-        methods: {
-            toggleNavbar() {
-                this.isNavbarVisible = !this.isNavbarVisible;
-            },
-            hideNavbarOnSmallScreens() {
-                if (window.innerWidth <= 900) {
-                    this.isNavbarVisible = false;
-                }
-            },
-        },
-        mounted() {
-            this.hideNavbarOnSmallScreens();
-            window.addEventListener('resize', this.hideNavbarOnSmallScreens);
-        },
-        beforeUnmount() {
-            // Removes the event listener when the component is destroyed
-            window.removeEventListener('resize', this.hideNavbarOnSmallScreens);
-        },
-    };
+import { mapState, mapMutations } from 'vuex';
+
+export default {
+  name: 'NavBar',
+  computed: {
+    ...mapState(['isNavbarVisible']),
+  },
+  methods: {
+    ...mapMutations(['toggleNavbar']),
+    hideNavbarOnSmallScreens() {
+      if (window.innerWidth <= 900 && this.isNavbarVisible) {
+        this.toggleNavbar();
+      }
+    },
+  },
+  mounted() {
+    this.hideNavbarOnSmallScreens();
+    window.addEventListener('resize', this.hideNavbarOnSmallScreens);
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.hideNavbarOnSmallScreens);
+  },
+};
 </script>
 
 <style scoped>
@@ -121,7 +118,7 @@
     .nav-item::after {
         content: "";
         position: absolute;
-        height: 2px;
+        height: 3px;
         width: 0;
         left: 0;
         margin-top: 20px;

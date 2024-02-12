@@ -1,6 +1,7 @@
 <template>
     <!-- main container -->
-    <div class="main-container">
+    <div class="main-container" :style="getAdjustedWidth">
+
 
         <div class="row-1">
             <!-- column 1============================================================================== -->
@@ -19,7 +20,7 @@
                 <div>
                     <!-- paragraph -->
                     <p class="headline-small-black">My name is Aqeel Hanslo, third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. I possess the ability to think outside the box to create innovative solutions for problems.</p>
-                    <br><br>
+                    <br><br><br>
                     <!-- download cv button -->
                     <button class="button">Download CV</button>
                 </div>
@@ -29,7 +30,8 @@
             <div class="container-two  line-height-low">
                 <div class="image-container">
                     <img :src="gifPath" alt="#" class="image-1">
-                    <img :src="gifPath" alt="#" class="image-2">               
+                    <img :src="gifPath" alt="#" class="image-2">  
+                    <img :src="gifPath" alt="#" class="image-3">              
                 </div>
             </div>
 
@@ -38,7 +40,7 @@
         <div class="row-2">
             <!-- heading -->
             <h1 class="headline-large-blue">Education</h1>
-
+            <br>
             <div class="timeline">
                 <ul>
                     <li>
@@ -93,8 +95,19 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
     export default {
         name : 'AboutCard',
+        computed: {
+            ...mapState(['isNavbarVisible']),
+            getAdjustedWidth() {
+                return {
+                    width: this.isNavbarVisible ? 'calc(100% - 6.5rem)' : '100%',
+                    position: 'relative',
+                    left: this.isNavbarVisible ? '6.5rem' : '0',                
+                };
+            },
+        },
         data: () => {
             return {
                 typeValue: '',
@@ -161,17 +174,18 @@
     }
     .row-1 {
         display: flex;
+        flex-direction: row-reverse;
         align-items: center;
         justify-content: center;
         min-height: 100vh;
         width: 100%;
-        gap: 5rem;
+        gap: 7%;
         padding-bottom: 15vh;
     }
     .container-one {
-        text-align: right;
-        width: 35%;
-        height: 100%;
+        text-align: left;
+        width: 40%;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         padding-top: 25vh;
@@ -183,9 +197,9 @@
         flex-direction: column;
         align-items: center;
         /* justify-content: center; */
-        width: 35%;
-        height: auto;
-        padding-top: 25vh;
+        width: 40%;
+        height: 100vh;
+        padding-top: 26vh;
         gap: 2rem;
     }
     .row-2 {
@@ -197,6 +211,7 @@
         align-items: center;
         justify-content: center;
         padding: 100px 3rem;
+        padding-bottom: 300px;
         background-color: #111;
     }
 
@@ -206,26 +221,38 @@
         position: relative;
         width: 100%; 
         height: 100%;
+        max-height: 500px;
         max-width: 500px;
-        border: 5px #0084ff solid;
+        /* border: 5px #0084ff solid; */
         padding: 2rem;
     }
     .image-1 {
         width: 100%;
         height: 100%;
-        border: 9px #ffffff solid;
+        border: 13px #ffffff solid;
         /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); */
     }
     .image-2 {
         position: absolute;
-        top: 15%; 
-        left: 15%; 
+        top: 11%; 
+        left: 11%; 
         width: 90%;
         height: 90%;
-        border: 2px #ffffff solid;
+        /* border: 2px #ffffff solid; */
         z-index: -1;
         filter: grayscale(100%);
-        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
+    }
+    .image-3 {
+        position: absolute;
+        top: -1%; 
+        left: -1%; 
+        width: 90%;
+        height: 90%;
+        /* border: 2px #ffffff solid; */
+        z-index: -1;
+        filter: grayscale(100%);
+        /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
     }
 
     /* timeline styling */
@@ -240,18 +267,33 @@
     }
 
     .timeline ul {
-    list-style: none;
-    padding-left: 0;
-    display: block;
-}
+        list-style: none;
+        padding-left: 0;
+        display: block;
+    }
 
-.timeline ul li {
-    padding: 20px;
-    background-color: #1e1f22;
-    color: white;
-    border-radius: 10px;
-    margin-bottom: 20px; /* Adjust the value as needed */
-}
+    .timeline ul li {
+        padding: 20px;
+        background-color: #1e1f22;
+        color: white;
+        border-radius: 10px;
+    }
+    /* animation for timeline */
+    @media (prefers-reduced-motion: no-preference) {
+        .timeline ul li {
+            scale: .8; opacity: 0;
+            animation: fade-in linear forwards;
+            animation-timeline: view();
+            animation-range: 150px 400px;
+        }
+        @keyframes fade-in {
+            from {scale: .8; opacity: 0;}
+            to {scale: 1; opacity: 1;}
+        }
+    }
+
+
+
     .timeline ul li:last-child {
         margin-bottom: 0;
     }
@@ -308,8 +350,13 @@
         .image-1 {
             width: 100%;
             height: auto; 
+            border: 5px solid #ffffff;
         }
         .image-2 {
+            width: 90%; 
+            height: auto; 
+        }
+        .image-3 {
             width: 90%; 
             height: auto; 
         }
@@ -352,6 +399,7 @@
         }
         .row-2 {
             padding: 9rem 3rem;
+            padding-bottom: 300px;
         }
     }
 

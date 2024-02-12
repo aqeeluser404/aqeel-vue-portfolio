@@ -1,6 +1,6 @@
 <template>
     <!-- main container -->
-    <div class="main-container" :style="{ marginLeft: navbarWidth }">
+    <div class="main-container" :style="getAdjustedWidth">
 
         <!-- row 1============================================================================== -->
 
@@ -72,13 +72,25 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
     name: 'HomeCard',
+    computed: {
+        ...mapState(['isNavbarVisible']),
+        getAdjustedWidth() {
+            return {
+                width: this.isNavbarVisible ? 'calc(100% - 6.5rem)' : '100%',
+                position: 'relative',
+                left: this.isNavbarVisible ? '6.5rem' : '0',   
+            };
+        },
+    },
     methods: {
         GotoContact() {
             console.log('GotoContact method called');
             this.$router.push('/contact');
-        }
+        },
     },
 };
 </script>
