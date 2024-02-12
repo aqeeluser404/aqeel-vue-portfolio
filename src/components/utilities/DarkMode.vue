@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="darkmode">
+    <!-- <div class="darkmode">
       <img src="@/assets/logo/darkmode.svg" alt="dark-mode">
-    </div>
+    </div> -->
 
   </div>
 </template>

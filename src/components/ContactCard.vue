@@ -7,7 +7,7 @@
             <div>
                 <h1 class="headline-large-black">Contact</h1>
                 <br>
-                <h1 class="headline-small-blue weight-bold">Let's Talk</h1>
+                <h1 class="headline-medium"><span class="weight-bold">Let's Talk</span></h1>
                 <br>
                 <p class="headline-small-black line-height-med">
                     <span><b>Questions</b> or <b>ideas?</b></span><br>
@@ -125,8 +125,10 @@ export default {
 };
 </script>
 
-
 <style scoped>
+
+    /* containers================================================================================ */
+
     .main-container {
         flex-direction: row;
         align-items: center;
@@ -143,6 +145,9 @@ export default {
     .container-two {
         width: 22vw;
     }
+
+    /* content=================================================================================== */
+
     /* form styling */
     .contact-form {
         text-align: left;
@@ -190,5 +195,34 @@ export default {
     }
     #message {
         min-height: 90px;
+    }
+
+    /* media queries============================================================================= */
+
+    @media only screen and (max-width: 611px) {
+        .main-container {
+            padding: 9rem 3rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100%;
+        }
+        .container-one div {
+            max-width: 60vw;
+            padding-top: 100px;
+            height: 100%;
+
+        }
+        .container-two {
+            width: 70vw;
+            height: 100%;
+            padding-top: 50px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+
+        }
     }
 </style>

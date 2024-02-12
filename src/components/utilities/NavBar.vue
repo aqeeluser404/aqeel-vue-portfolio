@@ -107,12 +107,52 @@
         justify-content: space-between;
     }
     .nav-list-items {
+        position: relative;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
+        transition: 0.2s;
     }
+    .nav-item:hover {
+        color: #0084ff;
+    }
+    .nav-item::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 0;
+        left: 0;
+        margin-top: 20px;
+        background-color: #0084ff;
+        transition: all 0.2s ease;
+    }
+    
+    .nav-item:hover::after {
+        width: 75%;
+        color: #0084ff;
+    }
+
+    /* transition: 0.2s;}
+
+.navbar ul li a:hover {
+    color: rgb(255, 146, 106);
+}
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 146, 106);
+    transition: all 0.2s ease;}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+    color: rgb(255, 146, 106);} */
+
     .logo {
         width: 4.2rem;
         filter: invert(40%) sepia(130%) saturate(1000%) hue-rotate(200deg);
@@ -129,9 +169,7 @@
     hr {
         width: 4rem;
     }
-    .nav-item:hover {
-        color: rgb(206, 206, 206);
-    }
+
     .fidget-container {
         height: 3rem;
     }
@@ -142,6 +180,10 @@
         .nav-header {
             justify-content: flex-start;
             align-items: flex-start;
+        }
+        .nav-item:hover::after {
+            width: 0;
+            color: #0084ff;
         }
     }
 </style>
