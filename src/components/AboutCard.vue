@@ -170,7 +170,7 @@
     }
     .container-one {
         text-align: right;
-        width: 40%;
+        width: 35%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -222,7 +222,7 @@
         left: 15%; 
         width: 90%;
         height: 90%;
-        border: 9px #ffffff solid;
+        border: 2px #ffffff solid;
         z-index: -1;
         filter: grayscale(100%);
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
@@ -240,15 +240,18 @@
     }
 
     .timeline ul {
-        list-style: none;
-        padding-left: 0;
-    }
-    .timeline ul li {
-        padding: 20px;
-        background-color: #1e1f22;
-        color: white;
-        border-radius: 10px;
-    }
+    list-style: none;
+    padding-left: 0;
+    display: block;
+}
+
+.timeline ul li {
+    padding: 20px;
+    background-color: #1e1f22;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
     .timeline ul li:last-child {
         margin-bottom: 0;
     }
@@ -366,9 +369,9 @@
         }
         .timeline ul li {
             width: 50%;
+            height: 100%;
             position: relative;
-            margin-bottom: 50px;
-            margin-top: 50px;
+            margin-bottom: 1rem;
         }
         .timeline ul li:nth-child(odd) {
             float: left;
@@ -402,6 +405,7 @@
         .timeline-content .date {
             position: absolute;
             top: -30px;
+            padding-bottom: 2rem;
         }
         .timeline ul li:hover::before {
             background-color: #5E9FFF;

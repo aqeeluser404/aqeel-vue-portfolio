@@ -36,22 +36,12 @@
                         <textarea id="message" name="message" required v-model="message"></textarea>
                     </div>
                     
-                    <!-- Add reCAPTCHA widget -->
-                    <div class="g-recaptcha" data-sitekey="6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk"></div>
-
                     <div class="form-group">
+                        <div class="g-recaptcha"></div>
                         <input id="submit" type="submit" value="Submit" class="button">
                     </div>
                     <span id="msg">{{ submitMessage }}</span>
                 </form>
-
-                <!-- test code -->
-                <!-- <div>
-                    <p>Result</p>
-                    <p>name: {{ name }}</p>
-                    <p>email: {{ email }}</p>
-                    <p>message: {{ message }}</p>
-                </div> -->
             </div>
         </div>
         <!-- components -->
@@ -68,71 +58,73 @@ import { projectFirestore } from '../firebase/config';
 // import emailjs from 'emailjs-com';
 
 export default {
-  name: 'ContactCard',
-  data() {
-    return {
-      name: '',
-      email: '',
-      message: '',
-      submitMessage: '',
-      recaptchaToken: null,
-    };
-  },
-  methods: {
-    async handleSubmit() {
-      try {
-        // Check reCAPTCHA response
-        const recaptchaResponse = await grecaptcha.execute('6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk', { action: 'submit' });
-
-        if (!recaptchaResponse) {
-          console.error('reCAPTCHA verification failed');
-          return;
-        }
-
-        let userMessage = {
-          name: this.name,
-          email: this.email,
-          message: this.message,
-          recaptchaResponse: recaptchaResponse,
+    name: 'ContactCard',
+    data() {
+        return {
+        name: '',
+        email: '',
+        message: '',
+        submitMessage: '',
+        recaptchaToken: null,
         };
-
-        // Save form data to Firestore collection
-        await projectFirestore.collection('userMessages').add(userMessage);
-
-        // this.sendEmail();
-
-        // Reset form fields
-        this.name = '';
-        this.email = '';
-        this.message = '';
-        this.submitMessage = 'Message sent successfully';
-      } catch (error) {
-        console.error('Error submitting form:', error);
-        this.submitMessage = 'Error submitting form. Please try again.';
-      }
     },
-    // sendEmail() {
-    //   emailjs.send('service_doxaq1h', 'template_1o8h4xa', {
-    //     name: this.name,
-    //     email: this.email,
-    //     message: this.message,
-    //   }, 'YOUR_EMAILJS_USER_ID')
-    //   .then((result) => {
-    //     console.log('Email sent:', result.text);
-    //   }, (error) => {
-    //     console.log('Email error:', error.text);
-    //   });
-    // }
-  },
-  mounted() {
-    const script = document.createElement('script');
-    script.src = 'https://www.google.com/recaptcha/api.js?render=6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk';
-    script.async = true;
-    script.defer = true;
-    document.head.appendChild(script);
-  },
+    methods: {
+        async handleSubmit() {
+            try {
+                // Check reCAPTCHA response
+                const recaptchaResponse = await grecaptcha.execute('6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk', { action: 'submit' });
+
+                if (!recaptchaResponse) {
+                    console.error('reCAPTCHA verification failed');
+                    return;
+                }
+
+                let userMessage = {
+                    name: this.name,
+                    email: this.email,
+                    message: this.message,
+                    recaptchaResponse: recaptchaResponse,
+                };
+
+                // Save form data to Firestore collection
+                await projectFirestore.collection('userMessages').add(userMessage);
+
+                // this.sendEmail();
+
+                // Reset form fields
+                this.name = '';
+                this.email = '';
+                this.message = '';
+                this.submitMessage = 'Message sent successfully';
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                this.submitMessage = 'Error submitting form. Please try again.';
+            }
+        },
+        // sendEmail() {
+        //   emailjs.send('service_doxaq1h', 'template_1o8h4xa', {
+        //     name: this.name,
+        //     email: this.email,
+        //     message: this.message,
+        //   }, 'YOUR_EMAILJS_USER_ID')
+        //   .then((result) => {
+        //     console.log('Email sent:', result.text);
+        //   }, (error) => {
+        //     console.log('Email error:', error.text);
+        //   });
+        // }
+    },
+    mounted() {
+        // Load the reCAPTCHA script dynamically
+        const script = document.createElement('script');
+        script.src = 'https://www.google.com/recaptcha/api.js?render=6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk';
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+    },
 };
 </script>
+
 
 <style scoped>
     .main-container {

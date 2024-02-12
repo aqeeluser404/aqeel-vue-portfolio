@@ -42,15 +42,17 @@
             </div>
             <!-- social links -->
             <div class="social-links">
-                <a href="https://github.com/aqeeluser404" target="_blank" rel="noopener noreferrer">
-                    <img src="@/assets/logo/github.svg" alt="github-logo" class="social-icon">
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                    <img src="@/assets/logo/instagram.svg" alt="github-logo" class="social-icon">
-                </a>
-                <a href="https://www.linkedin.com/in/aqeel-hanslo-234961210" target="_blank" rel="noopener noreferrer">
-                    <img src="@/assets/logo/linkedin.svg" alt="linkedin-logo" class="social-icon unique-icon">
-                </a>
+                    <a href="https://github.com/aqeeluser404" target="_blank" rel="noopener noreferrer">
+                        <img src="@/assets/logo/github.svg" alt="github-logo" class="social-icon">
+                    </a>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="@/assets/logo/instagram.svg" alt="github-logo" class="social-icon">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/aqeel-hanslo-234961210" target="_blank" rel="noopener noreferrer">
+                        <img src="@/assets/logo/linkedin.svg" alt="linkedin-logo" class="social-icon unique-icon">
+                    </a>
             </div>
         </div>
 
@@ -185,6 +187,7 @@ export default {
             justify-content: center;
             gap: 5rem;
         }
+
         .styled-button {
             justify-content: center;
         }
