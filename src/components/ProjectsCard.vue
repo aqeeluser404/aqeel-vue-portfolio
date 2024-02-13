@@ -1,6 +1,6 @@
 <template>
     <!-- main container -->
-    <div class="main-container">
+    <div class="main-container" :style="getAdjustedWidth">
         
         <!-- row 1============================================================================== -->
         <div class="text-container">
@@ -60,8 +60,20 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
     export default {
         name : 'ProjectsCard',
+        computed: {
+            ...mapState(['isNavbarVisible']),
+            getAdjustedWidth() {
+                return {
+                    width: this.isNavbarVisible ? 'calc(100% - 6.5rem)' : '100%',
+                    position: 'relative',
+                    left: this.isNavbarVisible ? '6.5rem' : '0'
+                };
+            },
+        },
         data: () => {
             return {
                 typeValue: '',

@@ -67,7 +67,7 @@ export default {
         left: 1rem;
         z-index: 1;
     }
-    /* make nav bar responsive and hidden when button pressed */
+    /* hide navbar when logo is clicked */
     .hidden {
         transform: translateX(-110%);
         transition: all 1s;
@@ -121,40 +121,18 @@ export default {
         height: 3px;
         width: 0;
         left: 0;
+        border-radius: 10px;
         margin-top: 20px;
         background-color: #0084ff;
         transition: all 0.2s ease;
     }
-    
     .nav-item:hover::after {
         width: 75%;
         color: #0084ff;
     }
-
-    /* transition: 0.2s;}
-
-.navbar ul li a:hover {
-    color: rgb(255, 146, 106);
-}
-.navbar ul li a::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(255, 146, 106);
-    transition: all 0.2s ease;}
-
-.navbar ul li a:hover::after {
-    width: 100%;
-    color: rgb(255, 146, 106);} */
-
     .logo {
         width: 4.2rem;
         filter: invert(40%) sepia(130%) saturate(1000%) hue-rotate(200deg);
-
-        /* filter: brightness(2) invert(1); */
     }
     .logo:hover {
         color: #0084ff;
@@ -166,7 +144,6 @@ export default {
     hr {
         width: 4rem;
     }
-
     .fidget-container {
         height: 3rem;
     }
@@ -183,4 +160,25 @@ export default {
             color: #0084ff;
         }
     }
+
+    /* filter: brightness(2) invert(1); */
+    /* transition: 0.2s;}
+
+    .navbar ul li a:hover {
+        color: rgb(255, 146, 106);
+    }
+    .navbar ul li a::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(255, 146, 106);
+        transition: all 0.2s ease;}
+
+    .navbar ul li a:hover::after {
+        width: 100%;
+        color: rgb(255, 146, 106);} */
 </style>
+

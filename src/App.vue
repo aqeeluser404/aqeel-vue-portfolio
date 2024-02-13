@@ -8,7 +8,6 @@
 </template>
 
 <script>
-
 // component imports
 import NavBar from './components/utilities/NavBar.vue'
 import DarkMode from './components/utilities/DarkMode.vue'
@@ -20,7 +19,7 @@ import MouseCursor from './components/utilities/MouseCursor.vue';
       NavBar,
       DarkMode,
       MouseCursor
-    }
+    },
   }
 </script>
 

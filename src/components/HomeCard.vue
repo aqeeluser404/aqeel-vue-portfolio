@@ -114,14 +114,14 @@ export default {
     .main-container {
         align-items: flex-end;
         justify-content: center;
-        padding-top: 8%;
-        padding-right: 8%;
         position: relative;
     }
     /* row 1 */
     .text-container {
         display: flex;
         flex-direction: column;
+        padding-top: 8%;
+        padding-right: 8%;
         gap: 1rem;
         text-align: right;
     }
@@ -129,6 +129,7 @@ export default {
     .links-container {
         width: 50vw;
         display: flex;
+        padding-right: 8%;
         justify-content: flex-end;
         gap: 9rem;
     }
@@ -200,6 +201,7 @@ export default {
             justify-content: space-between;
             gap: 7rem;
             width: 100%;
+            padding-right: 0;
         }
         .social-icon {
             width: 2rem;

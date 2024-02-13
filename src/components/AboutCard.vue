@@ -19,10 +19,12 @@
 
                 <div>
                     <!-- paragraph -->
-                    <p class="headline-small-black">My name is Aqeel Hanslo, third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. I possess the ability to think outside the box to create innovative solutions for problems.</p>
-                    <br><br><br>
+                    <p class="headline-small-black">My name is <b>Aqeel Hanslo</b> , third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. 
+                    <br><br>
+                    I possess the ability to think outside the box to create innovative solutions for problems.</p>
+                    <br><br><br><br>
                     <!-- download cv button -->
-                    <button class="button">Download CV</button>
+                    <button class="button-2">Download CV</button>
                 </div>
 
             </div>
@@ -395,7 +397,7 @@ import { mapState } from 'vuex';
         }
         .container-two {
             width: 70vw;
-            padding-top: 50px;
+            padding-top: 100px;
             height: 100%;
         }
         .row-2 {

@@ -1,6 +1,6 @@
 <template>
     <!-- main container -->
-    <div class="main-container">
+    <div class="main-container" :style="getAdjustedWidth">
 
         <!-- column 1============================================================================== -->
         <div class="container-one line-height-low">
@@ -22,23 +22,24 @@
             
             <!-- form -->
             <div class="contact-form">
-                <form @submit.prevent="handleSubmit">
+                <form @submit.prevent="handleSubmit" action="https://public.herotofu.com/v1/037ba170-ca37-11ee-bb69-515451de93af" method="post" accept-charset="UTF-8">
                     <div class="form-group">
                         <label for="name">NAME</label>
-                        <input type="text" id="name" name="name" required placeholder="Type Here" v-model="name">
+                        <input type="text" id="name" name="Name" required placeholder="Type Here" v-model="name">
                     </div>
                     <div class="form-group">
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email" required placeholder="Type Here" v-model="email">
+                        <input type="email" id="email" name="Email" required placeholder="Type Here" v-model="email">
                     </div>
                     <div class="form-group">
                         <label for="message">MESSAGE</label>
-                        <textarea id="message" name="message" required v-model="message"></textarea>
+                        <textarea id="message" name="Message" required v-model="message"></textarea>
                     </div>
                     
                     <div class="form-group">
                         <div class="g-recaptcha"></div>
-                        <input id="submit" type="submit" value="Submit" class="button">
+
+                        <input id="submit" type="submit" value="Say Hi!" class="button-2">
                     </div>
                     <span id="msg">{{ submitMessage }}</span>
                 </form>
@@ -53,20 +54,34 @@
 </template>
 
 <script>
+import UseEmail from "../UseEmail.js"
+
 /* global grecaptcha */
 import { projectFirestore } from '../firebase/config';
 // import emailjs from 'emailjs-com';
+import { mapState } from 'vuex';
 
 export default {
     name: 'ContactCard',
     data() {
         return {
-        name: '',
-        email: '',
-        message: '',
-        submitMessage: '',
-        recaptchaToken: null,
+            name: '',
+            email: '',
+            message: '',
+            submitMessage: '',
+            recaptchaToken: null,
         };
+    },
+
+    computed: {
+        ...mapState(['isNavbarVisible']),
+        getAdjustedWidth() {
+            return {
+                width: this.isNavbarVisible ? 'calc(100% - 6.5rem)' : '100%',
+                position: 'relative',
+                left: this.isNavbarVisible ? '6.5rem' : '0',
+            };
+        },
     },
     methods: {
         async handleSubmit() {
@@ -90,7 +105,10 @@ export default {
                 await projectFirestore.collection('userMessages').add(userMessage);
 
                 // this.sendEmail();
+                this.sendExample();
 
+
+                
                 // Reset form fields
                 this.name = '';
                 this.email = '';
@@ -101,21 +119,24 @@ export default {
                 this.submitMessage = 'Error submitting form. Please try again.';
             }
         },
-        // sendEmail() {
-        //   emailjs.send('service_doxaq1h', 'template_1o8h4xa', {
-        //     name: this.name,
-        //     email: this.email,
-        //     message: this.message,
-        //   }, 'YOUR_EMAILJS_USER_ID')
-        //   .then((result) => {
-        //     console.log('Email sent:', result.text);
-        //   }, (error) => {
-        //     console.log('Email error:', error.text);
-        //   });
-        // }
+        setup() {
+            const { sendEmail } = UseEmail('https://public.herotofu.com/v1/037ba170-ca37-11ee-bb69-515451de93af');
+            const sendExample = () => {
+                sendEmail({
+                    name: this.name,
+                    email: this.email,
+                    message: this.message,
+                });
+            };
+            return { sendExample };
+        },
     },
+
+
+
+
     mounted() {
-        // Load the reCAPTCHA script dynamically
+        // reCAPTCHA
         const script = document.createElement('script');
         script.src = 'https://www.google.com/recaptcha/api.js?render=6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk';
         script.async = true;
