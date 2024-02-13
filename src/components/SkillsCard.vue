@@ -2,78 +2,96 @@
     <!-- main container -->
     <div class="main-container" :style="getAdjustedWidth">
 
-        <!-- row 1============================================================================== -->
-        <div class="text-container line-height-low">
-            <h1 class="headline-large">Skills</h1>
-            <p class="headline-small">
-                <span class="opacity-full"><br> The design of an application or website usually </span>
-                <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
-                <span class="opacity-quarter"><br> what to do and I'll try to visualize your ideas</span>
-                <br><br><br><br>
-                <!-- view projects -->
-                <button class="button">View My work</button>
-            </p>
-        </div>
-        <br>
-        <!-- row 2============================================================================== -->
-        <div class="skill-container">
-            <div class="skill">
-                <div class="skill-name">HTML</div>
-                <div class="skill-bar">
-                    <div class="skill-per" per="90%" style="max-width:90%"></div>
-                </div>
+        <div class="column-left">
+            <!-- row 1============================================================================== -->
+            <div class="text-container line-height-low">
+                <h1 class="headline-large">Skills</h1>
+                <p class="headline-small">
+                    <span class="opacity-full"><br> The design of an application or website usually </span>
+                    <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
+                    <span class="opacity-quarter"><br> what to do and I'll try to visualize your ideas</span>
+                    <br><br><br><br>
+                    <!-- view projects -->
+                    <button class="button">View My work</button>
+                </p>
             </div>
-
-            <div class="skill">
-                <div class="skill-name">CSS</div>
-                <div class="skill-bar">
-                    <div class="skill-per" per="85%" style="max-width:85%"></div>
+            <br>
+            <!-- row 2============================================================================== -->
+            <div class="skill-container">
+                <div class="skill">
+                    <div class="skill-name">HTML</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="90%" style="max-width:90%"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="skill">
-                <div class="skill-name">Javascript</div>
-                <div class="skill-bar">
-                    <div class="skill-per" per="55%" style="max-width:55%"></div>
+                <div class="skill">
+                    <div class="skill-name">CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="85%" style="max-width:85%"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="skill">
-                <div class="skill-name">Vue.JS</div>
-                <div class="skill-bar">
-                    <div class="skill-per" per="60%" style="max-width:60%"></div>
+                <div class="skill">
+                    <div class="skill-name">Javascript</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="55%" style="max-width:55%"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="skill">
-                <div class="skill-name">SPRINGBOOT</div>
-                <div class="skill-bar">
-                    <div class="skill-per" per="70%" style="max-width:70%"></div>
+                <div class="skill">
+                    <div class="skill-name">Vue.JS</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="60%" style="max-width:60%"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="skill">
-                <div class="skill-name">MYSQL</div>
-                <div class="skill-bar">
+                <div class="skill">
+                    <div class="skill-name">SPRINGBOOT</div>
+                    <div class="skill-bar">
                         <div class="skill-per" per="70%" style="max-width:70%"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="skill">
-                <div class="skill-name">JAVA</div>
-                <div class="skill-bar">
-                    <div class="skill-per" per="80%" style="max-width:80%"></div>
+                <div class="skill">
+                    <div class="skill-name">MYSQL</div>
+                    <div class="skill-bar">
+                            <div class="skill-per" per="70%" style="max-width:70%"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="skill">
-                <div class="skill-name">GIT</div>
-                <div class="skill-bar">
-                    <div class="skill-per" per="90%" style="max-width:90%"></div>
+                <div class="skill">
+                    <div class="skill-name">JAVA</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="80%" style="max-width:80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">GIT</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="90%" style="max-width:90%"></div>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <div class="column-right">
+            <div class="text-block-row">
+                <div class="text-block">
+                    <h1 class="headline-medium-white weight-bold">04+ </h1>
+                    <p class="alt-font">Full stack applications</p>
+                </div>
+                <div class="text-block">
+                    <h1 class="headline-medium-white weight-bold">03+ </h1>
+                    <p class="alt-font">Years in developing practice</p>
+                </div>
+                <div class="text-block">
+                    <h1 class="headline-medium-white weight-bold">05+ </h1>
+                    <p class="alt-font">Coding Languages</p>
+                </div>
+            </div>
+        </div>
         <!-- components -->
         <!-- number -->
         <div class="page-number">
@@ -106,6 +124,25 @@ export default {
 </script>
 
 <style scoped>
+    .text-block-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        gap: 1rem;
+    }
+    .text-block {
+        border: 1px solid #949494;
+        border-radius: 5px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        text-transform: uppercase;
+        gap: 1rem;
+        width: 30%;
+    }
 
     /* components================================================================================ */
     
@@ -125,6 +162,7 @@ export default {
 
     .main-container {
         padding: 9rem 3rem;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         position: relative;
@@ -134,9 +172,17 @@ export default {
         /* scrolling */
         height: 100%;
     }
+    .column-left {
+        width: 100%;
+        max-width: 50vw;
+    }
+    .column-right {
+        width: 100%;
+        max-width: 50vw;
+    }
     .text-container {
         text-align: right;
-        width: 40vw;
+        width: auto;
         display: flex;
         flex-direction: column;
         gap: 2rem;

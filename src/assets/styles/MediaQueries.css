@@ -19,21 +19,21 @@
 
     /* small fonts */
     .headline-small {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: #ffffff;
         font-family: 'M PLUS 1 Code', monospace;
         font-weight: 400;
         line-height: 1;
     }
     .headline-small-2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: #ffffff;
         font-family: 'Koulen', sans-serif;
         font-weight: 400;
         line-height: 1;
     }
     .headline-small-black {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: #0E0E0E;
         font-family: 'M PLUS 1 Code', monospace;
         font-weight: 400;

@@ -1,9 +1,11 @@
 <template>
     <div class="main-container">
-        <h2 class="headline-small-blue">Thanks you!</h2>
+        <h2 class="headline-small-blue weight-bold"><b>Thank you!</b></h2>
+        <br>
         <div class="headline-small-black">We'll be in touch soon.</div>
         <br>
-        <button class="button" @click="GoToHome">Go Back</button>
+        <br>
+        <button class="button-2" @click="GoToHome">Go Back</button>
     </div>
 </template>
 

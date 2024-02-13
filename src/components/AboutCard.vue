@@ -1,7 +1,8 @@
 <template>
+    <div class="rect-container" :style="getAdjustedWidthRect"></div>
     <!-- main container -->
     <div class="main-container" :style="getAdjustedWidth">
-
+        
 
         <div class="row-1">
             <!-- column 1============================================================================== -->
@@ -19,8 +20,7 @@
 
                 <div>
                     <!-- paragraph -->
-                    <p class="headline-small-black">My name is <b>Aqeel Hanslo</b> , third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. 
-                    <br><br>
+                    <p class="headline-small-black">My name is Aqeel Hanslo , third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. 
                     I possess the ability to think outside the box to create innovative solutions for problems.</p>
                     <br><br><br><br>
                     <!-- download cv button -->
@@ -109,6 +109,13 @@ import { mapState } from 'vuex';
                     left: this.isNavbarVisible ? '6.5rem' : '0',                
                 };
             },
+            // getAdjustedWidthRect() {
+            //     return {
+            //         width: this.isNavbarVisible ? 'calc(99% - 6.5rem)' : '99%',
+            //         right: this.isNavbarVisible ? '6.5rem' : '100%',
+                    
+            //     }
+            // }
         },
         data: () => {
             return {
@@ -169,24 +176,37 @@ import { mapState } from 'vuex';
     /* containers================================================================================ */
 
     .main-container {
+
         align-items: center;
         justify-content: center;
         height: 100%;
+        width: 100%;
         gap: 5%;
     }
+    .rect-container {
+        position: absolute;
+        height: 97%;
+        width: 85%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #111;
+        box-sizing: border-box;
+    }
     .row-1 {
+        position: relative;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
+        height: 100%;
         width: 100%;
-        gap: 7%;
+        gap: 5%;
         padding-bottom: 15vh;
     }
     .container-one {
         text-align: left;
-        width: 40%;
+        width: 30%;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -216,28 +236,31 @@ import { mapState } from 'vuex';
         padding-bottom: 300px;
         background-color: #111;
     }
-
+    /* .alt-font {
+        text-align: left;
+    } */
     /* content=================================================================================== */
 
     .image-container {
         position: relative;
         width: 100%; 
         height: 100%;
-        max-height: 500px;
-        max-width: 500px;
+        max-height: 450px;
+        max-width: 450px;
         /* border: 5px #0084ff solid; */
         padding: 2rem;
     }
     .image-1 {
         width: 100%;
         height: 100%;
-        border: 13px #ffffff solid;
+        border: 17px #ffffff solid;
         /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); */
     }
     .image-2 {
+        display: none;
         position: absolute;
-        top: 11%; 
-        left: 11%; 
+        top: -6%; 
+        left: -6%;
         width: 90%;
         height: 90%;
         /* border: 2px #ffffff solid; */
@@ -249,6 +272,7 @@ import { mapState } from 'vuex';
         position: absolute;
         top: -1%; 
         left: -1%; 
+        border: 10px #ffffff solid;
         width: 90%;
         height: 90%;
         /* border: 2px #ffffff solid; */
@@ -343,9 +367,9 @@ import { mapState } from 'vuex';
     /* media queries============================================================================= */
 
     @media only screen and (max-width: 1600px) {
-        .container-two {
+        /* .container-two {
             width: 32%;
-        }
+        } */
         .image-container {
             width: 100%;
             height: auto; 
@@ -364,21 +388,6 @@ import { mapState } from 'vuex';
             height: auto; 
         }
     }
-
-/* @media only screen and (max-width: 768px) {
-    .image-container {
-        width: 100%;
-        height: auto; 
-    }
-    .image-1 {
-        width: 100%;
-        height: auto; 
-    }
-    .image-2 {
-        width: 90%; 
-        height: auto; 
-    }
-} */
     @media only screen and (max-width: 736px) {
         .main-container {
             align-items: center;

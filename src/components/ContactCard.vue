@@ -47,10 +47,7 @@
                     </div>
 
                     <!-- redirect to success page -->
-                    <div v-if="submitted">
-                        <!-- <h2>Thanks you!</h2>
-                        <div>We'll be in touch soon.</div> -->
-                    </div>
+                    <div v-if="submitted"></div>
                 </form>
             </div>
         </div>
