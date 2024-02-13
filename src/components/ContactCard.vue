@@ -22,7 +22,11 @@
             
             <!-- form -->
             <div class="contact-form">
-                <form @submit.prevent="handleSubmit" action="https://public.herotofu.com/v1/037ba170-ca37-11ee-bb69-515451de93af" method="post" accept-charset="UTF-8">
+                <form 
+                :action="FORM_ENDPOINT"
+                @submit="handleSubmit"
+                method="POST"
+                >
                     <div class="form-group">
                         <label for="name">NAME</label>
                         <input type="text" id="name" name="Name" required placeholder="Type Here" v-model="name">
@@ -41,7 +45,12 @@
 
                         <input id="submit" type="submit" value="Say Hi!" class="button-2">
                     </div>
-                    <span id="msg">{{ submitMessage }}</span>
+
+                    <!-- redirect to success page -->
+                    <div v-if="submitted">
+                        <!-- <h2>Thanks you!</h2>
+                        <div>We'll be in touch soon.</div> -->
+                    </div>
                 </form>
             </div>
         </div>
@@ -54,11 +63,8 @@
 </template>
 
 <script>
-import UseEmail from "../UseEmail.js"
-
 /* global grecaptcha */
 import { projectFirestore } from '../firebase/config';
-// import emailjs from 'emailjs-com';
 import { mapState } from 'vuex';
 
 export default {
@@ -70,6 +76,8 @@ export default {
             message: '',
             submitMessage: '',
             recaptchaToken: null,
+            submitted: false,
+            FORM_ENDPOINT: "https://public.herotofu.com/v1/037ba170-ca37-11ee-bb69-515451de93af",
         };
     },
 
@@ -104,31 +112,20 @@ export default {
                 // Save form data to Firestore collection
                 await projectFirestore.collection('userMessages').add(userMessage);
 
-                // this.sendEmail();
-                this.sendExample();
-
-
-                
                 // Reset form fields
                 this.name = '';
                 this.email = '';
                 this.message = '';
                 this.submitMessage = 'Message sent successfully';
+
+                setTimeout(() => {
+                    this.submitted = true;
+                }, 100);
+
             } catch (error) {
                 console.error('Error submitting form:', error);
                 this.submitMessage = 'Error submitting form. Please try again.';
             }
-        },
-        setup() {
-            const { sendEmail } = UseEmail('https://public.herotofu.com/v1/037ba170-ca37-11ee-bb69-515451de93af');
-            const sendExample = () => {
-                sendEmail({
-                    name: this.name,
-                    email: this.email,
-                    message: this.message,
-                });
-            };
-            return { sendExample };
         },
     },
 

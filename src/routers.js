@@ -3,6 +3,7 @@ import AboutCard from './components/AboutCard.vue'
 import SkillsCard from './components/SkillsCard.vue'
 import ProjectsCard from './components/ProjectsCard.vue'
 import ContactCard from './components/ContactCard.vue'
+import ThankYou from './components/utilities/ThankYou.vue'
 
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -31,7 +32,12 @@ const routes = [
         name : 'ContactCard',
         component : ContactCard,
         path : '/contact'
-    }
+    },
+    {
+        name : 'ThankYou',
+        component : ThankYou,
+        path : '/thank-you'
+    },
 ];
 
 const router = createRouter({
