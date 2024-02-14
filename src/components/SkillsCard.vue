@@ -12,7 +12,7 @@
                     <span class="opacity-quarter"><br> That being said, I am knowledgeable in most languages, including some backend code.</span>
                     <br><br><br><br>
                     <!-- view projects -->
-                    <button class="button">View My work</button>
+                    <button class="button" @click="GoToProjects">View My work</button>
                 </p>
             </div>
             <br>
@@ -85,23 +85,23 @@
                     <div>
                         <img src="../assets/testimonial/afika.jpg" alt="#" class="testimonial-img">
                     </div>
-                    <h1 class="alt-font">Afika Maliwa 
+                    <h1 class="nav-item">Afika Maliwa 
                         <br>Line Manager - CapaCiTi</h1>
                 </div>
             </div>
             <br>
             <div class="text-block-row">
                 <div class="text-block">
-                    <h1 class="headline-medium weight-bold">05+ </h1>
-                    <p class="alt-font"> Backend Frontend Coding Languages</p>
+                    <img src="../assets/misc/coding-2.svg" alt="#">
+                    <p class="nav-item-2"> Backend Frontend Coding Languages</p>
                 </div>
                 <div class="text-block">
-                    <h1 class="headline-medium weight-bold">04+ </h1>
-                    <p class="alt-font">Full stack applications</p>
+                    <img src="../assets/misc/coding.svg" alt="#">
+                    <p class="nav-item-2">Full stack java applications</p>
                 </div>
                 <div class="text-block">
-                    <h1 class="headline-medium weight-bold">03+ </h1>
-                    <p class="alt-font">Years in developing practice</p>
+                    <img src="../assets/misc/coding-3.svg" alt="#">
+                    <p class="nav-item-2">Three years in developing practice</p>
                 </div>
 
             </div>
@@ -133,6 +133,11 @@ export default {
                 left: this.isNavbarVisible ? '6.5rem' : '0',
             };
         }
+    },
+    methods: {
+        GoToProjects() {
+            this.$router.push('/projects')
+        }
     }
 }
 </script>
@@ -147,17 +152,31 @@ export default {
         gap: 1rem;
     }
     .text-block {
-        border: 1px solid #949494;
-        background: #ffffff;
         border-radius: 1rem;
         padding: 1rem;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: flex-start;
         text-align: center;
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
         gap: 1rem;
         width: 30%;
+        background: #22222262;
+        box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
+                    inset 0 8px 8px rgba(0,0,0,0.1),
+                    inset 0 -4px 4px rgba(0,0,0,0.1);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        transition: all 0.5s;
+    }
+    .text-block:hover {
+        transform: scale(1.05);
+    }
+    .text-block img {
+        width: 50%;
+        /* filter: invert(85%); */
+        filter: invert(40%) sepia(130%) saturate(1000%) hue-rotate(200deg);
+
     }
 
     /* components================================================================================ */
@@ -190,7 +209,7 @@ export default {
     }
     .column-left {
         width: 100%;
-        max-width: 40vw;
+        max-width: 30vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -198,7 +217,7 @@ export default {
     .column-right {
         width: 100%;
         height: 100vh;
-        max-width: 40vw;
+        max-width: 35vw;
     }
     .text-container {
         text-align: right;
@@ -233,7 +252,7 @@ export default {
         justify-content: center;
         text-align: left;
         gap: 1.5rem;
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
         align-items: center;
     }
     .container {
@@ -244,7 +263,7 @@ export default {
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
         border-radius: 2rem;
         width: 100%;
-        padding: 3rem 7rem;
+        padding: 3rem 6rem;
         display: flex;
         justify-content: center;
         align-content: center;
@@ -257,7 +276,7 @@ export default {
     .testimonial-img {
         width: 100px;
         border-radius: 50%;
-        border: 3px solid #5E9FFF;
+        border: 5px solid #5E9FFF;
     }
 
     /* content=================================================================================== */
@@ -288,7 +307,9 @@ export default {
         position: absolute;
         padding: 4px 6px;
         background: #f1f1f1;
-        color: black;
+        color: rgb(37, 37, 37);
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
         border-radius: 4px;
         font-size: 12px;
         top: -35px;
@@ -322,6 +343,7 @@ export default {
             padding: 0;
             flex-direction: column;
             align-items: center;
+            padding-bottom: 100px;
             /* align-items: center;
             flex-direction: column;
             justify-content: center; */
@@ -361,9 +383,12 @@ export default {
             width: 100%;
             text-align: left;
             flex-direction: row;
-            text-align: space-evenly;
+            align-items: center;
             justify-content: center;
             gap: 3rem;
+        }
+        .container {
+            padding: 3rem 3rem;
         }
     }
 </style>

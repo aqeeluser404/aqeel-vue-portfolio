@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: 'WallpaperComponent',
+    name: 'MouseCursor',
     mounted() {
         console.clear();
         // Select the circle element

@@ -92,6 +92,7 @@
         <div class="page-number">
             <h1 class="headline-xsmall">02</h1>
         </div>
+        <div class="scroll-watcher"></div>
     </div>
 </template>
 
@@ -172,6 +173,7 @@ import { mapState } from 'vuex';
 
     /* components================================================================================ */
 
+
     /* containers================================================================================ */
 
     .main-container {
@@ -190,10 +192,14 @@ import { mapState } from 'vuex';
         justify-content: center;
         outline: 2px solid #333; 
         box-sizing: border-box;
-        height: 99%;
-        width: 99%;
+        height: 100%;
+        width: 100%;
         gap: 5%;
         /* padding-bottom: 15vh; */
+
+        animation: fade-out linear;
+        animation-timeline: view();
+        animation-range: exit -75px;
     }
     .container-one {
         text-align: left;
@@ -214,6 +220,14 @@ import { mapState } from 'vuex';
         height: 100vh;
         padding-top: 26vh;
         gap: 2rem;
+    }
+
+    @keyframes fade-out {
+        to { opacity: 0; }
+    }
+    @keyframes image-container-animation {
+        25% { opacity: 1; }
+        85%, 100% { opacity: 0; scale: 0.5;}
     }
     .row-2 {
         min-height: 100vh;
@@ -236,41 +250,60 @@ import { mapState } from 'vuex';
         position: relative;
         width: 100%; 
         height: 100%;
-        max-height: 450px;
-        max-width: 450px;
+        max-height: 400px;
+        max-width: 400px;
         /* border: 5px #0084ff solid; */
         padding: 2rem;
+
+        animation: image-container-animation linear;
+        animation-timeline: view();
+        animation-range: exit;
+
+
+    }
+    .image-container:hover .image-1 {
+        transform: translate(-15%, -15%) scale(1.1);
+    }
+    .image-container:hover .image-3 {
+        transform: translate(3%, 3%);
+    }
+    .image-container:hover .image-2 {
+        transform: translate(15%, 15%);
     }
     .image-1 {
         width: 100%;
         height: 100%;
-        border: 17px #ffffff solid;
+        /* border: 10px #ffffff solid; */
         /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); */
-    }
-    .image-2 {
-        display: none;
-        position: absolute;
-        top: -6%; 
-        left: -6%;
-        width: 90%;
-        height: 90%;
-        /* border: 2px #ffffff solid; */
-        z-index: -1;
-        filter: grayscale(100%);
-        /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
+        transition: all 0.5s;
     }
     .image-3 {
         position: absolute;
-        top: -1%; 
-        left: -1%; 
+        top: 5%; 
+        left: 5%; 
         border: 10px #ffffff solid;
-        width: 90%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
         /* border: 2px #ffffff solid; */
         z-index: -1;
         filter: grayscale(100%);
         /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
+        transition: all 0.5s;
     }
+    .image-2 {
+        position: absolute;
+        bottom: 5%; 
+        right: 5%;
+        width: 100%;
+        height: 100%;
+        border: 10px #ffffff solid;
+        z-index: -1;
+        opacity: 40%;
+        filter: grayscale(100%);
+        /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
+        transition: all 0.5s;
+    }
+
 
     /* timeline styling */
     .timeline {
@@ -356,11 +389,8 @@ import { mapState } from 'vuex';
     }
 
     /* media queries============================================================================= */
-
+/* 
     @media only screen and (max-width: 1600px) {
-        /* .container-two {
-            width: 32%;
-        } */
         .image-container {
             width: 100%;
             height: auto; 
@@ -368,7 +398,6 @@ import { mapState } from 'vuex';
         .image-1 {
             width: 100%;
             height: auto; 
-            border: 5px solid #ffffff;
         }
         .image-2 {
             width: 90%; 
@@ -378,7 +407,7 @@ import { mapState } from 'vuex';
             width: 90%; 
             height: auto; 
         }
-    }
+    } */
     @media only screen and (max-width: 736px) {
         .main-container {
             align-items: center;
