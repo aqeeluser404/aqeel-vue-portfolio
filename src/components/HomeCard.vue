@@ -11,7 +11,7 @@
                     <h1 class="headline-medium">  &lt;Software Developer/&gt; </h1>
                 </div>
 
-                <p class="headline-small">
+                <p class="alt-font-medium">
                     <span class="opacity-full"><br>  The design of an application or website usually </span>
                     <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
                     <span class="opacity-quarter"><br> what to do and I'll try to visualize your ideas</span>

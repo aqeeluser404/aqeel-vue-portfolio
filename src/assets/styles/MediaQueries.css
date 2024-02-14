@@ -1,6 +1,16 @@
 
 @media only screen and (max-width: 1500px) {
 
+    /* alt text */
+    .alt-font-medium {
+        color: #b8b8b8;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.5rem;
+        font-family: 'Inter', sans-serif;
+        line-height: 1.2;
+    }
+
     /* xsmall fonts */
     .headline-xsmall {
         font-size: 1.2rem;

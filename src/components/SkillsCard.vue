@@ -79,30 +79,31 @@
         <div class="column-right">
 
             <div class="container">
-                <h1 class="headline-small-2"> <span class="headline-large-blue">&quot;</span><br>Aqeel has good coding knowledge. He is quite shy and quiet but always gets work done on time and meets deadlines. </h1>
+                <h1 class="headline-small-2"> <span class="headline-large-blue"><img src="../assets/misc/quote.png" alt="#" width="50px"></span><br>Aqeel has good coding knowledge. He is quite shy and quiet but always gets work done on time and meets deadlines. </h1>
                 <div class="container-splitter"><hr></div>
                 <div class="testimonial-box">
                     <div>
                         <img src="../assets/testimonial/afika.jpg" alt="#" class="testimonial-img">
                     </div>
-                    <h1 class="alt-font-2">Afika Maliwa 
+                    <h1 class="alt-font">Afika Maliwa 
                         <br>Line Manager - CapaCiTi</h1>
                 </div>
             </div>
             <br>
             <div class="text-block-row">
                 <div class="text-block">
-                    <h1 class="headline-medium-white weight-bold">04+ </h1>
+                    <h1 class="headline-medium weight-bold">05+ </h1>
+                    <p class="alt-font"> Backend Frontend Coding Languages</p>
+                </div>
+                <div class="text-block">
+                    <h1 class="headline-medium weight-bold">04+ </h1>
                     <p class="alt-font">Full stack applications</p>
                 </div>
                 <div class="text-block">
-                    <h1 class="headline-medium-white weight-bold">03+ </h1>
+                    <h1 class="headline-medium weight-bold">03+ </h1>
                     <p class="alt-font">Years in developing practice</p>
                 </div>
-                <div class="text-block">
-                    <h1 class="headline-medium-white weight-bold">05+ </h1>
-                    <p class="alt-font"> Backend Frontend Coding Languages</p>
-                </div>
+
             </div>
         </div>
         <!-- components -->
@@ -147,7 +148,7 @@ export default {
     }
     .text-block {
         border: 1px solid #949494;
-        background: #949494;
+        background: #ffffff;
         border-radius: 1rem;
         padding: 1rem;
         display: flex;
@@ -162,7 +163,7 @@ export default {
     /* components================================================================================ */
     
     #video-background {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         bottom: 0;
@@ -236,14 +237,14 @@ export default {
         align-items: center;
     }
     .container {
-        background: #2222228c;
+        background: #22222262;
         box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
                     inset 0 8px 8px rgba(0,0,0,0.1),
                     inset 0 -4px 4px rgba(0,0,0,0.1);
-                
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
         border-radius: 2rem;
         width: 100%;
-        padding: 2rem;
+        padding: 3rem 7rem;
         display: flex;
         justify-content: center;
         align-content: center;
@@ -256,7 +257,7 @@ export default {
     .testimonial-img {
         width: 100px;
         border-radius: 50%;
-        border: 1px solid #5E9FFF;
+        border: 3px solid #5E9FFF;
     }
 
     /* content=================================================================================== */
@@ -333,10 +334,11 @@ export default {
         }
         .column-right {
             /* padding: 9rem 3rem; */
-            padding-top: 9rem;
-            padding-right: 3rem;
-            width: 70vw;
+            /* padding-top: 9rem;
+            padding-right: 3rem; */
+            width: 100%;
             height: 100%;
+            max-width: 70vw;
             /* max-width: 40vw; */
         }
         .text-container {
@@ -349,8 +351,19 @@ export default {
             width: 70vw;
             height: 100%;
         }
-        #video-background {
-            position: absolute;
+        .testimonial-box {
+            width: 100%;
+        }
+        .text-block-row {
+            flex-direction: column;
+        }
+        .text-block {
+            width: 100%;
+            text-align: left;
+            flex-direction: row;
+            text-align: space-evenly;
+            justify-content: center;
+            gap: 3rem;
         }
     }
 </style>
