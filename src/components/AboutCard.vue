@@ -325,6 +325,11 @@ import { mapState } from 'vuex';
     .timeline ul li {
         padding: 20px;
         background-color: #1e1f22;
+        /* background: #22222262; */
+        box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
+                    inset 0 8px 8px rgba(0,0,0,0.1),
+                    inset 0 -4px 4px rgba(0,0,0,0.1);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
         color: white;
         border-radius: 10px;
     }

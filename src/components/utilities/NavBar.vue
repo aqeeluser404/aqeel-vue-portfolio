@@ -102,6 +102,10 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
+                    inset 0 8px 8px rgba(0,0,0,0.1),
+                    inset 0 -4px 4px rgba(0,0,0,0.1);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     }
     .nav-list-items {
         position: relative;
