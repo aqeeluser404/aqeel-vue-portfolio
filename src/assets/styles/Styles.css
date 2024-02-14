@@ -129,6 +129,22 @@
     font-family: 'Inter', sans-serif;
     line-height: 1.2;
 }
+.alt-font-2 {
+    color: #b8b8b8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.2;
+}
+.alt-font-3 {
+    color: #242424;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.2;
+}
 
 /* xsmall fonts */
 .headline-xsmall {

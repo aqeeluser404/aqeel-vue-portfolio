@@ -1,5 +1,4 @@
 <template>
-    <div class="rect-container" :style="getAdjustedWidthRect"></div>
     <!-- main container -->
     <div class="main-container" :style="getAdjustedWidth">
         
@@ -20,7 +19,7 @@
 
                 <div>
                     <!-- paragraph -->
-                    <p class="headline-small-black">My name is Aqeel Hanslo , third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. 
+                    <p class="alt-font-3">My name is Aqeel Hanslo , third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. 
                     I possess the ability to think outside the box to create innovative solutions for problems.</p>
                     <br><br><br><br>
                     <!-- download cv button -->
@@ -183,26 +182,18 @@ import { mapState } from 'vuex';
         width: 100%;
         gap: 5%;
     }
-    .rect-container {
-        position: absolute;
-        height: 97%;
-        width: 85%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border: 1px solid #111;
-        box-sizing: border-box;
-    }
     .row-1 {
         position: relative;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         justify-content: center;
-        height: 100%;
-        width: 100%;
+        outline: 2px solid #333; 
+        box-sizing: border-box;
+        height: 99%;
+        width: 99%;
         gap: 5%;
-        padding-bottom: 15vh;
+        /* padding-bottom: 15vh; */
     }
     .container-one {
         text-align: left;

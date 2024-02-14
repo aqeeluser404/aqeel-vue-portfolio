@@ -6,10 +6,10 @@
             <!-- row 1============================================================================== -->
             <div class="text-container line-height-low">
                 <h1 class="headline-large">Skills</h1>
-                <p class="headline-small">
-                    <span class="opacity-full"><br> The design of an application or website usually </span>
-                    <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
-                    <span class="opacity-quarter"><br> what to do and I'll try to visualize your ideas</span>
+                <p class="alt-font-2"> 
+                    <span class="opacity-full"><br> I've always been the type of person who can spend hours designing stuff. </span>
+                    <span class="opacity-half"><br> I simply enjoy being able to illustrate my thoughts into something visually appealing. </span>  
+                    <span class="opacity-quarter"><br> That being said, I am knowledgeable in most languages, including some backend code.</span>
                     <br><br><br><br>
                     <!-- view projects -->
                     <button class="button">View My work</button>
@@ -77,6 +77,19 @@
         </div>
 
         <div class="column-right">
+
+            <div class="container">
+                <h1 class="headline-small-2"> <span class="headline-large-blue">&quot;</span><br>Aqeel has good coding knowledge. He is quite shy and quiet but always gets work done on time and meets deadlines. </h1>
+                <div class="container-splitter"><hr></div>
+                <div class="testimonial-box">
+                    <div>
+                        <img src="../assets/testimonial/afika.jpg" alt="#" class="testimonial-img">
+                    </div>
+                    <h1 class="alt-font-2">Afika Maliwa 
+                        <br>Line Manager - CapaCiTi</h1>
+                </div>
+            </div>
+            <br>
             <div class="text-block-row">
                 <div class="text-block">
                     <h1 class="headline-medium-white weight-bold">04+ </h1>
@@ -88,7 +101,7 @@
                 </div>
                 <div class="text-block">
                     <h1 class="headline-medium-white weight-bold">05+ </h1>
-                    <p class="alt-font">Coding Languages</p>
+                    <p class="alt-font"> Backend Frontend Coding Languages</p>
                 </div>
             </div>
         </div>
@@ -114,7 +127,7 @@ export default {
         ...mapState(['isNavbarVisible']),
         getAdjustedWidth() {
             return {
-                width: this.isNavbarVisible ? 'calc(100% - 6.5rem)' : '100%,',
+                width: this.isNavbarVisible ? 'calc(100% - 6.5rem)' : '100%',
                 position: 'relative',
                 left: this.isNavbarVisible ? '6.5rem' : '0',
             };
@@ -124,6 +137,7 @@ export default {
 </script>
 
 <style scoped>
+
     .text-block-row {
         width: 100%;
         display: flex;
@@ -133,7 +147,8 @@ export default {
     }
     .text-block {
         border: 1px solid #949494;
-        border-radius: 5px;
+        background: #949494;
+        border-radius: 1rem;
         padding: 1rem;
         display: flex;
         flex-direction: column;
@@ -147,7 +162,7 @@ export default {
     /* components================================================================================ */
     
     #video-background {
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         bottom: 0;
@@ -163,10 +178,10 @@ export default {
     .main-container {
         padding: 9rem 3rem;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         position: relative;
-        gap: 2rem;
+        gap: 5%;
         padding-top: 25vh;
 
         /* scrolling */
@@ -174,11 +189,15 @@ export default {
     }
     .column-left {
         width: 100%;
-        max-width: 50vw;
+        max-width: 40vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .column-right {
         width: 100%;
-        max-width: 50vw;
+        height: 100vh;
+        max-width: 40vw;
     }
     .text-container {
         text-align: right;
@@ -186,19 +205,58 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-
         /* scrolling */
         /* height: auto; */
     }
     .skill-container {
-        width: 40vw;
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         text-align: left;
-
+        padding-top: 50px;
         /* scrolling */
         /* height: 100vh; */
+    }
+    .container-splitter {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    hr {
+        width: 25%;
+    }
+    .testimonial-box {
+        width: 100%;
+        justify-content: center;
+        text-align: left;
+        gap: 1.5rem;
+        text-transform: uppercase;
+        align-items: center;
+    }
+    .container {
+        background: #2222228c;
+        box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
+                    inset 0 8px 8px rgba(0,0,0,0.1),
+                    inset 0 -4px 4px rgba(0,0,0,0.1);
+                
+        border-radius: 2rem;
+        width: 100%;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .container div {
+        display: flex;
+    }
+    .testimonial-img {
+        width: 100px;
+        border-radius: 50%;
+        border: 1px solid #5E9FFF;
     }
 
     /* content=================================================================================== */
@@ -260,9 +318,26 @@ export default {
 
     @media only screen and (max-width: 611px) {
         .main-container {
-            padding: 9rem 3rem;
+            padding: 0;
+            flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
+            /* align-items: center;
+            flex-direction: column;
+            justify-content: center; */
+        }
+        .column-left {
+            padding: 9rem 3rem;
+            min-width: 100vw;
+            height: 100%;
+            /* max-width: 40vw; */
+        }
+        .column-right {
+            /* padding: 9rem 3rem; */
+            padding-top: 9rem;
+            padding-right: 3rem;
+            width: 70vw;
+            height: 100%;
+            /* max-width: 40vw; */
         }
         .text-container {
             text-align: right;
@@ -272,7 +347,6 @@ export default {
         }
         .skill-container {
             width: 70vw;
-            padding-top: 50px;
             height: 100%;
         }
         #video-background {
