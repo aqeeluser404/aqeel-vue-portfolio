@@ -398,6 +398,10 @@ import { mapState } from 'vuex';
             padding-bottom: 30%;
             justify-content: center;
         }
+        .image-container {
+            height: 325px;
+            width: 325px;
+        }
         /* .image-container {
             width: 100%;
             height: auto; 

@@ -100,13 +100,14 @@ export default {
     /* components================================================================================ */
     
     #video-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        position: fixed;
+        top: -2px;
+        left: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
         object-fit: cover;
         z-index: -1;
+        transform: scale(1.02);
     }
 
     /* containers================================================================================ */
