@@ -276,7 +276,8 @@ import { mapState } from 'vuex';
         width: 90%;
         height: 90%;
         border-radius: 1rem;
-        /* border: 10px #ffffff solid; */
+        border: 10px #ffffff solid;
+
         /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); */
         transition: all 0.5s;
         /* border: 10px #ffffff solid; */
@@ -285,13 +286,17 @@ import { mapState } from 'vuex';
         position: absolute;
         top: 0; 
         left: 0; 
-        border: 10px #ffffff solid;
+
         border-radius: 1rem;
         width:90%;
         height: 90%;
         /* border: 2px #ffffff solid; */
         z-index: -1;
+        /* filter: invert(30%) sepia(150%) saturate(1000%) hue-rotate(200deg); */
         filter: grayscale(100%);
+        border: 10px #ffffff solid;
+
+
         /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
         transition: all 0.5s;
     }
@@ -304,7 +309,7 @@ import { mapState } from 'vuex';
         border-radius: 1rem;
         border: 10px #ffffff solid;
         z-index: -1;
-        opacity: 40%;
+        opacity: 50%;
         filter: grayscale(100%);
         transition: all 0.5s;
     }

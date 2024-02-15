@@ -2,7 +2,10 @@
 <template>
   <div class="main-container">
     <!-- Your loading or intro content goes here -->
-    <h1 class="headline-small-blue">Loading<span class="loading-dots"></span></h1>
+    <div>
+      <img src="@/assets/misc/hour.gif" alt="#" class="hour-glass">
+    </div>
+    <h1 class="headline-small">Loading<span class="loading-dots"></span></h1>
 
   </div>
 </template>
@@ -14,6 +17,12 @@ export default {
 </script>
 
 <style scoped>
+  .hour-glass {
+      width: 150px;
+      background-color: #0E0E0E;
+      filter: invert(94.5%) hue-rotate(1deg);
+
+  }
   .main-container {
     text-align: center;
     background-color: #0E0E0E;

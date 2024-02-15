@@ -6,11 +6,12 @@
         <div class="text-container">
             <h1 class="headline-large">Projects</h1>
             <br>
-            <!-- text animation -->
-            <h1 class="typing-text-animation headline-medium">
-                <span class="typed-text weight-bold">{{ typeValue }}</span>
-                <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
-            </h1>
+            <p class="alt-font-2"> 
+                    <span class="opacity-full"><br> I've always been the type of person who can spend hours designing stuff. </span>
+                    <span class="opacity-half"><br> I simply enjoy being able to illustrate my thoughts into something visually appealing. </span>  
+                    <span class="opacity-quarter"><br> That being said, I am knowledgeable in most languages, including some backend code.</span>
+                </p>
+
         </div>
 
         <!-- row 2============================================================================== -->
@@ -18,32 +19,33 @@
             <div class="card">
                 <img src="../assets/projects/first-portfolio.png" class="card-img" alt="#">
                 <div class="card-body">
-                    <h1 class="card-title">First Portfolio</h1>
-                    <p class="card-sub-title">HTML CSS and JavaScript</p>
-                    <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
-                    
-                    <button class="card-btn">Source Code</button>
+                    <h1 class="card-title headline-small-blue">First Portfolio</h1>
+                    <p class="card-sub-title alt-font-medium">Static - HTML - CSS - JS <br> <b>(No Framework)</b></p>
+                    <p class="card-info alt-font-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
+                    <button class="button">Source Code</button>
                 </div>
             </div>
             <div class="card">
                 <img src="../assets/projects/animeapp.png" class="card-img" alt="#">
                 <div class="card-body">
-                    <h1 class="card-title">Anime Web App</h1>
-                    <p class="card-sub-title">Java Springboot and Vue.js</p>
-                    <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
-                    <button class="card-btn">Source Code</button>
+                    <h1 class="card-title headline-small-blue">Anime Web App</h1>
+                    <p class="card-sub-title alt-font-medium">Java - Springboot - Workbench <br> <b>(Vue Framework)</b> </p>
+                    <p class="card-info alt-font-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
+                    <button class="button">Source Code</button>
                 </div>
             </div>
             <div class="card">
                 <img src="../assets/projects/bankapp2.png" class="card-img" alt="#">
                 <div class="card-body">
-                    <h1 class="card-title">Project 1</h1>
-                    <p class="card-sub-title">Sub heading</p>
-                    <p class="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
-                    <button class="card-btn">Source Code</button>
+                    <h1 class="card-title headline-small-blue">Python Bank App</h1>
+                    <p class="card-sub-title alt-font-medium">Python - Custom Tkinter - Gui <br> <b>(CapaCiTi Project)</b></p>
+                    <p class="card-info alt-font-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
+                    <button class="button">Source Code</button>
                 </div>
             </div>
         </div>
+
+        <button class="button">View GitHub</button>
 
         <!-- components -->
         <!-- number -->
@@ -152,12 +154,15 @@ import { mapState } from 'vuex';
     /* containers================================================================================ */
 
     .main-container {
-        padding-top: 9rem;
-        padding-left: 6.5rem;
+        padding: 9rem 3rem;
+        padding-top: 25vh;
         align-items: center;
         justify-content: center;
         position: relative;
-        gap: 5%;
+        /* scrolling */
+        height: 100%;
+        width: 100%;
+        gap: 5rem;
         /* padding-top: 25vh; */
 
     }
@@ -189,9 +194,11 @@ import { mapState } from 'vuex';
     }
     .card {
         width: 320px;
+        border-radius: 2rem;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
         height: 400px;
         overflow: hidden;
-        border: 4px solid #ffffff2d;
+        /* border: 4px solid #ffffff2d; */
         position: relative;
     }
     .card-img {
@@ -201,11 +208,15 @@ import { mapState } from 'vuex';
         object-position: center top;
     }
     .card-body {
-        font-family: 'Koulen', sans-serif;
+        /* font-family: 'Koulen', sans-serif; */
+        border-radius: 2rem;
+
         width: 100%;
         height: 100%;
-        bottom: -100%;
+        bottom: 0;
         right: 0;
+        transform: scale(50%);
+        opacity: 0;
         position: absolute;
         background: #000000b9;
         backdrop-filter: blur(5px);
@@ -214,12 +225,14 @@ import { mapState } from 'vuex';
         text-align: left;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         gap: 1rem;
         transition: ease-in-out 0.5s;
     }
     .card:hover .card-body{
-        bottom: 0;
+        transform: scale(1);
+        opacity: 100%;
+        /* right: 0; */
     }
     .card-title {
         text-transform: uppercase;
@@ -228,7 +241,7 @@ import { mapState } from 'vuex';
     }
     .card-sub-title {
         text-transform: uppercase;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 300;
     }
     .card-info {
