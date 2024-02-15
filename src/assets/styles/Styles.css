@@ -65,7 +65,7 @@ a {
     
 }
 .button:hover {
-    background: #5E9FFF;
+    background: #5e9eff7e;
     color: #000000;
 }
 .button-2:hover {
@@ -107,26 +107,47 @@ a {
 .box-2 {
     min-width: 50px;
     min-height: 50px;
+
     border-bottom: 1.6px solid;
     border-image: linear-gradient(to right, rgba(161, 161, 161, 0) 15%, #0084ffcb 95%) 1;
+    opacity: 0%;
+    transition: ease-in-out 0.5s;
+}
+.styled-button:hover .box-2 {
+    opacity: 100%;
+}
+.styled-button:hover .box-4 {
+    opacity: 100%;
+}
+.styled-button:hover .box-6 {
+    opacity: 100%;
+}
+.styled-button:hover .box-8 {
+    opacity: 100%;
 }
 .box-4 {
     min-width: 120px;
     min-height: 75px;
     border-left: 1.6px solid;
     border-image: linear-gradient(to bottom, rgba(161, 161, 161, 0) 15%, #0084ffcb 95%) 1;
+    opacity: 0%;
+    transition: ease-in-out 0.5s;
 }
 .box-6 {
     min-width: 120px;
     min-height: 75px;
     border-right: 1.6px solid;
     border-image: linear-gradient(to top, rgba(161, 161, 161, 0) 15%, #0084ffcb 95%) 1;
+    opacity: 0%;
+    transition: ease-in-out 0.5s;
 }
 .box-8 {
     min-width: 50px;
     min-height: 50px;
     border-top: 1.6px solid;
     border-image: linear-gradient(to left, rgba(161, 161, 161, 0) 15%, #0084ffcb 95%) 1;
+    opacity: 0%;
+    transition: ease-in-out 0.5s;
 }
 
 /* ============================================================================font styling  */
