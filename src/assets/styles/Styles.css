@@ -32,6 +32,8 @@
     padding-left: 0.6rem;
     padding-right: 0.6rem;
     transition: 0.7s ease;
+    text-decoration: none;
+
 }
 .button-2 {
     min-width: 120px;
@@ -45,6 +47,22 @@
     padding-left: 0.6rem;
     padding-right: 0.6rem;
     transition: 0.7s ease;
+    text-decoration: none;
+}
+a {
+    display: inline-block;
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none;
+    width: 140px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center; 
+        text-decoration: none;
+
+    
 }
 .button:hover {
     background: #5E9FFF;
@@ -54,6 +72,7 @@
     background: #5E9FFF;
     color: #ffffff;
 }
+
 .middle {
     min-width: 120px;
     display: flex;
@@ -125,7 +144,7 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: .9rem;
+    font-size: .7rem;
     font-family: 'Inter', sans-serif;
 }
 

@@ -23,7 +23,8 @@
                     I possess the ability to think outside the box to create innovative solutions for problems.</p>
                     <br><br><br><br>
                     <!-- download cv button -->
-                    <button class="button-2">Download CV</button>
+                    
+                    <a href="/aqeel-cv.pdf" download class="button-2" target="_blank">Download CV</a>
                 </div>
 
             </div>
@@ -161,7 +162,7 @@ import { mapState } from 'vuex';
                         this.typeArrayIndex = 0;
                     setTimeout(this.typeText, this.typingSpeed + 1000);
                 }
-            }
+            },
         },
         created() {
             setTimeout(this.typeText, this.newTextDelay + 200);
@@ -250,40 +251,44 @@ import { mapState } from 'vuex';
         position: relative;
         width: 100%; 
         height: 100%;
-        max-height: 400px;
-        max-width: 400px;
+        height: 400px;
+        width: 400px;
         /* border: 5px #0084ff solid; */
-        padding: 2rem;
+        padding: 0;
 
         animation: image-container-animation linear;
         animation-timeline: view();
         animation-range: exit;
-
-
     }
     .image-container:hover .image-1 {
-        transform: translate(-15%, -15%) scale(1.1);
+        transform: translate(-10%, -10%);
+        /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
     }
     .image-container:hover .image-3 {
-        transform: translate(3%, 3%);
+        transform: translate(5%, 5%)scale(0.99);
+        /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
     }
     .image-container:hover .image-2 {
-        transform: translate(15%, 15%);
+        transform: translate(18%, 18%)scale(0.99);
+        /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
     }
     .image-1 {
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
+        border-radius: 1rem;
         /* border: 10px #ffffff solid; */
         /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); */
         transition: all 0.5s;
+        /* border: 10px #ffffff solid; */
     }
     .image-3 {
         position: absolute;
-        top: 5%; 
-        left: 5%; 
+        top: 0; 
+        left: 0; 
         border: 10px #ffffff solid;
-        width: 100%;
-        height: 100%;
+        border-radius: 1rem;
+        width:90%;
+        height: 90%;
         /* border: 2px #ffffff solid; */
         z-index: -1;
         filter: grayscale(100%);
@@ -292,18 +297,17 @@ import { mapState } from 'vuex';
     }
     .image-2 {
         position: absolute;
-        bottom: 5%; 
-        right: 5%;
-        width: 100%;
-        height: 100%;
+        bottom: 10%; 
+        right: 10%;
+        width: 90%;
+        height: 90%;
+        border-radius: 1rem;
         border: 10px #ffffff solid;
         z-index: -1;
         opacity: 40%;
         filter: grayscale(100%);
-        /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
         transition: all 0.5s;
     }
-
 
     /* timeline styling */
     .timeline {
@@ -315,13 +319,11 @@ import { mapState } from 'vuex';
         position: relative;
         text-align: left;
     }
-
     .timeline ul {
         list-style: none;
         padding-left: 0;
         display: block;
     }
-
     .timeline ul li {
         padding: 20px;
         background-color: #1e1f22;
@@ -346,9 +348,6 @@ import { mapState } from 'vuex';
             to {scale: 1; opacity: 1;}
         }
     }
-
-
-
     .timeline ul li:last-child {
         margin-bottom: 0;
     }
@@ -372,7 +371,6 @@ import { mapState } from 'vuex';
         letter-spacing: 2px;
         line-height: 1.8;
     }
-
     /* text animation styling */
     span.typed-text {
         color: #0084ff;
@@ -394,9 +392,13 @@ import { mapState } from 'vuex';
     }
 
     /* media queries============================================================================= */
-/* 
-    @media only screen and (max-width: 1600px) {
-        .image-container {
+ 
+    @media only screen and (max-width: 1200px) {
+        .row-1 {
+            padding-bottom: 30%;
+            justify-content: center;
+        }
+        /* .image-container {
             width: 100%;
             height: auto; 
         }
@@ -411,9 +413,10 @@ import { mapState } from 'vuex';
         .image-3 {
             width: 90%; 
             height: auto; 
-        }
-    } */
+        } */
+    } 
     @media only screen and (max-width: 736px) {
+
         .main-container {
             align-items: center;
             justify-content: flex-start;

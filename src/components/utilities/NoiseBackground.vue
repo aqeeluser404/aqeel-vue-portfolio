@@ -1,0 +1,25 @@
+<template>
+    <div class="noise"></div>
+</template>
+
+<script>
+export default {
+    
+}
+</script>
+
+<style>
+.noise::before{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    /* you can control opacity of noise  */
+    opacity: .01;  
+    z-index: 1000;
+    pointer-events: none;
+    background: url(@/assets/misc/noise.gif) ;
+}
+</style>

@@ -101,7 +101,7 @@
                 </div>
                 <div class="text-block">
                     <img src="../assets/misc/coding-3.svg" alt="#">
-                    <p class="nav-item-2">Three years in developing practice</p>
+                    <p class="nav-item-2">Practical coding experience</p>
                 </div>
 
             </div>
@@ -385,7 +385,14 @@ export default {
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            gap: 3rem;
+            gap: 2rem;
+            
+        }
+        .nav-item {
+            font-size: 0.7rem;
+        }
+        .nav-item-2 {
+            font-size: 0.7rem;
         }
         .container {
             padding: 3rem 3rem;

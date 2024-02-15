@@ -1,7 +1,7 @@
 <template>
     <!-- logo nav button to appear when nav container is hidden -->
-    <picture v-if="!isNavbarVisible">
-      <img src="@/assets/logo/a.png" alt="a-logo" class="logo logo-container" @click="toggleNavbar"/>
+    <picture v-if="!showLoadingPage && !isNavbarVisible">
+        <img src="@/assets/logo/a.png" alt="a-logo" class="logo logo-container" @click="toggleNavbar"/>
     </picture>
   
     <!-- container to make navbar visible/not visible -->
@@ -41,6 +41,14 @@ export default {
   name: 'NavBar',
   computed: {
     ...mapState(['isNavbarVisible']),
+
+    isNavbarVisible() {
+      return this.$store.state.isNavbarVisible;
+    },
+    showLoadingPage() {
+      return this.$store.state.showLoading;
+    },
+
   },
   methods: {
     ...mapMutations(['toggleNavbar']),
@@ -49,7 +57,11 @@ export default {
         this.toggleNavbar();
       }
     },
+    toggleNavbar() {
+      this.$store.commit('toggleNavbar');
+    },
   },
+
   mounted() {
     this.hideNavbarOnSmallScreens();
     window.addEventListener('resize', this.hideNavbarOnSmallScreens);
