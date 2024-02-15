@@ -1,16 +1,16 @@
-import HomeCard from './components/HomeCard.vue'
+// import HomeCard from './components/HomeCard.vue'
 import AboutCard from './components/AboutCard.vue'
 import SkillsCard from './components/SkillsCard.vue'
 import ProjectsCard from './components/ProjectsCard.vue'
 import ContactCard from './components/ContactCard.vue'
-import ThankYou from './components/utilities/ThankYou.vue'
+import ThankCard from './components/ThankCard.vue'
 
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
     {
         name : 'HomeCard',
-        component : HomeCard,
+        component : () => import('../src/components/HomeCard.vue'),
         path : '/'
     },
     {
@@ -34,8 +34,8 @@ const routes = [
         path : '/contact'
     },
     {
-        name : 'ThankYou',
-        component : ThankYou,
+        name : 'ThankCard',
+        component : ThankCard,
         path : '/thank-you'
     },
 ];

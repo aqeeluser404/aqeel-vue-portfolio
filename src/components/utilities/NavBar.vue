@@ -28,6 +28,14 @@
                 <router-link to="/skills" class="nav-item" @click="hideNavbarOnSmallScreens">SKILLS</router-link>
                 <router-link to="/projects" class="nav-item" @click="hideNavbarOnSmallScreens">PROJECTS</router-link>
             </div>
+
+
+            <!-- <router-view v-slot="{ Component }">
+                <transition name="slide" mode="out-in">
+                    <Component :is="Component" />
+                </transition>
+            </router-view> -->
+
   
             <div class="fidget-container"></div>
         </nav>
@@ -73,6 +81,17 @@ export default {
 </script>
 
 <style scoped>
+
+    .slide-enter-from,
+    .slide-leave-to {
+        opacity: 0;
+    }
+    .slide-enter-active,
+    .slide-leave-active {
+        transition: slide 0.3s ease-out;
+    }
+
+
     .logo-container {
         position: fixed;
         top: 1rem;

@@ -11,7 +11,7 @@
 
 <script>
     export default {
-        name: 'ThankYou',
+        name: 'ThankCard',
         methods: {
             GoToHome() {
                 this.$router.push('/')

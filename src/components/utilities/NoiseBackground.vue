@@ -16,7 +16,6 @@ export default {
     width: 100vw;
     height: 100vh;
     content: "";
-    /* you can control opacity of noise  */
     opacity: .01;  
     z-index: 1000;
     pointer-events: none;
