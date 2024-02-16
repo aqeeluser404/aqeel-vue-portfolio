@@ -204,6 +204,10 @@ import { mapState } from 'vuex';
         animation-timeline: view();
         animation-range: exit -75px;
     }
+    @keyframes fade-out {
+        to { opacity: 0; }
+    }
+    
     .container-one {
         text-align: left;
         width: 30%;
@@ -226,13 +230,7 @@ import { mapState } from 'vuex';
         gap: 2rem;
     }
 
-    @keyframes fade-out {
-        to { opacity: 0; }
-    }
-    @keyframes image-container-animation {
-        25% { opacity: 1; }
-        85%, 100% { opacity: 0; scale: 0.5;}
-    }
+
     .row-2 {
         height: 100%;
         width: 100%;
@@ -256,51 +254,37 @@ import { mapState } from 'vuex';
         height: 100%;
         height: 400px;
         width: 400px;
-        /* border: 5px #0084ff solid; */
         padding: 0;
 
         animation: image-container-animation linear;
         animation-timeline: view();
         animation-range: exit;
     }
-    .image-container:hover .image-1 {
-        transform: translate(-10%, -10%);
-        /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
+    @keyframes image-container-animation {
+        25% { opacity: 1; }
+        85%, 100% { opacity: 0; scale: 0.5;}
     }
-    .image-container:hover .image-3 {
-        transform: translate(5%, 5%)scale(0.99);
-        /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
-    }
-    .image-container:hover .image-2 {
-        transform: translate(18%, 18%)scale(0.99);
-        /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
-    }
+    .image-container:hover .image-1 {transform: translate(-10%, -10%);}
+    .image-container:hover .image-3 {transform: translate(5%, 5%)scale(0.99);}
+    .image-container:hover .image-2 {transform: translate(18%, 18%)scale(0.99);}
     .image-1 {
         width: 90%;
         height: 90%;
         border-radius: 1rem;
         border: 10px #ffffff solid;
-
-        /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); */
         transition: all 0.5s;
-        /* border: 10px #ffffff solid; */
+        position: absolute;
     }
     .image-3 {
         position: absolute;
         top: 0; 
         left: 0; 
-
         border-radius: 1rem;
         width:90%;
         height: 90%;
-        /* border: 2px #ffffff solid; */
         z-index: -1;
-        /* filter: invert(30%) sepia(150%) saturate(1000%) hue-rotate(200deg); */
         filter: grayscale(100%);
         border: 10px #ffffff solid;
-
-
-        /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); */
         transition: all 0.5s;
     }
     .image-2 {
@@ -317,6 +301,10 @@ import { mapState } from 'vuex';
         transition: all 0.5s;
     }
 
+
+
+
+    
     /* timeline styling */
     .timeline {
         font-family: 'Inter', sans-serif;

@@ -125,7 +125,6 @@ export default {
         gap: 0.8rem;
     }
     #navbar {
-        z-index: 1;
         background-color: #111111;
         padding: 1rem;
         height: 100svh;

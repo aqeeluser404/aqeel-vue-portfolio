@@ -1,8 +1,7 @@
 /* Global styling  */
-html, body {
-    overscroll-behavior-y: none;
-    overflow-x: hidden;
-}
+html, body {overscroll-behavior-y: none;}
+    /* do not use this with animations */
+    /* overflow-x: hidden; */
 
 /* component styling */
 
@@ -13,7 +12,7 @@ html, body {
 .main-container {
     /* width: calc(100vw - 6.5rem); */
     width: 100vw;
-    height: 100svh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
