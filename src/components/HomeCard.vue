@@ -116,12 +116,14 @@ export default {
         align-items: flex-end;
         justify-content: center;
         position: relative;
+        min-height: 100svh;
+        height: 100%;
     }
     /* row 1 */
     .text-container {
         display: flex;
         flex-direction: column;
-        padding-top: 8%;
+        padding-top: 12%;
         padding-right: 8%;
         gap: 1rem;
         text-align: right;
@@ -157,10 +159,10 @@ export default {
     @media only screen and (max-width: 1441px) and (max-width: 1500px) {
         .links-container {
             /* width: 25vw; */
-            gap: 5rem;
+            gap: 4rem;
         }
         .social-links {
-            gap: 5rem;
+            gap: 1rem;
         }
     }
     @media only screen and (max-width: 611px) {
@@ -171,12 +173,8 @@ export default {
             font-size: 2rem;
         }
         .headline-large {
-            font-size: 4rem;
-            text-align: left;
-        }
-        .headline-small {
-            font-size: 1.3rem;
-            line-height: 1.2;
+            font-size: 5rem;
+            text-align: right;
         }
         .main-container {
             padding: 12rem 3rem;
@@ -193,6 +191,8 @@ export default {
             line-height: 1.4;
             gap: 1rem;
             text-align: right;
+            padding-top: 0%;
+            padding-right: 0%;
         }
         .text-container p {
             text-align: right;
@@ -209,7 +209,7 @@ export default {
         }
         .social-links {
             justify-content: center;
-            gap: 5rem;
+            gap: 3rem;
         }
         .unique-icon {
             width: 2.7rem;

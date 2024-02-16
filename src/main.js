@@ -1,9 +1,9 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './routers';
+import store from './store'; // Import your Vuex store
 import LoadingCard from './components/utilities/LoadingCard.vue'; 
 import NavBar from './components/utilities/NavBar.vue';
-import store from './store';
 import './assets/styles/Styles.css';
 import './assets/styles/MediaQueries.css';
 
@@ -42,8 +42,9 @@ router.afterEach(() => {
   store.commit('setShowLoading', false);
 });
 
-createApp(App)
-  .use(router)
-  .use(store)
-  .component('NavBar', NavBar)
-  .mount('#app');
+// Create the app and use Vuex store before mounting
+const app = createApp(App);
+app.use(router);
+app.use(store);
+app.component('NavBar', NavBar);
+app.mount('#app');

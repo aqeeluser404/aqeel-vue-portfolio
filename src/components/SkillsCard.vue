@@ -342,7 +342,7 @@ export default {
             padding: 0;
             flex-direction: column;
             align-items: center;
-            padding-bottom: 100px;
+            padding-bottom: 300px;
             /* align-items: center;
             flex-direction: column;
             justify-content: center; */
@@ -363,7 +363,7 @@ export default {
             /* max-width: 40vw; */
         }
         .text-container {
-            text-align: right;
+            text-align: left;
             width: 70vw;
             padding-top: 100px;
             height: 100%;

@@ -82,14 +82,14 @@ export default {
 
 <style scoped>
 
-    .slide-enter-from,
+    /* .slide-enter-from,
     .slide-leave-to {
         opacity: 0;
     }
     .slide-enter-active,
     .slide-leave-active {
         transition: slide 0.3s ease-out;
-    }
+    } */
 
 
     .logo-container {
@@ -125,11 +125,12 @@ export default {
         gap: 0.8rem;
     }
     #navbar {
+        z-index: 1;
         background-color: #111111;
         padding: 1rem;
-        height: 100vh;
+        height: 100svh;
         width: 6.5rem;
-        position: fixed;
+        position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -177,14 +178,19 @@ export default {
         padding: 0.5rem;
     }
     hr {
-        width: 4rem;
+        width: 3rem;
     }
     .fidget-container {
         height: 3rem;
     }
+    @media only screen and (max-height: 500px) {
+        .logo {
+            width: 3.5rem;
+        }
+    }
     @media only screen and (max-width: 611px) {
         #navbar {
-            width: 100vw;
+            width: 6rem;
         }
         .nav-header {
             justify-content: flex-start;
@@ -193,6 +199,13 @@ export default {
         .nav-item:hover::after {
             width: 0;
             color: #0084ff;
+        }
+        .logo {
+            width: 3.5rem;
+        }
+        .nav-item{
+            font-size: 0.7rem;
+
         }
     }
 

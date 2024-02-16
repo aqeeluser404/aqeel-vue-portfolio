@@ -13,6 +13,9 @@
 <script>
 export default {
   name: 'LoadingCard',
+  // mounted() {
+  //   this.$store.commit('toggleNavbar');
+  // }
 };
 </script>
 
@@ -26,6 +29,7 @@ export default {
   .main-container {
     text-align: center;
     background-color: #0E0E0E;
+    z-index: 1001;
   }
   .loading-dots::after {
     content: '';

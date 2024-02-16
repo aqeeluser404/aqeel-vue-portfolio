@@ -5,11 +5,11 @@
         <!-- row 1============================================================================== -->
         <div class="text-container">
             <h1 class="headline-large">Projects</h1>
-            <br>
+            <!-- <br> -->
             <p class="alt-font-2"> 
-                    <span class="opacity-full"><br> I've always been the type of person who can spend hours designing stuff. </span>
-                    <span class="opacity-half"><br> I simply enjoy being able to illustrate my thoughts into something visually appealing. </span>  
-                    <span class="opacity-quarter"><br> That being said, I am knowledgeable in most languages, including some backend code.</span>
+                    <span class="opacity-full"><br> I've always been the type of person who can spend hours</span>
+                    <span class="opacity-half"><br> designing stuff.   </span>  
+                    <span class="opacity-quarter"><br> Trying to solve a problem is the real objective</span>
                 </p>
 
         </div>
@@ -264,10 +264,15 @@ import { mapState } from 'vuex';
     }
 
     /* media queries============================================================================= */
-
+    @media only screen and (max-width: 736px) {
+        .text-container {
+            padding-top: 100px;
+        }
+    }
     @media only screen and (max-width: 984px) {
         .main-container {
             padding: 9rem 3rem;
+            padding-bottom: 300px;
             align-items: center;
             justify-content: flex-start;
             flex-direction: column;
@@ -275,9 +280,9 @@ import { mapState } from 'vuex';
             height: 100%;
         }
         .text-container {
-            text-align: center;
+            text-align: left;
+            gap: 2rem;
             width: 70vw;
-            padding-top: 100px;
             height: 100%;
         }
         .card-row {

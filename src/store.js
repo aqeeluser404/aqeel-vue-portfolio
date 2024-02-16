@@ -7,11 +7,11 @@ export default createStore({
     showLoading: true
   },
   mutations: {
-    toggleNavbar(state) {
-      state.isNavbarVisible = !state.isNavbarVisible;
-    },
     setShowLoading(state, value) {
       state.showLoading = value;
+    },
+    toggleNavbar(state) {
+      state.isNavbarVisible = !state.isNavbarVisible;
     },
   },
 });

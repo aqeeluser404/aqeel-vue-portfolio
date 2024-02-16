@@ -189,12 +189,14 @@ import { mapState } from 'vuex';
         position: relative;
         display: flex;
         flex-direction: row-reverse;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
-        outline: 2px solid #333; 
+        /* outline: 2px solid #333;  */
         box-sizing: border-box;
         height: 100%;
         width: 100%;
+        /* padding-bottom: 300px; */
+        /* min-height: 100svh; */
         gap: 5%;
         /* padding-bottom: 15vh; */
 
@@ -205,7 +207,7 @@ import { mapState } from 'vuex';
     .container-one {
         text-align: left;
         width: 30%;
-        height: 100vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         padding-top: 25vh;
@@ -218,7 +220,8 @@ import { mapState } from 'vuex';
         align-items: center;
         /* justify-content: center; */
         width: 40%;
-        height: 100vh;
+        height: auto;
+        min-height: 100svh;
         padding-top: 26vh;
         gap: 2rem;
     }
@@ -231,7 +234,7 @@ import { mapState } from 'vuex';
         85%, 100% { opacity: 0; scale: 0.5;}
     }
     .row-2 {
-        min-height: 100vh;
+        height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -398,9 +401,15 @@ import { mapState } from 'vuex';
 
     /* media queries============================================================================= */
  
+    @media only screen and (min-width: 1600px) {
+        .image-container {
+            height: 500px;
+            width: 500px;
+        }
+    }
     @media only screen and (max-width: 1200px) {
         .row-1 {
-            padding-bottom: 30%;
+            padding-bottom: 300px;
             justify-content: center;
         }
         .image-container {
@@ -434,17 +443,20 @@ import { mapState } from 'vuex';
         .row-1 {
             padding: 9rem 3rem;
             flex-direction: column; 
+            align-items: center;
         }
         .container-one {
             text-align: left;
             width: 70vw;
             padding-top: 100px;
-            height: 100%;
+            height: auto;
         }
         .container-two {
             width: 70vw;
             padding-top: 100px;
+            align-items: center;
             height: 100%;
+            min-height: auto;
         }
         .row-2 {
             padding: 9rem 3rem;

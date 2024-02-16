@@ -87,4 +87,9 @@ export default {
         pointer-events: none;
         z-index: 2;
     }
+    @media only screen and (max-width: 611px) {
+        .circle {
+            display: none;
+        }
+    }
 </style>

@@ -1,3 +1,9 @@
+/* Global styling  */
+html, body {
+    overscroll-behavior-y: none;
+    overflow-x: hidden;
+}
+
 /* component styling */
 
 .page-number {position: fixed;bottom: 10px;right: 10px;}
