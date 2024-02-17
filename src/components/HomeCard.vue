@@ -6,9 +6,7 @@
             <div class="text-container">
                 <h1 class="headline-xsmall">Hi there,</h1>
                 <h1 class="headline-large">I'm Aqeel Hanslo</h1>
-                <div class="circular-animation">
-                    <h1 class="headline-medium">  &lt;Software Developer/&gt; </h1>
-                </div>
+                <h1 class="headline-medium">  &lt;Software Developer/&gt; </h1>
                 <p class="font-inter-medium">
                     <span class="opacity-full"><br>The design of an application or website usually </span>
                     <span class="opacity-half"><br>mirrors the thought process of the creator. Tell me </span>  
@@ -93,8 +91,8 @@ export default {
 
 <style scoped>
 
-    /* components================================================================================ */
-    
+    /* components */
+
     #video-background {
         position: fixed;
         top: -2px;
@@ -106,7 +104,7 @@ export default {
         transform: scale(1.02);
     }
 
-    /* containers================================================================================ */
+    /* main container */
 
     .main-container {
         align-items: flex-end;
@@ -115,7 +113,9 @@ export default {
         min-height: 100svh;
         height: 100%;
     }
-    /* row 1 */
+
+    /* text container */
+
     .text-container {
         display: flex;
         flex-direction: column;
@@ -124,7 +124,9 @@ export default {
         gap: 1rem;
         text-align: right;
     }
-    /* row 2 */
+
+    /* links container */
+
     .links-container {
         width: 50vw;
         display: flex;
@@ -132,9 +134,6 @@ export default {
         justify-content: flex-end;
         gap: 9rem;
     }
-
-    /* content=================================================================================== */
-    
     .social-links {
         display: flex;
         justify-content: space-around;
@@ -152,16 +151,17 @@ export default {
 
     /* media queries============================================================================= */
     
-    @media only screen and (max-width: 1441px) and (max-width: 1500px) {
+    @media only screen and (max-width: 900px) {
+        /* containers */
+        .social-links {
+            gap: 3rem;
+        }
         .links-container {
-            /* width: 25vw; */
             gap: 4rem;
         }
-        .social-links {
-            gap: 1rem;
-        }
     }
-    @media only screen and (max-width: 611px) {
+    @media only screen and (max-width: 736px) {
+        /* fonts */
         .headline-xsmall {
             font-size: 1.5rem;
         }
@@ -171,16 +171,19 @@ export default {
         .headline-large {
             font-size: 5rem;
             text-align: right;
+            padding-bottom: 2rem;
         }
+        .text-container p {
+            text-align: right;
+        }
+
+        /* containers */
         .main-container {
             padding: 12rem 3rem;
             align-items: center;
             justify-content: space-between;
             gap: 6.5rem;
             height: 100%;
-        }
-        .headline-large {
-            padding-bottom: 2rem;
         }
         .text-container {
             width: 70vw;
@@ -190,9 +193,6 @@ export default {
             padding-top: 0%;
             padding-right: 0%;
         }
-        .text-container p {
-            text-align: right;
-        }
         .links-container {
             flex-direction: column;
             justify-content: space-between;
@@ -200,22 +200,15 @@ export default {
             width: 100%;
             padding-right: 0;
         }
-        .social-icon {
-            width: 2rem;
-        }
+
+        /* icons */
+        .social-icon {width: 2rem;} .unique-icon {width: 2.7rem;}
         .social-links {
             justify-content: center;
             gap: 3rem;
         }
-        .unique-icon {
-            width: 2.7rem;
-        }
-
         .styled-button {
             justify-content: center;
-        }
-        .box-1, .box-2, .box-3, .box-4, .box-6, .box-7, .box-8, .box-9 {
-            display: none;
         }
     }
 </style>
