@@ -151,8 +151,9 @@ export default {
 
     /* media queries============================================================================= */
     
+    /* container fix queries */
+
     @media only screen and (max-width: 900px) {
-        /* containers */
         .social-links {
             gap: 3rem;
         }
@@ -160,8 +161,13 @@ export default {
             gap: 4rem;
         }
     }
+
+    /* mobile sized queries */
+
     @media only screen and (max-width: 736px) {
+
         /* fonts */
+
         .headline-xsmall {
             font-size: 1.5rem;
         }
@@ -178,6 +184,7 @@ export default {
         }
 
         /* containers */
+
         .main-container {
             padding: 12rem 3rem;
             align-items: center;
@@ -202,6 +209,7 @@ export default {
         }
 
         /* icons */
+        
         .social-icon {width: 2rem;} .unique-icon {width: 2.7rem;}
         .social-links {
             justify-content: center;

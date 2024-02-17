@@ -1,10 +1,10 @@
 <template>
-    <!-- LOGO NAV BTN to appear when nav container is hidden -->
+    <!-- logo below navbar -->
     <picture v-if="!showLoadingPage && !isNavbarVisible">
         <img src="@/assets/logo/a.png" alt="a-logo" class="logo logo-container" @click="toggleNavbar"/>
     </picture>
   
-    <!-- container to make navbar visible/not visible -->
+    <!-- navbar visible/not visible -->
     <div class="navbar-vertical-fixed" :class="{ 'hidden': !isNavbarVisible }">
         <!-- navbar -->
         <nav id="navbar">

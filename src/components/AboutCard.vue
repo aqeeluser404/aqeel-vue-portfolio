@@ -2,12 +2,14 @@
     <!-- main container -->
     <div class="main-container" :style="getAdjustedWidth">
         
-
+        <!-- top row -->
         <div class="row-1">
-            <!-- column 1============================================================================== -->
+
+            <!-- right container -->
             <div class="container-one line-height-low">
+
+                <!-- heading -->
                 <div>
-                    <!-- heading -->
                     <h1 class="headline-large-black">About Me</h1>
                     <br>
                     <!-- animation text -->
@@ -17,18 +19,16 @@
                     </h1>
                 </div>
 
+                <!-- paragraph -->
                 <div>
-                    <!-- paragraph -->
                     <p class="alt-font-3">My name is Aqeel Hanslo , third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. 
                     I possess the ability to think outside the box to create innovative solutions for problems.</p>
                     <br><br><br><br>
-                    <!-- download cv button -->
-                    
                     <a href="/aqeel-cv.pdf" download class="button-hover-white" target="_blank">Download CV</a>
                 </div>
-
             </div>
-            <!-- column 2============================================================================== -->
+
+            <!-- left container - image -->
             <div class="container-two  line-height-low">
                 <div class="image-container">
                     <img :src="gifPath" alt="#" class="image-1">
@@ -39,10 +39,13 @@
 
         </div>
 
+        <!-- bottom row -->
         <div class="row-2">
+
             <!-- heading -->
-            <h1 class="headline-large-blue">Education</h1>
-            <br>
+            <h1 class="headline-large-blue">Education</h1><br>
+
+            <!-- timeline container -->
             <div class="timeline">
                 <ul>
                     <li>
@@ -88,12 +91,12 @@
                 </ul>
             </div>
         </div>
+
         <!-- components -->
         <!-- number -->
         <div class="page-number">
             <h1 class="headline-xsmall">02</h1>
         </div>
-        <div class="scroll-watcher"></div>
     </div>
 </template>
 
@@ -110,13 +113,6 @@ import { mapState } from 'vuex';
                     left: this.isNavbarVisible ? '6.5rem' : '0',                
                 };
             },
-            // getAdjustedWidthRect() {
-            //     return {
-            //         width: this.isNavbarVisible ? 'calc(99% - 6.5rem)' : '99%',
-            //         right: this.isNavbarVisible ? '6.5rem' : '100%',
-                    
-            //     }
-            // }
         },
         data: () => {
             return {
@@ -172,34 +168,30 @@ import { mapState } from 'vuex';
 
 <style scoped>
 
-    /* components================================================================================ */
+    /* components */
 
-
-    /* containers================================================================================ */
+    /* main container */
 
     .main-container {
-
         align-items: center;
         justify-content: center;
         height: 100%;
         width: 100%;
         gap: 5%;
     }
+
+    /* top row */
     .row-1 {
         position: relative;
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-start;
         justify-content: center;
-        /* outline: 2px solid #333;  */
         box-sizing: border-box;
         height: 100%;
         width: 100%;
-        /* padding-bottom: 300px; */
-        /* min-height: 100svh; */
         gap: 5%;
-        /* padding-bottom: 15vh; */
-
+        /* animation */
         animation: fade-out linear;
         animation-timeline: view();
         animation-range: exit -75px;
@@ -207,7 +199,9 @@ import { mapState } from 'vuex';
     @keyframes fade-out {
         to { opacity: 0; }
     }
-    
+
+    /* about me container */
+
     .container-one {
         text-align: left;
         width: 30%;
@@ -217,157 +211,9 @@ import { mapState } from 'vuex';
         padding-top: 25vh;
         gap: 3rem;
     }
-    .container-two {
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* justify-content: center; */
-        width: 40%;
-        height: auto;
-        min-height: 100svh;
-        padding-top: 26vh;
-        gap: 2rem;
-    }
 
-
-    .row-2 {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        align-items: center;
-        justify-content: center;
-        padding: 100px 3rem;
-        padding-bottom: 300px;
-        background-color: #111;
-    }
-    /* .alt-font {
-        text-align: left;
-    } */
-    /* content=================================================================================== */
-
-    .image-container {
-        position: relative;
-        width: 100%; 
-        height: 100%;
-        height: 400px;
-        width: 400px;
-        padding: 0;
-
-        animation: image-container-animation linear;
-        animation-timeline: view();
-        animation-range: exit;
-    }
-    @keyframes image-container-animation {
-        25% { opacity: 1; }
-        85%, 100% { opacity: 0; scale: 0.5;}
-    }
-    .image-container:hover .image-1 {transform: translate(-10%, -10%);}
-    .image-container:hover .image-3 {transform: translate(5%, 5%)scale(0.99);}
-    .image-container:hover .image-2 {transform: translate(18%, 18%)scale(0.99);}
-    .image-1 {
-        width: 90%;
-        height: 90%;
-        border-radius: 1rem;
-        border: 10px #ffffff solid;
-        transition: all 0.5s;
-        position: absolute;
-    }
-    .image-3 {
-        position: absolute;
-        top: 0; 
-        left: 0; 
-        border-radius: 1rem;
-        width:90%;
-        height: 90%;
-        z-index: -1;
-        filter: grayscale(100%);
-        border: 10px #ffffff solid;
-        transition: all 0.5s;
-    }
-    .image-2 {
-        position: absolute;
-        bottom: 10%; 
-        right: 10%;
-        width: 90%;
-        height: 90%;
-        border-radius: 1rem;
-        border: 10px #ffffff solid;
-        z-index: -1;
-        opacity: 50%;
-        filter: grayscale(100%);
-        transition: all 0.5s;
-    }
-
-
-
-
-    
-    /* timeline styling */
-    .timeline {
-        font-family: 'Inter', sans-serif;
-        width: 80%;
-        height: auto;
-        max-width: 800px;
-        margin: 0 auto;
-        position: relative;
-        text-align: left;
-    }
-    .timeline ul {
-        list-style: none;
-        padding-left: 0;
-        display: block;
-    }
-    .timeline ul li {
-        padding: 20px;
-        background-color: #1e1f22;
-        /* background: #22222262; */
-        box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
-                    inset 0 8px 8px rgba(0,0,0,0.1),
-                    inset 0 -4px 4px rgba(0,0,0,0.1);
-        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-        color: white;
-        border-radius: 10px;
-    }
-    /* animation for timeline */
-    @media (prefers-reduced-motion: no-preference) {
-        .timeline ul li {
-            scale: .8; opacity: 0;
-            animation: fade-in linear forwards;
-            animation-timeline: view();
-            animation-range: 150px 400px;
-        }
-        @keyframes fade-in {
-            from {scale: .8; opacity: 0;}
-            to {scale: 1; opacity: 1;}
-        }
-    }
-    .timeline ul li:last-child {
-        margin-bottom: 0;
-    }
-    .timeline-content h1 {
-        color: #5E9FFF;
-        font-weight: 600;
-        font-size: 1.2rem;
-        line-height: 30px;
-        margin-bottom: 5px;
-        /* text-transform: uppercase; */
-    }
-    .timeline-content p {
-        font-size: 16px;
-        line-height: 30px;
-        font-weight: 300;
-    }
-    .timeline-content .date {
-        font-size: 12px;
-        font-weight: 300;
-        margin-bottom: 15px;
-        letter-spacing: 2px;
-        line-height: 1.8;
-    }
     /* text animation styling */
+
     span.typed-text {
         color: #0084ff;
     }
@@ -387,8 +233,155 @@ import { mapState } from 'vuex';
         99% { background-color: transparent; }
     }
 
+    /* image container */
+
+    .container-two {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        height: auto;
+        min-height: 100svh;
+        padding-top: 26vh;
+        gap: 2rem;
+    }
+    .image-container {
+        position: relative;
+        width: 100%; 
+        height: 100%;
+        height: 400px;
+        width: 400px;
+        padding: 0;
+         /* animation */
+        animation: image-container-animation linear;
+        animation-timeline: view();
+        animation-range: exit;
+    }
+    @keyframes image-container-animation {
+        25% { opacity: 1; }
+        85%, 100% { opacity: 0; scale: 0.5;}
+    }
+    .image-container:hover .image-1 {transform: translate(-10%, -10%);}
+    .image-container:hover .image-3 {transform: translate(5%, 5%)scale(0.99);}
+    .image-container:hover .image-2 {transform: translate(18%, 18%)scale(0.99);}
+    .image-1 {
+        width: 90%;
+        height: 90%;
+        border-radius: 1rem;
+        border: 10px #ffffff solid;
+        transition: all 0.5s;
+        position: absolute;
+    }
+    .image-2 {
+        position: absolute;
+        bottom: 10%; 
+        right: 10%;
+        width: 90%;
+        height: 90%;
+        border-radius: 1rem;
+        border: 10px #ffffff solid;
+        z-index: -1;
+        opacity: 50%;
+        filter: grayscale(100%);
+        transition: all 0.5s;
+    }
+    .image-3 {
+        position: absolute;
+        top: 0; 
+        left: 0; 
+        border-radius: 1rem;
+        width:90%;
+        height: 90%;
+        z-index: -1;
+        filter: grayscale(100%);
+        border: 10px #ffffff solid;
+        transition: all 0.5s;
+    }
+
+    /* bottom row */
+
+    .row-2 {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 3rem;
+        padding-bottom: 300px;
+        background-color: #111;
+    }
+
+    /* timeline styling */
+
+    .timeline {
+        font-family: 'Inter', sans-serif;
+        width: 80%;
+        height: auto;
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        text-align: left;
+    }
+    .timeline ul {
+        list-style: none;
+        padding-left: 0;
+        display: block;
+    }
+    .timeline ul li {
+        color: white;
+        padding: 20px;
+        background-color: #1e1f22;
+        border-radius: 10px;
+        box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
+                    inset 0 8px 8px rgba(0,0,0,0.1),
+                    inset 0 -4px 4px rgba(0,0,0,0.1);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    }
+    .timeline ul li:last-child {
+        margin-bottom: 0;
+    }
+    .timeline-content h1 {
+        color: #5E9FFF;
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
+    .timeline-content p {
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 300;
+    }
+    .timeline-content .date {
+        font-size: 12px;
+        font-weight: 300;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+        line-height: 1.8;
+    }
+
+    /* animation for timeline */
+
+    @media (prefers-reduced-motion: no-preference) {
+        .timeline ul li {
+            scale: .8; opacity: 0;
+            animation: fade-in linear forwards;
+            animation-timeline: view();
+            animation-range: 150px 400px;
+        }
+        @keyframes fade-in {
+            from {scale: .8; opacity: 0;}
+            to {scale: 1; opacity: 1;}
+        }
+    }
+
     /* media queries============================================================================= */
  
+    /* container fix queries */
+
     @media only screen and (min-width: 1600px) {
         .image-container {
             height: 500px;
@@ -404,25 +397,14 @@ import { mapState } from 'vuex';
             height: 325px;
             width: 325px;
         }
-        /* .image-container {
-            width: 100%;
-            height: auto; 
-        }
-        .image-1 {
-            width: 100%;
-            height: auto; 
-        }
-        .image-2 {
-            width: 90%; 
-            height: auto; 
-        }
-        .image-3 {
-            width: 90%; 
-            height: auto; 
-        } */
     } 
+
+    /* mobile sized queries */
+
     @media only screen and (max-width: 736px) {
 
+        /* containers */
+        
         .main-container {
             align-items: center;
             justify-content: flex-start;
@@ -452,7 +434,8 @@ import { mapState } from 'vuex';
         }
     }
 
-    /* timeline */
+    /* timeline queries */
+
     @media only screen and (min-width: 768px) {
         .timeline:before {
             content: "";
