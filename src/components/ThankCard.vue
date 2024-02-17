@@ -5,7 +5,7 @@
         <div class="headline-small-black">We'll be in touch soon.</div>
         <br>
         <br>
-        <button class="button-2" @click="GoToHome">Go Back</button>
+        <button class="button-hover-white" @click="GoToHome">Go Back</button>
     </div>
 </template>
 

@@ -2,24 +2,21 @@
     <!-- main container -->
     <div class="main-container" :style="getAdjustedWidth">
 
-        <!-- row 1============================================================================== -->
-
+        <!-- text container -->
             <div class="text-container">
                 <h1 class="headline-xsmall">Hi there,</h1>
                 <h1 class="headline-large">I'm Aqeel Hanslo</h1>
                 <div class="circular-animation">
                     <h1 class="headline-medium">  &lt;Software Developer/&gt; </h1>
                 </div>
-
-                <p class="alt-font-medium">
-                    <span class="opacity-full"><br>  The design of an application or website usually </span>
-                    <span class="opacity-half"><br> mirrors the thought process of the creator. Tell me </span>  
+                <p class="font-inter-medium">
+                    <span class="opacity-full"><br>The design of an application or website usually </span>
+                    <span class="opacity-half"><br>mirrors the thought process of the creator. Tell me </span>  
                     <span class="opacity-quarter"><br> what to do and I'll try to visualize your ideas</span>
                 </p>
             </div>
 
-
-        <!-- row 2============================================================================== -->
+        <!-- links container -->
         <div class="links-container">
             
             <!-- custom button -->
@@ -42,19 +39,18 @@
                     <div class="box-9"></div>
                 </div>
             </div>
+
             <!-- social links -->
             <div class="social-links">
-                    <a href="https://github.com/aqeeluser404" target="_blank" rel="noopener noreferrer">
-                        <img src="@/assets/logo/github.svg" alt="github-logo" class="social-icon">
-                    </a>
-
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="@/assets/logo/instagram.svg" alt="github-logo" class="social-icon">
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/aqeel-hanslo-234961210" target="_blank" rel="noopener noreferrer">
-                        <img src="@/assets/logo/linkedin.svg" alt="linkedin-logo" class="social-icon unique-icon">
-                    </a>
+                <a href="https://github.com/aqeeluser404" target="_blank" rel="noopener noreferrer">
+                    <img src="@/assets/logo/github.svg" alt="github-logo" class="social-icon">
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <img src="@/assets/logo/instagram.svg" alt="github-logo" class="social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/aqeel-hanslo-234961210" target="_blank" rel="noopener noreferrer">
+                    <img src="@/assets/logo/linkedin.svg" alt="linkedin-logo" class="social-icon unique-icon">
+                </a>
             </div>
         </div>
 

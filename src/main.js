@@ -4,18 +4,13 @@ import router from './routers';
 import store from './store';
 import LoadingCard from './components/utilities/LoadingCard.vue'; 
 import NavBar from './components/utilities/NavBar.vue';
-import './assets/styles/Styles.css';
-import './assets/styles/MediaQueries.css';
+import './components/styles/Styles.css'
 
-// loading component
+// LoadingCard component
 let showLoadingPage = true;
-
-// div to mount the loading container
-const loadingContainer = document.createElement('div');
+const loadingContainer = document.createElement('div');   // div to mount the loading container
 document.body.appendChild(loadingContainer);
-
-// Set isNavbarVisible to true initially
-store.commit('toggleNavbar');
+store.commit('toggleNavbar');   // Set isNavbarVisible to true initially
 
 // Define a global beforeResolve guard
 router.beforeResolve((to, from, next) => {

@@ -1,21 +1,16 @@
 <!-- components/utilities/Loading.vue -->
 <template>
   <div class="main-container">
-    <!-- Your loading or intro content goes here -->
     <div>
       <img src="@/assets/misc/hour.gif" alt="#" class="hour-glass">
     </div>
     <h1 class="headline-small">Loading<span class="loading-dots"></span></h1>
-
   </div>
 </template>
 
 <script>
 export default {
   name: 'LoadingCard',
-  // mounted() {
-  //   this.$store.commit('toggleNavbar');
-  // }
 };
 </script>
 

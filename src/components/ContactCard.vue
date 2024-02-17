@@ -43,7 +43,7 @@
                     <div class="form-group">
                         <div class="g-recaptcha"></div>
 
-                        <input id="submit" type="submit" value="Say Hi!" class="button-2">
+                        <input id="submit" type="submit" value="Say Hi!" class="button-hover-white">
                     </div>
 
                     <!-- redirect to success page -->

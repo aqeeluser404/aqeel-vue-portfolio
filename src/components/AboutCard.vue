@@ -24,7 +24,7 @@
                     <br><br><br><br>
                     <!-- download cv button -->
                     
-                    <a href="/aqeel-cv.pdf" download class="button-2" target="_blank">Download CV</a>
+                    <a href="/aqeel-cv.pdf" download class="button-hover-white" target="_blank">Download CV</a>
                 </div>
 
             </div>
