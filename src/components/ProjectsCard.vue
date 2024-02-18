@@ -6,7 +6,7 @@
         <div class="text-container">
             <h1 class="headline-large">Projects</h1>
             <!-- <br> -->
-            <p class="alt-font-2"> 
+            <p class="font-inter-medium-white"> 
                     <span class="opacity-full"><br> I've always been the type of person who can spend hours</span>
                     <span class="opacity-half"><br> designing stuff.   </span>  
                     <span class="opacity-quarter"><br> Trying to solve a problem is the real objective</span>
@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <h1 class="card-title headline-small-blue">First Portfolio</h1>
                     <p class="card-sub-title font-inter-medium">Static - HTML - CSS - JS <br> <b>(No Framework)</b></p>
-                    <p class="card-info alt-font-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
+                    <p class="card-info font-inter-medium-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
                     <button class="button">Source Code</button>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                 <div class="card-body">
                     <h1 class="card-title headline-small-blue">Anime Web App</h1>
                     <p class="card-sub-title font-inter-medium">Java - Springboot - Workbench <br> <b>(Vue Framework)</b> </p>
-                    <p class="card-info alt-font-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
+                    <p class="card-info font-inter-medium-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
                     <button class="button">Source Code</button>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                 <div class="card-body">
                     <h1 class="card-title headline-small-blue">Python Bank App</h1>
                     <p class="card-sub-title font-inter-medium">Python - Custom Tkinter - Gui <br> <b>(CapaCiTi Project)</b></p>
-                    <p class="card-info alt-font-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
+                    <p class="card-info font-inter-medium-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt esse vel provident ducimus laborum praesentium perspiciatis, aliquid cupiditate.</p>
                     <button class="button">Source Code</button>
                 </div>
             </div>

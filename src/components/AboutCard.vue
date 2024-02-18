@@ -21,7 +21,7 @@
 
                 <!-- paragraph -->
                 <div>
-                    <p class="alt-font-3">My name is Aqeel Hanslo , third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. 
+                    <p class="font-inter-medium-black">My name is Aqeel Hanslo , third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. 
                     I possess the ability to think outside the box to create innovative solutions for problems.</p>
                     <br><br><br><br>
                     <a href="/aqeel-cv.pdf" download class="button-hover-white" target="_blank">Download CV</a>
@@ -167,8 +167,6 @@ import { mapState } from 'vuex';
 </script>
 
 <style scoped>
-
-    /* components */
 
     /* main container */
 

@@ -6,7 +6,7 @@
             <!-- row 1============================================================================== -->
             <div class="text-container line-height-low">
                 <h1 class="headline-large">Skills</h1>
-                <p class="alt-font-2"> 
+                <p class="font-inter-medium-white"> 
                     <span class="opacity-full"><br> I've always been the type of person who can spend hours designing stuff. </span>
                     <span class="opacity-half"><br> I simply enjoy being able to illustrate my thoughts into something visually appealing. </span>  
                     <span class="opacity-quarter"><br> That being said, I am knowledgeable in most languages, including some backend code.</span>
@@ -93,15 +93,15 @@
             <div class="text-block-row">
                 <div class="text-block">
                     <img src="../assets/misc/coding-2.svg" alt="#">
-                    <p class="nav-item-2"> Backend Frontend Coding Languages</p>
+                    <p class="font-inter-small"> Backend Frontend Coding Languages</p>
                 </div>
                 <div class="text-block">
                     <img src="../assets/misc/coding.svg" alt="#">
-                    <p class="nav-item-2">Full stack java applications</p>
+                    <p class="font-inter-small">Full stack java applications</p>
                 </div>
                 <div class="text-block">
                     <img src="../assets/misc/coding-3.svg" alt="#">
-                    <p class="nav-item-2">Practical coding experience</p>
+                    <p class="font-inter-small">Practical coding experience</p>
                 </div>
 
             </div>
@@ -390,7 +390,7 @@ export default {
         .nav-item {
             font-size: 0.7rem;
         }
-        .nav-item-2 {
+        .font-inter-small {
             font-size: 0.7rem;
         }
         .container {
