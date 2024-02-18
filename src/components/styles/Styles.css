@@ -130,7 +130,7 @@ html, body {
     transition: all 0.2s ease;
 }
 .nav-item:hover::after {
-    width: 75%;
+    width: 90%;
     color: #0084ff;
 }
 

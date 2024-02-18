@@ -2,21 +2,28 @@
     <!-- main container -->
     <div class="main-container" :style="getAdjustedWidth">
 
+        <!-- left container -->
         <div class="column-left">
-            <!-- row 1============================================================================== -->
+
+            <!-- text container -->
             <div class="text-container line-height-low">
+
+                <!-- heading & paragraph -->
                 <h1 class="headline-large">Skills</h1>
                 <p class="font-inter-medium-white"> 
                     <span class="opacity-full"><br> I've always been the type of person who can spend hours designing stuff. </span>
                     <span class="opacity-half"><br> I simply enjoy being able to illustrate my thoughts into something visually appealing. </span>  
                     <span class="opacity-quarter"><br> That being said, I am knowledgeable in most languages, including some backend code.</span>
                     <br><br><br><br>
+
                     <!-- view projects -->
                     <button class="button" @click="GoToProjects">View My work</button>
                 </p>
             </div>
+
             <br>
-            <!-- row 2============================================================================== -->
+
+            <!-- progression bars -->
             <div class="skill-container">
                 <div class="skill">
                     <div class="skill-name">HTML</div>
@@ -24,49 +31,42 @@
                         <div class="skill-per" per="90%" style="max-width:90%"></div>
                     </div>
                 </div>
-
                 <div class="skill">
                     <div class="skill-name">CSS</div>
                     <div class="skill-bar">
                         <div class="skill-per" per="85%" style="max-width:85%"></div>
                     </div>
                 </div>
-
                 <div class="skill">
                     <div class="skill-name">Javascript</div>
                     <div class="skill-bar">
                         <div class="skill-per" per="55%" style="max-width:55%"></div>
                     </div>
                 </div>
-
                 <div class="skill">
                     <div class="skill-name">Vue.JS</div>
                     <div class="skill-bar">
                         <div class="skill-per" per="60%" style="max-width:60%"></div>
                     </div>
                 </div>
-
                 <div class="skill">
                     <div class="skill-name">SPRINGBOOT</div>
                     <div class="skill-bar">
                         <div class="skill-per" per="70%" style="max-width:70%"></div>
                     </div>
                 </div>
-
                 <div class="skill">
                     <div class="skill-name">MYSQL</div>
                     <div class="skill-bar">
                             <div class="skill-per" per="70%" style="max-width:70%"></div>
                     </div>
                 </div>
-
                 <div class="skill">
                     <div class="skill-name">JAVA</div>
                     <div class="skill-bar">
                         <div class="skill-per" per="80%" style="max-width:80%"></div>
                     </div>
                 </div>
-
                 <div class="skill">
                     <div class="skill-name">GIT</div>
                     <div class="skill-bar">
@@ -76,10 +76,17 @@
             </div>
         </div>
 
+        <!-- right container -->
         <div class="column-right">
 
+            <!-- testimonial container -->
             <div class="container">
-                <h1 class="headline-small-2"> <span class="headline-large-blue"><img src="../assets/misc/quote.png" alt="#" width="50px"></span><br>Aqeel has good coding knowledge. He is quite shy and quiet but always gets work done on time and meets deadlines. </h1>
+                <h1 class="headline-small-2">
+                    <span class="headline-large-blue"><img src="../assets/misc/quote.png" alt="#" width="50px"></span>
+                    <br>Aqeel has good coding knowledge. He is quite shy and quiet but always gets work done on time and meets deadlines.
+                </h1>
+
+                <!-- splitter div -->
                 <div class="container-splitter"><hr></div>
                 <div class="testimonial-box">
                     <div>
@@ -90,6 +97,8 @@
                 </div>
             </div>
             <br>
+
+            <!-- some more skill boxes -->
             <div class="text-block-row">
                 <div class="text-block">
                     <img src="../assets/misc/coding-2.svg" alt="#">
@@ -103,9 +112,9 @@
                     <img src="../assets/misc/coding-3.svg" alt="#">
                     <p class="font-inter-small">Practical coding experience</p>
                 </div>
-
             </div>
         </div>
+
         <!-- components -->
         <!-- number -->
         <div class="page-number">
@@ -144,42 +153,7 @@ export default {
 
 <style scoped>
 
-    .text-block-row {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        text-align: center;
-        gap: 1rem;
-    }
-    .text-block {
-        border-radius: 1rem;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        text-align: center;
-        /* text-transform: uppercase; */
-        gap: 1rem;
-        width: 30%;
-        background: #22222262;
-        box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
-                    inset 0 8px 8px rgba(0,0,0,0.1),
-                    inset 0 -4px 4px rgba(0,0,0,0.1);
-        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-        transition: all 0.5s;
-    }
-    .text-block:hover {
-        transform: scale(1.05);
-    }
-    .text-block img {
-        width: 50%;
-        /* filter: invert(85%); */
-        filter: invert(40%) sepia(130%) saturate(1000%) hue-rotate(200deg);
-
-    }
-
-    /* components================================================================================ */
+    /* components */
     
     #video-background {
         position: fixed;
@@ -192,7 +166,7 @@ export default {
         transform: scale(1.02);
     }
 
-    /* containers================================================================================ */
+    /* main container */
 
     .main-container {
         padding: 9rem 3rem;
@@ -202,10 +176,11 @@ export default {
         position: relative;
         gap: 5%;
         padding-top: 25vh;
-
-        /* scrolling */
         height: 100%;
     }
+
+    /* left container */
+
     .column-left {
         width: 100%;
         max-width: 30vw;
@@ -213,19 +188,12 @@ export default {
         flex-direction: column;
         align-items: center;
     }
-    .column-right {
-        width: 100%;
-        height: 100vh;
-        max-width: 35vw;
-    }
     .text-container {
         text-align: right;
         width: auto;
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        /* scrolling */
-        /* height: auto; */
     }
     .skill-container {
         width: 100%;
@@ -234,53 +202,10 @@ export default {
         gap: 1.5rem;
         text-align: left;
         padding-top: 50px;
-        /* scrolling */
-        /* height: 100vh; */
     }
-    .container-splitter {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    hr {
-        width: 25%;
-    }
-    .testimonial-box {
-        width: 100%;
-        justify-content: center;
-        text-align: left;
-        gap: 1.5rem;
-        /* text-transform: uppercase; */
-        align-items: center;
-    }
-    .container {
-        background: #22222262;
-        box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
-                    inset 0 8px 8px rgba(0,0,0,0.1),
-                    inset 0 -4px 4px rgba(0,0,0,0.1);
-        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-        border-radius: 2rem;
-        width: 100%;
-        padding: 3rem 6rem;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .container div {
-        display: flex;
-    }
-    .testimonial-img {
-        width: 100px;
-        border-radius: 50%;
-        border: 5px solid #5E9FFF;
-    }
-
-    /* content=================================================================================== */
 
     /* skill progress bars */
+
     .skill-name{
         font-size: 15px;
         font-weight: 600;
@@ -326,41 +251,101 @@ export default {
         transform: translateX(50%) rotate(45deg);
         border-radius: 2px;
     }
-    @keyframes fillBars{
-        from{
-            width: 0;
-        }
-        to{
-            width: 100%;
-        }
+    @keyframes fillBars{ from{ width: 0; }to{ width: 100%; } }
+
+    /* right container */
+
+    .column-right {
+        width: 100%;
+        height: 100vh;
+        max-width: 35vw;
     }
+
+    /* testimonial container */
+    
+    .container {
+        background: #22222262;
+        box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
+                    inset 0 8px 8px rgba(0,0,0,0.1),
+                    inset 0 -4px 4px rgba(0,0,0,0.1);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 2rem;
+        width: 100%;
+        padding: 3rem 6rem;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .container-splitter {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    hr { width: 25%; }
+    .testimonial-box {
+        width: 100%;
+        justify-content: center;
+        text-align: left;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .container div { display: flex; }
+    .testimonial-img {
+        width: 100px;
+        border-radius: 50%;
+        border: 5px solid #5E9FFF;
+    }
+
+    /* some more skill boxes */
+
+    .text-block-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        gap: 1rem;
+    }
+    .text-block {
+        border-radius: 1rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        gap: 1rem;
+        width: 30%;
+        background: #22222262;
+        transition: all 0.5s;
+        box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
+                    inset 0 8px 8px rgba(0,0,0,0.1),
+                    inset 0 -4px 4px rgba(0,0,0,0.1);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    }
+    .text-block:hover { transform: scale(1.05); }
+    .text-block img { width: 50%;filter: invert(40%) sepia(130%) saturate(1000%) hue-rotate(200deg); }
 
     /* media queries============================================================================= */
 
-    @media only screen and (max-width: 611px) {
+    /* mobile sized queries */
+
+    @media only screen and (max-width: 736px) {
+
+        /* containers */
+
         .main-container {
             padding: 0;
             flex-direction: column;
             align-items: center;
             padding-bottom: 300px;
-            /* align-items: center;
-            flex-direction: column;
-            justify-content: center; */
         }
         .column-left {
             padding: 9rem 3rem;
             min-width: 100vw;
             height: 100%;
-            /* max-width: 40vw; */
-        }
-        .column-right {
-            /* padding: 9rem 3rem; */
-            /* padding-top: 9rem;
-            padding-right: 3rem; */
-            width: 100%;
-            height: 100%;
-            max-width: 70vw;
-            /* max-width: 40vw; */
         }
         .text-container {
             text-align: left;
@@ -371,6 +356,11 @@ export default {
         .skill-container {
             width: 70vw;
             height: 100%;
+        }
+        .column-right {
+            width: 100%;
+            height: 100%;
+            max-width: 70vw;
         }
         .testimonial-box {
             width: 100%;
@@ -383,10 +373,15 @@ export default {
             text-align: left;
             flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             gap: 2rem;
-            
         }
+        .text-block img {
+            width: 25%;
+        }
+
+        /* fonts */
+        
         .nav-item {
             font-size: 0.7rem;
         }

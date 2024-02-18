@@ -57,6 +57,7 @@
         <div class="page-number">
             <h1 class="headline-xsmall">01</h1>
         </div>
+        
         <!-- video wallpaper -->
         <video autoplay muted loop id="video-background">
             <source src="@/assets/wallpaper/video-wallpaper.mp4" type="video/mp4">

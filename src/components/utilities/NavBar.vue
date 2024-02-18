@@ -71,6 +71,7 @@ import { mapState, mapMutations } from 'vuex';
 <style scoped>
 
     /* navbar */
+
     .navbar-vertical-fixed {
         position: fixed;
         top: 0;
@@ -91,6 +92,7 @@ import { mapState, mapMutations } from 'vuex';
     }
 
     /* logo */
+
     .logo-container {
         position: fixed;
         top: 1rem;
@@ -103,6 +105,7 @@ import { mapState, mapMutations } from 'vuex';
     }
 
     /* nav header */
+
     .nav-header {
         display: flex;
         justify-content: center;
@@ -126,6 +129,7 @@ import { mapState, mapMutations } from 'vuex';
     }
 
     /* nav item list */
+
     .nav-list-items {
         position: relative;
         display: flex;
@@ -137,18 +141,22 @@ import { mapState, mapMutations } from 'vuex';
     }
 
     /* container to center the nav list */
+
     .filler-container {
         height: 3rem;
     }
 
     /* hide navbar when logo is clicked */
+
     .hidden {
         transform: translateX(-110%);
         transition: all 1s;
     }
 
     /* ============================================================================  */
+    
     /* media queries */
+
     @media only screen and (max-height: 500px) {
         .logo {
             width: 3.5rem;
@@ -166,6 +174,5 @@ import { mapState, mapMutations } from 'vuex';
             width: 3.5rem;
         }
     }
-
 </style>
 

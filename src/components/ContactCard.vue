@@ -2,7 +2,7 @@
     <!-- main container -->
     <div class="main-container" :style="getAdjustedWidth">
 
-        <!-- column 1============================================================================== -->
+        <!-- top container -->
         <div class="container-one line-height-low">
             <div>
                 <h1 class="headline-large-black">Contact</h1>
@@ -17,11 +17,13 @@
             </div>
         </div>
 
-        <!-- column 2============================================================================== -->
+        <!-- bottom container -->
         <div class="container-two">
             
-            <!-- form -->
+            <!-- form container -->
             <div class="contact-form">
+
+                <!-- handling form endpoints -->
                 <form 
                 :action="FORM_ENDPOINT"
                 @submit="handleSubmit"
@@ -42,7 +44,6 @@
                     
                     <div class="form-group">
                         <div class="g-recaptcha"></div>
-
                         <input id="submit" type="submit" value="Say Hi!" class="button-hover-white">
                     </div>
 
@@ -142,28 +143,32 @@ export default {
 
 <style scoped>
 
-    /* containers================================================================================ */
+    /* main container */
 
     .main-container {
         flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: 5vw;
-        /* padding: 0; */
     }
+
+    /* text container */
+
     .container-one div  {
         display: flex;
         flex-direction: column;
         text-align: right;
         max-width: 60vw;
     }
+
+    /* form container */
+    
     .container-two {
         width: 22vw;
     }
 
-    /* content=================================================================================== */
-
     /* form styling */
+
     .contact-form {
         text-align: left;
         margin: 0 auto;
@@ -215,6 +220,9 @@ export default {
     /* media queries============================================================================= */
 
     @media only screen and (max-width: 611px) {
+
+        /* containers */
+
         .main-container {
             padding: 9rem 3rem;
             flex-direction: column;
@@ -226,7 +234,6 @@ export default {
             max-width: 60vw;
             padding-top: 100px;
             height: 100%;
-
         }
         .container-two {
             width: 70vw;
@@ -237,7 +244,6 @@ export default {
         .form-group input[type="email"],
         .form-group textarea {
             width: 100%;
-
         }
     }
 </style>
