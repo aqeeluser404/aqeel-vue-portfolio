@@ -1,7 +1,7 @@
 <template>
   <div>
     <MouseCursor />
-    <router-view />
+    <!-- <router-view /> -->
     <NavBar />
     <NoiseBackground />
     <DarkMode />

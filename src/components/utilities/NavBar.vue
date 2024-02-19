@@ -32,6 +32,14 @@
             <div class="filler-container"></div>
         </nav>
     </div>
+
+    <router-view v-slot="{ Component, route }">
+        <transition name="slide" mode="out-in">
+            <div :key="route.name">
+                <component :is="Component"></component>
+            </div>
+        </transition>
+    </router-view>
 </template>
   
 <script>
@@ -68,7 +76,24 @@ import { mapState, mapMutations } from 'vuex';
     };
 </script>
 
-<style scoped>
+<style>
+    .slide-enter-active,
+    .slide-leave-active {
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    }
+
+    .slide-enter-from,
+    .slide-leave-to {
+        opacity: 0;
+        transform: translateX(10vw);
+    }
+
+    .slide-enter-to,
+    .slide-leave-from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
 
     /* navbar */
 
@@ -138,6 +163,9 @@ import { mapState, mapMutations } from 'vuex';
         align-items: center;
         gap: 1.5rem;
         transition: 0.2s;
+    }
+    .nav-item.router-link-exact-active {
+        color: #5E9FFF;
     }
 
     /* container to center the nav list */

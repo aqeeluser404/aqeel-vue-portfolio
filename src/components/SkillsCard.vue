@@ -121,10 +121,10 @@
             <h1 class="headline-xsmall">03</h1>
         </div>
         <!-- video wallpaper -->
-        <video autoplay muted loop id="video-background">
-            <source src="@/assets/wallpaper/video-wallpaper.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <video autoplay muted loop id="video-background" style="width: 100%; height: 100vh; object-fit: cover; z-index: -1;">
+    <source src="@/assets/wallpaper/video-wallpaper.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
     </div>
 </template>
 
@@ -173,7 +173,7 @@ export default {
         flex-direction: row;
         align-items: flex-start;
         justify-content: center;
-        position: relative;
+        /* position: relative; */
         gap: 5%;
         padding-top: 25vh;
         height: 100%;

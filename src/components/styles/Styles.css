@@ -2,6 +2,7 @@
 
 html, body {
     overscroll-behavior-y: none;/* overflow-x: hidden; do not use this with animations */
+    user-select: none;
 }
 
 .main-container {
@@ -11,12 +12,24 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color: #242424; */
 }
 
 .page-number {
     position: fixed;
     bottom: 10px;
     right: 10px;
+}
+
+#video-background {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    object-fit: cover;
+    z-index: -1;
+    transform: scale(1.02);
 }
 
 /* =================================================================================== */
@@ -116,7 +129,7 @@ html, body {
     font-family: 'Inter', sans-serif;
 }
 .nav-item:hover {
-    color: #0084ff;
+    color: #5E9FFF;
 }
 .nav-item::after {
     content: "";
@@ -126,12 +139,12 @@ html, body {
     left: 0;
     border-radius: 10px;
     margin-top: 20px;
-    background-color: #0084ff;
+    background-color: #5E9FFF;
     transition: all 0.2s ease;
 }
 .nav-item:hover::after {
     width: 90%;
-    color: #0084ff;
+    color: #5E9FFF;
 }
 
 /* nav-item media queries */
