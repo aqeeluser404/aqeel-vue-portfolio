@@ -139,6 +139,7 @@ export default {
             return {
                 width: this.isNavbarVisible ? 'calc(100% - 6.5rem)' : '100%',
                 position: 'relative',
+                // margin: this.isNavbarVisible ? '0' : '0',
                 left: this.isNavbarVisible ? '6.5rem' : '0',
             };
         }
@@ -357,7 +358,7 @@ export default {
         }
         .column-left {
             padding: 9rem 3rem;
-            min-width: 100vw;
+            /* min-width: 100vw; */
             height: 100%;
         }
         .text-container {

@@ -108,9 +108,11 @@ import { mapState } from 'vuex';
             ...mapState(['isNavbarVisible']),
             getAdjustedWidth() {
                 return {
-                    width: this.isNavbarVisible ? 'calc(100% - 6.5rem)' : '100%',
+                    width: this.isNavbarVisible ? 'calc(100% - 5.8rem)' : '100%',
+                    // width: this.isNavbarVisible ? 'calc(100% - 6.5rem)' : '100%',
                     position: 'relative',
-                    left: this.isNavbarVisible ? '6.5rem' : '0',                
+                    left: this.isNavbarVisible ? '5.9rem' : '0',               
+                    // left: this.isNavbarVisible ? '6.5rem' : 0, 
                 };
             },
         },
@@ -240,7 +242,7 @@ import { mapState } from 'vuex';
         align-items: center;
         width: 40%;
         height: auto;
-        min-height: 100svh;
+        min-height: 100vh;
         padding-top: 26vh;
         gap: 2rem;
     }
@@ -302,7 +304,7 @@ import { mapState } from 'vuex';
     .row-2 {
         height: 100%;
         width: 100%;
-        min-width: 100vw;
+        /* min-width: 100vw; */
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -419,7 +421,7 @@ import { mapState } from 'vuex';
             text-align: left;
             width: 70vw;
             padding-top: 100px;
-            height: auto;
+            min-height: auto;
         }
         .container-two {
             width: 70vw;
