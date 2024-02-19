@@ -21,7 +21,7 @@ html, body {
     right: 10px;
 }
 
-#video-background {
+/* #video-background {
     position: absolute;
     top: -2px;
     left: -2px;
@@ -30,7 +30,7 @@ html, body {
     object-fit: cover;
     z-index: -1;
     transform: scale(1.02);
-}
+} */
 
 /* =================================================================================== */
 

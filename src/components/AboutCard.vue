@@ -302,6 +302,7 @@ import { mapState } from 'vuex';
     .row-2 {
         height: 100%;
         width: 100%;
+        min-width: 100vw;
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -310,6 +311,7 @@ import { mapState } from 'vuex';
         padding: 100px 3rem;
         padding-bottom: 300px;
         background-color: #111;
+
     }
 
     /* timeline styling */

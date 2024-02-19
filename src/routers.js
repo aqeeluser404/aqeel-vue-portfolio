@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-// Import your components
+// components
 import HomeCard from './components/HomeCard.vue';
 import AboutCard from './components/AboutCard.vue';
 import SkillsCard from './components/SkillsCard.vue';
@@ -8,6 +8,7 @@ import ProjectsCard from './components/ProjectsCard.vue';
 import ContactCard from './components/ContactCard.vue';
 import ThankCard from './components/ThankCard.vue';
 
+// routes
 const routes = [
   {
     name: 'HomeCard',
@@ -41,11 +42,19 @@ const routes = [
   },
 ];
 
+
+// Always allow router to start page from the top
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0 };
+    }
+  },
 });
-
 
 // Reload back to homeCard
 router.beforeEach((to, from, next) => {

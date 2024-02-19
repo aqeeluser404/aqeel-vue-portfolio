@@ -40,19 +40,19 @@
                 <div class="skill">
                     <div class="skill-name">Javascript</div>
                     <div class="skill-bar">
-                        <div class="skill-per" per="55%" style="max-width:55%"></div>
+                        <div class="skill-per" per="69%" style="max-width:69%"></div>
                     </div>
                 </div>
                 <div class="skill">
                     <div class="skill-name">Vue.JS</div>
                     <div class="skill-bar">
-                        <div class="skill-per" per="60%" style="max-width:60%"></div>
+                        <div class="skill-per" per="78%" style="max-width:78%"></div>
                     </div>
                 </div>
                 <div class="skill">
                     <div class="skill-name">SPRINGBOOT</div>
                     <div class="skill-bar">
-                        <div class="skill-per" per="70%" style="max-width:70%"></div>
+                        <div class="skill-per" per="77%" style="max-width:77%"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -121,10 +121,10 @@
             <h1 class="headline-xsmall">03</h1>
         </div>
         <!-- video wallpaper -->
-        <video autoplay muted loop id="video-background" style="width: 100%; height: 100vh; object-fit: cover; z-index: -1;">
-    <source src="@/assets/wallpaper/video-wallpaper.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+        <video autoplay muted loop id="video-background" style="width: 100%; height: 100vh;">
+            <source src="@/assets/wallpaper/video-wallpaper.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 </template>
 
@@ -170,12 +170,13 @@ export default {
 
     .main-container {
         padding: 9rem 3rem;
+        padding-top: 25vh;
         flex-direction: row;
         align-items: flex-start;
         justify-content: center;
         /* position: relative; */
         gap: 5%;
-        padding-top: 25vh;
+
         height: 100%;
     }
 
@@ -194,31 +195,34 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        animation: slide 0.5s 1;    
     }
     .skill-container {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-        text-align: left;
+        text-align: right;
         padding-top: 50px;
+        transform: scaleX(-1); 
     }
 
     /* skill progress bars */
 
-    .skill-name{
+    .skill-name {
+        transform: scaleX(-1); 
         font-size: 15px;
-        font-weight: 600;
+        font-weight: 500;
         color: #f1f1f1;
         text-transform: uppercase;
         margin: 20px 0;
     }
-    .skill-bar{
+    .skill-bar {
         height: 18px;
         background: #44444480;
         border-radius: 3px;
     }
-    .skill-per{
+    .skill-per {
         height: 18px;
         background: #0084ff;
         border-radius: 3px;
@@ -226,7 +230,8 @@ export default {
         font-weight: 500;
         animation: fillBars 2.5s 1;
     }
-    .skill-per::before{
+    .skill-per::before {
+        transform: scaleX(-1); 
         content: attr(per);
         position: absolute;
         padding: 4px 6px;
@@ -239,6 +244,7 @@ export default {
         top: -35px;
         right: 0;
         transform: translateX(50%);
+        transform: scaleX(-1); 
     }
     .skill-per::after{
         content: "";
@@ -248,10 +254,10 @@ export default {
         background: #f1f1f1;
         top: -17px;
         right: 0;
-        transform: translateX(50%) rotate(45deg);
+        transform: translateX(-75%) rotate(45deg);
         border-radius: 2px;
+        
     }
-    @keyframes fillBars{ from{ width: 0; }to{ width: 100%; } }
 
     /* right container */
 
@@ -277,6 +283,7 @@ export default {
         align-content: center;
         flex-direction: column;
         gap: 2rem;
+        animation: slide 1s 1;
     }
     .container-splitter {
         width: 100%;
@@ -307,6 +314,7 @@ export default {
         justify-content: space-evenly;
         text-align: center;
         gap: 1rem;
+        animation: slide-bottom-up 0.5s 1;
     }
     .text-block {
         border-radius: 1rem;
@@ -327,6 +335,11 @@ export default {
     }
     .text-block:hover { transform: scale(1.05); }
     .text-block img { width: 50%;filter: invert(40%) sepia(130%) saturate(1000%) hue-rotate(200deg); }
+
+    /* animations */
+    @keyframes fillBars{ from{ width: 0; }to{ width: 100%; } }
+    @keyframes slide{ from{ transform: translateX(100%); }to{ transform: translateX(0); } }
+    @keyframes slide-bottom-up{ from{ transform: translateY(100%);}to{ transform: translateY(0);}}
 
     /* media queries============================================================================= */
 

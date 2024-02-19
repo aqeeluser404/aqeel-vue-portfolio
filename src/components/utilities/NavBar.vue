@@ -6,8 +6,11 @@
   
     <!-- navbar visible/not visible -->
     <div class="navbar-vertical-fixed" :class="{ 'hidden': !isNavbarVisible }">
+
         <!-- navbar -->
         <nav id="navbar">
+
+            <!-- nav header -->
             <div class="nav-header">
                 <div class="nav-logo">
                     <picture>
@@ -15,25 +18,27 @@
                     </picture>
                 </div>
                 <div class="header-divider"><hr/></div>
-
                 <div class="nav-title">
                     <h1 class="headline-small-2 line-height-low">DEV</h1>
                     <h1 class="headline-xsmall-2 line-height-low">INTERN</h1>
                 </div>
             </div>
   
+            <!-- nav items -->
             <div class="nav-list-items">
                 <router-link to="/" class="nav-item" @click="hideNavbarOnSmallScreens">HOME</router-link>
                 <router-link to="/about" class="nav-item" @click="hideNavbarOnSmallScreens" >ABOUT</router-link>
                 <router-link to="/skills" class="nav-item" @click="hideNavbarOnSmallScreens">SKILLS</router-link>
                 <router-link to="/projects" class="nav-item" @click="hideNavbarOnSmallScreens">PROJECTS</router-link>
             </div>
-
             <div class="filler-container"></div>
         </nav>
     </div>
 
+    <!-- router animation -->
     <router-view v-slot="{ Component, route }">
+        
+        <!-- slide transition -->
         <transition name="slide" mode="out-in">
             <div :key="route.name">
                 <component :is="Component"></component>
@@ -56,20 +61,26 @@ import { mapState, mapMutations } from 'vuex';
             },
         },
         methods: {
+
+            // close navbar once screen reaches 900px
             ...mapMutations(['toggleNavbar']),
             hideNavbarOnSmallScreens() {
                 if (window.innerWidth <= 900 && this.isNavbarVisible) {
                     this.toggleNavbar();
                 }
             },
+
+            // committing a mutation toggleNavbar to the Vuex store. 
             toggleNavbar() {
                 this.$store.commit('toggleNavbar');
             },
         },
+        // inserting an addEventListener into the DOM
         mounted() {
             this.hideNavbarOnSmallScreens();
             window.addEventListener('resize', this.hideNavbarOnSmallScreens);
         },
+        // removing
         beforeUnmount() {
             window.removeEventListener('resize', this.hideNavbarOnSmallScreens);
         },
@@ -77,23 +88,23 @@ import { mapState, mapMutations } from 'vuex';
 </script>
 
 <style>
+
+    /* router animation style */
+
     .slide-enter-active,
     .slide-leave-active {
         transition: opacity 0.3s ease-out, transform 0.3s ease-out;
     }
-
     .slide-enter-from,
     .slide-leave-to {
         opacity: 0;
         transform: translateX(10vw);
     }
-
     .slide-enter-to,
     .slide-leave-from {
         opacity: 1;
         transform: translateX(0);
     }
-
 
     /* navbar */
 
