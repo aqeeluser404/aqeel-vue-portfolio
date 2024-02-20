@@ -391,6 +391,9 @@ import { mapState } from 'vuex';
         }
     }
     @media only screen and (max-width: 1200px) {
+        .headline-large-blue {
+            font-size: 4.2rem;
+        }
         .row-1 {
             padding-bottom: 300px;
             justify-content: center;

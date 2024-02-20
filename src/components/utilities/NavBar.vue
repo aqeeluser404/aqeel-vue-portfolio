@@ -112,19 +112,27 @@ import { mapState, mapMutations } from 'vuex';
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 6.5rem;
+        margin: 0;
+        padding: 0;
+        height: 200%;
         z-index: 1;
+        background-color: #111111;
+        box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
     }
     #navbar {
-        background-color: #111111;
+
         padding: 1rem;
-        height: 100svh;
+        height: 100vh;
         width: 6.5rem;
-        position: absolute;
+        position: fixed;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+
+       background-color: #111111;
+        overflow-y: auto;
+        max-height: 100vh; 
     }
 
     /* logo */
@@ -154,7 +162,7 @@ import { mapState, mapMutations } from 'vuex';
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: auto;
+        width: 100%;
     }
     hr {
         width: 3rem;
@@ -207,7 +215,7 @@ import { mapState, mapMutations } from 'vuex';
         }
         .nav-header {
             justify-content: flex-start;
-            align-items: flex-start;
+            align-items: center;
         }
         .logo {
             width: 3.5rem;

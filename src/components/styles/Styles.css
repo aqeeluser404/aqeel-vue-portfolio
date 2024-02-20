@@ -301,7 +301,7 @@ html, body {
         line-height: 1;
     }
     .headline-xsmall-2 {
-        font-size: 1rem;
+        font-size: 0.8rem;
         color: #5E9FFF;
         font-family: 'Koulen', sans-serif;
         font-weight: 400;
@@ -317,7 +317,7 @@ html, body {
         line-height: 1;
     }
     .headline-small-2 {
-        font-size: 1.3rem;
+        font-size: 2rem;
         color: #ffffff;
         font-family: 'Koulen', sans-serif;
         font-weight: 400;
