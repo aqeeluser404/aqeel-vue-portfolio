@@ -113,6 +113,8 @@ export default {
         position: relative;
         min-height: 100svh;
         height: 100%;
+        overflow-x: hidden;
+
     }
 
     /* text container */
@@ -124,6 +126,7 @@ export default {
         padding-right: 8%;
         gap: 1rem;
         text-align: right;
+        animation: slide 1s 1;
     }
 
     /* links container */
@@ -134,12 +137,14 @@ export default {
         padding-right: 8%;
         justify-content: flex-end;
         gap: 9rem;
+
     }
     .social-links {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        gap: 9rem;   
+        gap: 9rem;  
+        animation: slide 1s 1;
     }
     .social-icon {
         width: 2.2rem;
@@ -149,6 +154,12 @@ export default {
     .unique-icon {
         width: 2.7rem;
     }
+
+    /* animations */
+    @keyframes fillBars{ from{ width: 0; }to{ width: 100%; } }
+    @keyframes slide{ from{ transform: translateX(100%); }to{ transform: translateX(0); } }
+    @keyframes slide-bottom-up{ from{ transform: translateY(100%);}to{ transform: translateY(0);}}
+
 
     /* media queries============================================================================= */
     

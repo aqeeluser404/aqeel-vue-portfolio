@@ -210,6 +210,7 @@ import { mapState } from 'vuex';
         flex-direction: column;
         padding-top: 25vh;
         gap: 3rem;
+        animation: slide 1s 1;
     }
 
     /* text animation styling */
@@ -379,6 +380,11 @@ import { mapState } from 'vuex';
             to {scale: 1; opacity: 1;}
         }
     }
+
+    /* animations */
+    @keyframes fillBars{ from{ width: 0; }to{ width: 100%; } }
+    @keyframes slide{ from{ transform: translateX(100%); }to{ transform: translateX(0); } }
+    @keyframes slide-bottom-up{ from{ transform: translateY(100%);}to{ transform: translateY(0);}}
 
     /* media queries============================================================================= */
  

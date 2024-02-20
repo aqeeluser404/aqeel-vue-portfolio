@@ -8,8 +8,29 @@
             <p class="font-inter-medium-white"> 
                 <span class="opacity-full"><br> I've always been the type of person who can spend hours</span>
                 <span class="opacity-half"><br> designing stuff.   </span>  
-                <span class="opacity-quarter"><br> Trying to solve a problem is the real objective</span>
+                <!-- <span class="opacity-quarter"><br> Trying to solve a problem is the real objective</span> -->
             </p>
+        </div>
+
+        <div class="icon-container">
+            <div class="icon-circle">
+                <i class="devicon-spring-original icon"></i>
+            </div>
+            <div class="icon-circle">
+                <i class="devicon-vuejs-plain icon"></i>
+            </div>
+            <div class="icon-circle">
+                <i class="devicon-githubactions-plain icon"></i>
+            </div>
+            <div class="icon-circle">
+                <i class="devicon-mysql-original icon"></i>
+            </div>
+            <div class="icon-circle">
+                <i class="devicon-aftereffects-plain icon"></i>
+            </div>
+            <div class="icon-circle">
+                <i class="devicon-npm-original-wordmark icon"></i>
+            </div>
         </div>
 
         <!-- projects container -->
@@ -157,6 +178,36 @@ import { mapState } from 'vuex';
         display: flex;
         flex-direction: column;
         gap: 2rem;
+    }
+    .icon-container {
+    display: flex;
+    width: 100%;
+    max-width: 40vw;
+    overflow: hidden; /* Hide the icons overflowing from the container */
+    }
+
+    .icon-circle {
+    padding: 1rem;
+    width: 100%; /* Occupy the full width of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Include padding and border in the width */
+    animation: moveIcons 20s linear infinite;
+    }
+
+    .icon {
+    font-size: 3rem;
+    opacity: 75%;
+    }
+
+    @keyframes moveIcons {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
     }
 
     /* project cards */
