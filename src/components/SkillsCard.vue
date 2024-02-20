@@ -92,7 +92,7 @@
                     <div>
                         <img src="../assets/testimonial/afika.jpg" alt="#" class="testimonial-img">
                     </div>
-                    <h1 class="nav-item">Afika Maliwa 
+                    <h1 class="font-inter-small">Afika Maliwa 
                         <br>Line Manager - CapaCiTi</h1>
                 </div>
             </div>
