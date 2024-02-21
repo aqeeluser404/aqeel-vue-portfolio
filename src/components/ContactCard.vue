@@ -119,8 +119,13 @@ export default {
                         recaptchaResponse: recaptchaResponse,
                     };
 
+                    console.log('userMessage:', userMessage);  // Add this line
+
+
                     // Save form data to Firestore collection
-                    await projectFirestore.collection('userMessages').add(userMessage);
+                    const docRef = await projectFirestore.collection('userMessages').add(userMessage);
+
+                    console.log('Document written with ID: ', docRef.id);  // Add this line
 
                     // Reset form fields
                     this.name = '';
@@ -141,13 +146,13 @@ export default {
             }
         },
 
-        validateForm() {
+        async validateForm() {
             this.isNameValid = !!this.name.trim();
             this.isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email);
             this.isMessageValid = !!this.message.trim();
         },
 
-        isFormValid() {
+        async isFormValid() {
             return this.isNameValid && this.isEmailValid && this.isMessageValid;
         },
     },

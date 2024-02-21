@@ -6,23 +6,18 @@ import LoadingCard from './components/utilities/LoadingCard.vue';
 import NavBar from './components/utilities/NavBar.vue';
 import './components/styles/Styles.css'
 
-// LoadingCard component
 let showLoadingPage = true;
-const loadingContainer = document.createElement('div');   // div to mount the loading container
+const loadingContainer = document.createElement('div');   
 document.body.appendChild(loadingContainer);
-store.commit('toggleNavbar');   // Set isNavbarVisible to true initially
+store.commit('toggleNavbar');   
 
-// Define a global beforeResolve guard
 router.beforeResolve((to, from, next) => {
-  // Show loading component before entering the first route
   if (showLoadingPage) {
     createApp(LoadingCard).mount(loadingContainer);
 
-    // Simulate a delay (3 seconds in this example)
     setTimeout(() => {
-      loadingContainer.remove(); // Remove the loading component
+      loadingContainer.remove();
       showLoadingPage = false;
-      // Set isNavbarVisible to false after loading to hide the navigation initially
       store.commit('toggleNavbar');
       next();
     }, 4000);
@@ -33,7 +28,6 @@ router.beforeResolve((to, from, next) => {
 });
 
 router.afterEach(() => {
-  // Hide loading component after the route has been entered
   store.commit('setShowLoading', false);
 });
 
