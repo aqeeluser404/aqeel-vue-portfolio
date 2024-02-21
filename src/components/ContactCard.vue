@@ -32,16 +32,21 @@
                     <div class="form-group">
                         <label for="name">NAME</label>
                         <input type="text" id="name" name="Name" required placeholder="Type Here" v-model="name">
+                        <span v-if="!isNameValid" class="error-message">Name is required</span>
                     </div>
+
                     <div class="form-group">
                         <label for="email">EMAIL</label>
                         <input type="email" id="email" name="Email" required placeholder="Type Here" v-model="email">
+                        <span v-if="!isEmailValid" class="error-message">Enter a valid email address</span>
                     </div>
+
                     <div class="form-group">
                         <label for="message">MESSAGE</label>
                         <textarea id="message" name="Message" required v-model="message"></textarea>
+                        <span v-if="!isMessageValid" class="error-message">Message is required</span>
                     </div>
-                    
+
                     <div class="form-group">
                         <div class="g-recaptcha"></div>
                         <input id="submit" type="submit" value="Say Hi!" class="button-hover-white">
@@ -76,6 +81,9 @@ export default {
             recaptchaToken: null,
             submitted: false,
             FORM_ENDPOINT: "https://public.herotofu.com/v1/037ba170-ca37-11ee-bb69-515451de93af",
+            isNameValid: true,
+            isEmailValid: true,
+            isMessageValid: true,
         };
     },
 
@@ -89,46 +97,60 @@ export default {
             };
         },
     },
+
     methods: {
         async handleSubmit() {
-            try {
-                // Check reCAPTCHA response
-                const recaptchaResponse = await grecaptcha.execute('6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk', { action: 'submit' });
+            this.validateForm();
 
-                if (!recaptchaResponse) {
-                    console.error('reCAPTCHA verification failed');
-                    return;
-                }
+            if (this.isFormValid()) {
+                try {
+                    // Check reCAPTCHA response
+                    const recaptchaResponse = await grecaptcha.execute('6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk', { action: 'submit' });
 
-                let userMessage = {
-                    name: this.name,
-                    email: this.email,
-                    message: this.message,
-                    recaptchaResponse: recaptchaResponse,
-                };
+                    if (!recaptchaResponse) {
+                        console.error('reCAPTCHA verification failed');
+                        return;
+                    }
 
-                // Save form data to Firestore collection
-                await projectFirestore.collection('userMessages').add(userMessage);
+                    let userMessage = {
+                        name: this.name,
+                        email: this.email,
+                        message: this.message,
+                        recaptchaResponse: recaptchaResponse,
+                    };
 
-                // Reset form fields
-                this.name = '';
-                this.email = '';
-                this.message = '';
-                this.submitMessage = 'Message sent successfully';
+                    // Save form data to Firestore collection
+                    await projectFirestore.collection('userMessages').add(userMessage);
 
-                setTimeout(() => {
+                    // Reset form fields
+                    this.name = '';
+                    this.email = '';
+                    this.message = '';
+                    this.submitMessage = 'Message sent successfully';
+
                     this.submitted = true;
-                }, 100);
 
-            } catch (error) {
-                console.error('Error submitting form:', error);
-                this.submitMessage = 'Error submitting form. Please try again.';
+                } catch (error) {
+                    console.error('Error submitting form:', error);
+                    this.submitMessage = 'Error submitting form. Please try again.';
+                }
+            } else {
+                this.nameErrorMessage = this.isNameValid ? '' : 'Name is required';
+                this.emailErrorMessage = this.isEmailValid ? '' : 'Enter a valid email address';
+                this.messageErrorMessage = this.isMessageValid ? '' : 'Message is required';
             }
         },
+
+        validateForm() {
+            this.isNameValid = !!this.name.trim();
+            this.isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email);
+            this.isMessageValid = !!this.message.trim();
+        },
+
+        isFormValid() {
+            return this.isNameValid && this.isEmailValid && this.isMessageValid;
+        },
     },
-
-
-
 
     mounted() {
         // reCAPTCHA
@@ -157,6 +179,7 @@ export default {
     .container-one div  {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         text-align: right;
         max-width: 60vw;
     }
