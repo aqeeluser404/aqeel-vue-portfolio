@@ -22,27 +22,28 @@
             
             <!-- form container -->
             <div class="contact-form">
-
+                <!-- :action="FORM_ENDPOINT" -->
+                <!-- handling form endpoints -->
                 <form 
-                :action="FORM_ENDPOINT"
+                
                 @submit="handleSubmit"
                 method="POST"
                 >
                     <div class="form-group">
                         <label for="name">NAME</label>
-                        <input type="text" id="name" name="Name" required placeholder="Type Here" v-model="userMessage.name">
+                        <input type="text" id="name" name="Name" required placeholder="Type Here" v-model="name">
                         <span v-if="!isNameValid" class="error-message">Name is required</span>
                     </div>
 
                     <div class="form-group">
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="Email" required placeholder="Type Here" v-model="userMessage.email">
+                        <input type="email" id="email" name="Email" required placeholder="Type Here" v-model="email">
                         <span v-if="!isEmailValid" class="error-message">Enter a valid email address</span>
                     </div>
 
                     <div class="form-group">
                         <label for="message">MESSAGE</label>
-                        <textarea id="message" name="Message" required v-model="userMessage.message"></textarea>
+                        <textarea id="message" name="Message" required v-model="message"></textarea>
                         <span v-if="!isMessageValid" class="error-message">Message is required</span>
                     </div>
 
@@ -50,6 +51,9 @@
                         <div class="g-recaptcha"></div>
                         <input id="submit" type="submit" value="Say Hi!" class="button-hover-white">
                     </div>
+
+                    <!-- redirect to success page -->
+                    <!-- <div v-if="submitted"></div> -->
                 </form>
             </div>
         </div>
@@ -63,27 +67,27 @@
 
 <script>
 /* global grecaptcha */
-import axios from 'axios';
+// import { projectFirestore } from '../firebase/config';
+import { getFirestore, doc, setDoc } from "firebase/firestore"; 
 import { mapState } from 'vuex';
 
 export default {
     name: 'ContactCard',
     data() {
         return {
-            userMessage: {
-                name: '',
-                email: '',
-                message: '',
-                recaptchaToken: null,
-            },
-            submitted: false,
-            FORM_ENDPOINT: "https://public.herotofu.com/v1/037ba170-ca37-11ee-bb69-515451de93af",
-            
+            name: '',
+            email: '',
+            message: '',
+            submitMessage: '',
+            recaptchaToken: null,
+            // submitted: false,
+            // FORM_ENDPOINT: "https://public.herotofu.com/v1/037ba170-ca37-11ee-bb69-515451de93af",
             isNameValid: true,
             isEmailValid: true,
             isMessageValid: true,
         };
     },
+
     computed: {
         ...mapState(['isNavbarVisible']),
         getAdjustedWidth() {
@@ -94,43 +98,67 @@ export default {
             };
         },
     },
+
     methods: {
-        handleSubmit() {
+        async handleSubmit(event) {
+
+            event.preventDefault();
+
             this.validateForm();
 
             if (this.isFormValid()) {
+                try {
+                    // Check reCAPTCHA response
+                    const recaptchaResponse = await grecaptcha.execute('6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk', { action: 'submit' });
 
-                // Check reCAPTCHA response
-                const recaptchaResponse = grecaptcha.execute('6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk', { action: 'submit' });
+                    if (!recaptchaResponse) {
+                        console.error('reCAPTCHA verification failed');
+                        return;
+                    }
 
-                if (!recaptchaResponse) {
-                    console.error('reCAPTCHA verification failed');
-                    return;
-                }
-                axios.post(`https://aqeel-dev-portfolio-default-rtdb.firebaseio.com/messages.json`, this.userMessage).then(response => {
-                    console.log(response)
-                });
+                    let userMessage = {
+                        name: this.name,
+                        email: this.email,
+                        message: this.message,
+                        recaptchaResponse: recaptchaResponse,
+                    };
 
-                this.userMessage.name = '';
-                this.userMessage.email = '';
-                this.userMessage.message = '';
+                    console.log('userMessage:', userMessage);  // Add this line
 
-                setTimeout(() => {
+                    // Get a reference to the Firestore service
+                    const db = getFirestore();
+
+                    // Add a new document in collection "messages"
+                    await setDoc(doc(db, "messages", this.email), userMessage);
+
                     this.submitted = true;
-                }, 100);
-            }  
-            else {
+
+                    // Reset form fields
+                    this.name = '';
+                    this.email = '';
+                    this.message = '';
+                    this.submitMessage = 'Message sent successfully';
+
+                    // this.submitted = true;
+
+                } catch (error) {
+                    console.error('Error submitting form:', error);
+                    this.submitMessage = 'Error submitting form. Please try again.';
+                }
+            } else {
                 this.nameErrorMessage = this.isNameValid ? '' : 'Name is required';
                 this.emailErrorMessage = this.isEmailValid ? '' : 'Enter a valid email address';
                 this.messageErrorMessage = this.isMessageValid ? '' : 'Message is required';
             }
         },
-        validateForm() {
-            this.isNameValid = this.userMessage.name.trim() !== '';
-            this.isEmailValid = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(this.userMessage.email);
-            this.isMessageValid = this.userMessage.message.trim() !== '';
+
+        async validateForm() {
+            this.isNameValid = !!this.name.trim();
+            this.isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email);
+            this.isMessageValid = !!this.message.trim();
         },
-        isFormValid() {
+
+        async isFormValid() {
             return this.isNameValid && this.isEmailValid && this.isMessageValid;
         },
     },
@@ -143,7 +171,7 @@ export default {
         script.defer = true;
         document.head.appendChild(script);
     },
-}
+};
 </script>
 
 <style scoped>

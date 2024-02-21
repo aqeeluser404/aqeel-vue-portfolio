@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <!-- main container -->
     <div class="main-container" :style="getAdjustedWidth">
 
@@ -23,11 +23,8 @@
             <!-- form container -->
             <div class="contact-form">
 
-                <form 
-                :action="FORM_ENDPOINT"
-                @submit="handleSubmit"
-                method="POST"
-                >
+                <form @submit.prevent="handleSubmit">
+
                     <div class="form-group">
                         <label for="name">NAME</label>
                         <input type="text" id="name" name="Name" required placeholder="Type Here" v-model="userMessage.name">
@@ -76,9 +73,6 @@ export default {
                 message: '',
                 recaptchaToken: null,
             },
-            submitted: false,
-            FORM_ENDPOINT: "https://public.herotofu.com/v1/037ba170-ca37-11ee-bb69-515451de93af",
-            
             isNameValid: true,
             isEmailValid: true,
             isMessageValid: true,
@@ -99,7 +93,6 @@ export default {
             this.validateForm();
 
             if (this.isFormValid()) {
-
                 // Check reCAPTCHA response
                 const recaptchaResponse = grecaptcha.execute('6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk', { action: 'submit' });
 
@@ -114,10 +107,6 @@ export default {
                 this.userMessage.name = '';
                 this.userMessage.email = '';
                 this.userMessage.message = '';
-
-                setTimeout(() => {
-                    this.submitted = true;
-                }, 100);
             }  
             else {
                 this.nameErrorMessage = this.isNameValid ? '' : 'Name is required';
@@ -134,6 +123,7 @@ export default {
             return this.isNameValid && this.isEmailValid && this.isMessageValid;
         },
     },
+
 
     mounted() {
         // reCAPTCHA
@@ -252,4 +242,4 @@ export default {
             width: 100%;
         }
     }
-</style>
+</style> -->
