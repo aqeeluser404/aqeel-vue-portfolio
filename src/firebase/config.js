@@ -4,13 +4,13 @@ import firebase from 'firebase/app'
 import 'firebase/firestore'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBOwOFP4AczsFXt6U-QgWg1aeEjlpUGVhU",
-    authDomain: "portfolio-version-2-96bc6.firebaseapp.com",
-    projectId: "portfolio-version-2-96bc6",
-    storageBucket: "portfolio-version-2-96bc6.appspot.com",
-    messagingSenderId: "849045256972",
-    appId: "1:849045256972:web:08a57a19023eb61e532729"
-};
+    apiKey: "AIzaSyBnjblsrSHYchneveWDLXFT6GLpcRVZ59o",
+    authDomain: "aqeel-dev-portfolio.firebaseapp.com",
+    projectId: "aqeel-dev-portfolio",
+    storageBucket: "aqeel-dev-portfolio.appspot.com",
+    messagingSenderId: "384356502628",
+    appId: "1:384356502628:web:e08f9739394e0933982371"
+  };
 
 firebase.initializeApp(firebaseConfig)
 
