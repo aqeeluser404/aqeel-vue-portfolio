@@ -31,7 +31,9 @@
                 <router-link to="/skills" class="nav-item" @click="hideNavbarOnSmallScreens">SKILLS</router-link>
                 <router-link to="/projects" class="nav-item" @click="hideNavbarOnSmallScreens">PROJECTS</router-link>
             </div>
-            <div class="filler-container"></div>
+            <div class="filler-container">
+                <img src="@/assets/misc/paper-plane-regular.svg" alt="#" @click="GoToContact" class="plane-icon"/>
+            </div>
         </nav>
     </div>
 
@@ -74,6 +76,10 @@ import { mapState, mapMutations } from 'vuex';
             toggleNavbar() {
                 this.$store.commit('toggleNavbar');
             },
+
+            GoToContact() {
+                this.$router.push('/contact');
+            }
         },
         // inserting an addEventListener into the DOM
         mounted() {
@@ -129,8 +135,7 @@ import { mapState, mapMutations } from 'vuex';
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
-       background-color: #111111;
+        background-color: #111111;
         overflow-y: auto;
         max-height: 100vh; 
     }
@@ -146,6 +151,12 @@ import { mapState, mapMutations } from 'vuex';
     .logo {
         width: 4.2rem;
         filter: invert(40%) sepia(130%) saturate(1000%) hue-rotate(200deg);
+        animation: scale 2s infinite ease-in-out;
+    }
+    @keyframes scale {
+        0% { transform: scale(1); opacity: 100%; }
+        50% { transform: scale(.9); opacity: 50%; }
+        100% { transform: scale(1); opacity: 100%; }
     }
 
     /* nav header */
@@ -155,7 +166,7 @@ import { mapState, mapMutations } from 'vuex';
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 0.5rem;
     }
     .header-divider {
         display: flex;
@@ -191,6 +202,15 @@ import { mapState, mapMutations } from 'vuex';
 
     .filler-container {
         height: 3rem;
+    }
+    .plane-icon {
+        width: 1.5rem;
+        filter: invert(100%);
+        transition: all 0.5s ease-in-out;
+    }
+    .plane-icon:hover {
+        filter: invert(40%) sepia(130%) saturate(1000%) hue-rotate(200deg);
+        scale: .95;
     }
 
     /* hide navbar when logo is clicked */

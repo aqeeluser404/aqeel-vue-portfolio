@@ -74,7 +74,6 @@ export default {
                 name: '',
                 email: '',
                 message: '',
-                recaptchaToken: null,
             },
             submitted: false,
             FORM_ENDPOINT: "https://public.herotofu.com/v1/037ba170-ca37-11ee-bb69-515451de93af",
@@ -101,23 +100,30 @@ export default {
             if (this.isFormValid()) {
 
                 // Check reCAPTCHA response
-                const recaptchaResponse = grecaptcha.execute('6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk', { action: 'submit' });
+                grecaptcha.execute('6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk', { action: 'submit' })
+                    .then((recaptchaResponse) => {
+                        if (!recaptchaResponse) {
+                            console.error('reCAPTCHA verification failed');
+                            return;
+                        }
 
-                if (!recaptchaResponse) {
-                    console.error('reCAPTCHA verification failed');
-                    return;
-                }
-                axios.post(`https://aqeel-dev-portfolio-default-rtdb.firebaseio.com/messages.json`, this.userMessage).then(response => {
-                    console.log(response)
-                });
+                        // Includes the reCAPTCHA response in the data
+                        this.userMessage.recaptchaResponse = recaptchaResponse;
 
-                this.userMessage.name = '';
-                this.userMessage.email = '';
-                this.userMessage.message = '';
+                        axios.post(`https://aqeel-dev-portfolio-default-rtdb.firebaseio.com/messages.json`, this.userMessage)
+                            .then(response => {
+                                console.log(response)
+                            });
 
-                setTimeout(() => {
-                    this.submitted = true;
-                }, 100);
+                        this.userMessage.name = '';
+                        this.userMessage.email = '';
+                        this.userMessage.message = '';
+                        this.userMessage.recaptchaResponse = '';
+
+                        setTimeout(() => {
+                            this.submitted = true;
+                        }, 100);
+                    });
             }  
             else {
                 this.nameErrorMessage = this.isNameValid ? '' : 'Name is required';

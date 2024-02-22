@@ -143,7 +143,7 @@ export default {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        gap: 9rem;  
+        gap: 6rem;  
         animation: slide 1s 1;
     }
     .social-icon {

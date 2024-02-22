@@ -4,14 +4,12 @@
     <!-- <router-view /> -->
     <NavBar />
     <NoiseBackground />
-    <DarkMode />
   </div>
 </template>
 
 <script>
 // component imports
 import NavBar from './components/utilities/NavBar.vue'
-import DarkMode from './components/utilities/DarkMode.vue'
 import MouseCursor from './components/utilities/MouseCursor.vue';
 import NoiseBackground from './components/utilities/NoiseBackground.vue';
 
@@ -19,7 +17,6 @@ import NoiseBackground from './components/utilities/NoiseBackground.vue';
     name: 'App',
     components: {
     NavBar,
-    DarkMode,
     MouseCursor,
     NoiseBackground
 },

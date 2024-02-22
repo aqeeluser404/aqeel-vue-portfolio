@@ -57,13 +57,13 @@ const router = createRouter({
 });
 
 // Reload back to homeCard
-router.beforeEach((to, from, next) => {
-    if (!from.name && to.name && to.name !== 'HomeCard') {
-      next({ name: 'HomeCard' });
-    } 
-    else {
-      next();
-    }
-});
+// router.beforeEach((to, from, next) => {
+//     if (!from.name && to.name && to.name !== 'HomeCard') {
+//       next({ name: 'HomeCard' });
+//     } 
+//     else {
+//       next();
+//     }
+// });
 
 export default router;

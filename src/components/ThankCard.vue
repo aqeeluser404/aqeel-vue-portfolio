@@ -6,7 +6,7 @@
             <b>Thank you!</b>
         </h1><br>
         
-        <div class="headline-small-black">We'll be in touch soon.</div>
+        <div class="font-inter-medium-black">We'll be in touch soon.</div>
         
         <br><br>
         
@@ -16,12 +16,23 @@
 </template>
 
 <script>
+import store from '../store';
+
     export default {
         name: 'ThankCard',
         methods: {
             GoToHome() {
                 this.$router.push('/')
-            }
-        }
+            },
+        },
+        mounted() {
+            setTimeout(() => {
+                store.commit('toggleNavbar');
+            }, 1) 
+            
+        },
+        beforeUnmount() {
+            store.commit('toggleNavbar');
+        },
     }
 </script>
