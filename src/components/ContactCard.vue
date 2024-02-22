@@ -161,6 +161,7 @@ export default {
         align-items: center;
         justify-content: center;
         gap: 5vw;
+        padding-top: 50vh;
     }
 
     /* text container */
@@ -171,12 +172,14 @@ export default {
         justify-content: flex-start;
         text-align: right;
         max-width: 60vw;
+        height: 100vh;
     }
 
     /* form container */
     
     .container-two {
         width: 22vw;
+        height: 100vh;
     }
 
     /* form styling */
@@ -243,7 +246,8 @@ export default {
             height: 100%;
         }
         .container-one div {
-            max-width: 60vw;
+            width: 100%;
+            max-width: 70vw;
             padding-top: 100px;
             height: 100%;
         }
