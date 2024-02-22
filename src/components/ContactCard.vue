@@ -74,6 +74,7 @@ export default {
                 name: '',
                 email: '',
                 message: '',
+                dateTime: '',
             },
             submitted: false,
             FORM_ENDPOINT: "https://public.herotofu.com/v1/037ba170-ca37-11ee-bb69-515451de93af",
@@ -99,6 +100,8 @@ export default {
 
             if (this.isFormValid()) {
 
+                this.userMessage.dateTime = new Date().toISOString();
+
                 // Check reCAPTCHA response
                 grecaptcha.execute('6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk', { action: 'submit' })
                     .then((recaptchaResponse) => {
@@ -119,6 +122,7 @@ export default {
                         this.userMessage.email = '';
                         this.userMessage.message = '';
                         this.userMessage.recaptchaResponse = '';
+                        this.userMessage.dateTime = '';
 
                         setTimeout(() => {
                             this.submitted = true;
@@ -131,6 +135,7 @@ export default {
                 this.messageErrorMessage = this.isMessageValid ? '' : 'Message is required';
             }
         },
+
         validateForm() {
             this.isNameValid = this.userMessage.name.trim() !== '';
             this.isEmailValid = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(this.userMessage.email);
