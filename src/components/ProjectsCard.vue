@@ -75,6 +75,15 @@
                 </div>
             </div>
             <div class="card">
+                <img src="../assets/projects/jwt-login.png" class="card-img" alt="#">
+                <div class="card-body">
+                    <h1 class="card-title headline-small-2 ">JWT Login System</h1>
+                    <p class="card-sub-title font-inter-medium">Express - MongoDB - NodeJS <br><br> <b>(Quasar Framework)</b> </p>
+                    <p class="card-info font-inter-medium-white">I created a Json web token login system for standard and admin users, storing tokens in local storage.</p>
+                    <button class="button" @click="redirectToSource4">View Demo</button>
+                </div>
+            </div>
+            <div class="card">
                 <img src="../assets/projects/bankapp2.png" class="card-img" alt="#">
                 <div class="card-body">
                     <h1 class="card-title headline-small-2 ">Python Bank App</h1>
@@ -96,7 +105,7 @@
 
         <!-- video wallpaper -->
         <video autoplay muted loop id="video-background" style="width: 100%; height: 100vh;">
-            <source src="@/assets/wallpaper/video-wallpaper.mp4" type="video/mp4">
+            <source src="@/assets/wallpaper/video-Wallpaper-low.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -171,6 +180,9 @@ import { mapState } from 'vuex';
             },
             redirectToSource3() {
                 window.open("https://github.com/aqeeluser404/CodeX-Bank-GUI", "_blank");
+            },
+            redirectToSource4() {
+                window.open("https://jwt-login-frontend.onrender.com/#/", "_blank");
             }
         },
         mounted() {

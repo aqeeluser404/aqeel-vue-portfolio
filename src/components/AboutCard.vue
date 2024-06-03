@@ -126,7 +126,7 @@ import { mapState } from 'vuex';
                 newTextDelay: 500,
                 typeArrayIndex: 0,
                 charIndex: 0,
-                gifPath: require('@/assets/aqeel/me.png'), 
+                gifPath: require('@/assets/aqeel/me-low.png'), 
 
             }
         },
