@@ -79,7 +79,7 @@
                 <div class="card-body">
                     <h1 class="card-title headline-small-2 ">JWT Login System</h1>
                     <p class="card-sub-title font-inter-medium">Express - MongoDB - NodeJS <br><br> <b>(Quasar Framework)</b> </p>
-                    <p class="card-info font-inter-medium-white">I created a Json web token login system for standard and admin users, storing tokens in local storage.</p>
+                    <p class="card-info font-inter-medium-white">Json web token login system for standard and admin users, storing tokens in local storage. Currently Hosted on free server, 50s wait time. <br> <span style="font-size: 0.8rem;">User: AdminUser1, Pass: Adminpass1</span> </p>
                     <button class="button" @click="redirectToSource4">View Demo</button>
                 </div>
             </div>
