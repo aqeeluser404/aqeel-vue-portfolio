@@ -2,8 +2,9 @@ node_modules
 package-lock.json
 dist
 .firebase/hosting.ZGlzdA.cache
-# .firebaserc
-# firebase.json
+.firebaserc
+firebase.json
+.firebase
 
 
 # https://portfolio-version-2-96bc6.web.app 
