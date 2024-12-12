@@ -7,4 +7,10 @@ firebase.json
 .firebase
 
 
-# https://portfolio-version-2-96bc6.web.app 
+# https://aqeel-dev-portfolio.web.app
+# install firebase cli
+# firebase logout
+# firebase login
+# firebase init
+# npm run build - start here if firebase already initialized 
+# firebase deploy
