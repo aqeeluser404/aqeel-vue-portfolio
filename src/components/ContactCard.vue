@@ -154,22 +154,10 @@ export default {
         },
         isFormValid() {
             return this.isNameValid && this.isEmailValid && this.isMessageValid;
-        },
-        fetchHealthStatus() { 
-            axios.get('https://send-email-api-o1hh.onrender.com/health')
-            // axios.get('http://localhost:5000/health')
-                .then(response => { 
-                    console.log('Health status:', response.data); 
-                }).catch(error => { 
-                    console.error('Error fetching health status:', error); 
-                }); 
-        }
-            
+        },     
     },
 
     mounted() {
-        this.fetchHealthStatus()
-
         // reCAPTCHA
         const script = document.createElement('script');
         script.src = 'https://www.google.com/recaptcha/api.js?render=6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk';
