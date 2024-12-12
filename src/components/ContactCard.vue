@@ -25,7 +25,7 @@
 
                 <form 
                 :action="FORM_ENDPOINT"
-                @submit="handleSubmit"
+                @submit.prevent="handleSubmit"
                 method="POST"
                 >
                     <div class="form-group">
@@ -65,6 +65,7 @@
 /* global grecaptcha */
 import axios from 'axios';
 import { mapState } from 'vuex';
+import router from '@/routers';
 
 export default {
     name: 'ContactCard',
@@ -74,11 +75,11 @@ export default {
                 name: '',
                 email: '',
                 message: '',
-                dateTime: '',
             },
             submitted: false,
-            FORM_ENDPOINT: "https://public.herotofu.com/v1/037ba170-ca37-11ee-bb69-515451de93af",
-            
+            // FORM_ENDPOINT: "https://public.herotofu.com/v1/037ba170-ca37-11ee-bb69-515451de93af",
+            FORM_ENDPOINT: "https://send-email-api-o1hh.onrender.com/contact",
+            // FORM_ENDPOINT: "http://localhost:5000/contact",
             isNameValid: true,
             isEmailValid: true,
             isMessageValid: true,
@@ -99,9 +100,6 @@ export default {
             this.validateForm();
 
             if (this.isFormValid()) {
-
-                this.userMessage.dateTime = new Date().toISOString();
-
                 // Check reCAPTCHA response
                 grecaptcha.execute('6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk', { action: 'submit' })
                     .then((recaptchaResponse) => {
@@ -113,28 +111,41 @@ export default {
                         // Includes the reCAPTCHA response in the data
                         this.userMessage.recaptchaResponse = recaptchaResponse;
 
-                        axios.post(`https://aqeel-dev-portfolio-default-rtdb.firebaseio.com/messages.json`, this.userMessage)
+                        // Debugging: Log message before sending
+                        console.log('Sending message:', {
+                            name: this.userMessage.name,
+                            email: this.userMessage.email,
+                            message: this.userMessage.message,
+                            recaptchaResponse: this.userMessage.recaptchaResponse
+                        });
+
+                        // Send data to backend
+                        axios.post(this.FORM_ENDPOINT, this.userMessage)
                             .then(response => {
-                                console.log(response)
+                                console.log('Response:', response);
+
+                                // Clear form fields
+                                this.userMessage.name = '';
+                                this.userMessage.email = '';
+                                this.userMessage.message = '';
+                                this.userMessage.recaptchaResponse = '';
+
+                                setTimeout(() => {
+                                    this.submitted = true;
+                                    router.push('/thank-you')
+                                }, 100);
+                            })
+                            .catch(error => {
+                                console.error('Error sending message:', error);
                             });
-
-                        this.userMessage.name = '';
-                        this.userMessage.email = '';
-                        this.userMessage.message = '';
-                        this.userMessage.recaptchaResponse = '';
-                        this.userMessage.dateTime = '';
-
-                        setTimeout(() => {
-                            this.submitted = true;
-                        }, 100);
                     });
-            }  
-            else {
+            } else {
                 this.nameErrorMessage = this.isNameValid ? '' : 'Name is required';
                 this.emailErrorMessage = this.isEmailValid ? '' : 'Enter a valid email address';
                 this.messageErrorMessage = this.isMessageValid ? '' : 'Message is required';
             }
         },
+
 
         validateForm() {
             this.isNameValid = this.userMessage.name.trim() !== '';
@@ -144,9 +155,21 @@ export default {
         isFormValid() {
             return this.isNameValid && this.isEmailValid && this.isMessageValid;
         },
+        fetchHealthStatus() { 
+            axios.get('https://send-email-api-o1hh.onrender.com/health')
+            // axios.get('http://localhost:5000/health')
+                .then(response => { 
+                    console.log('Health status:', response.data); 
+                }).catch(error => { 
+                    console.error('Error fetching health status:', error); 
+                }); 
+        }
+            
     },
 
     mounted() {
+        this.fetchHealthStatus()
+
         // reCAPTCHA
         const script = document.createElement('script');
         script.src = 'https://www.google.com/recaptcha/api.js?render=6LdGoW8pAAAAAK_oMIExegB957yAhvHfVYIJUoOk';
