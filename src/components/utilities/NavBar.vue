@@ -20,7 +20,7 @@
                 <div class="header-divider"><hr/></div>
                 <div class="nav-title">
                     <h1 class="headline-small-2 line-height-low">DEV</h1>
-                    <h1 class="headline-xsmall-2 line-height-low">INTERN</h1>
+                    <h1 class="headline-xsmall-2 line-height-low">JUNIOR</h1>
                 </div>
             </div>
   

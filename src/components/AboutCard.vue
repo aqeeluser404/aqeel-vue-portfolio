@@ -21,10 +21,9 @@
 
                 <!-- paragraph -->
                 <div>
-                    <p class="font-inter-medium-black">My name is Aqeel Hanslo , third year graduate at CPUT, I have chosen the career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. 
-                    I possess the ability to think outside the box to create innovative solutions for problems.</p>
+                    <p class="font-inter-medium-black">My name is Aqeel Hanslo, a graduate of CPUT. I have chosen a career in Applications Development because I not only enjoy building applications but also consider it one of my strong suits. I excel at thinking outside the box to create innovative solutions for complex problems.</p>
                     <br><br><br><br>
-                    <a href="/aqeel-cv.pdf" download class="button-hover-white" target="_blank">Download CV</a>
+                    <a href="/aqeel-cv.pdf" class="button-hover-white" target="_blank">Download CV</a>
                 </div>
             </div>
 
@@ -50,10 +49,26 @@
                 <ul>
                     <li>
                         <div class="timeline-content">
-                            <h3 class="date">2023 - 2024</h3>
+                            <h3 class="date">Mar 2024 - Jan 2025</h3>
+                            <h1>WLV Solutions</h1>
+                            <br>
+                            <p>DEVELOPER AND IT SUPPORT</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h3 class="date">Jan 2024 - Mar 2024</h3>
+                            <h1>Younglings</h1>
+                            <br>
+                            <p>SOFTWARE DEVELOPER INTERN</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h3 class="date">Jul 2023 - Jan 2024</h3>
                             <h1>CapaCiTi</h1>
                             <br>
-                            <p>LEARNERSHIP IN FULLSTACK DEVELOPMENT</p>
+                            <p>SOFTWARE DEVELOPER INTERN</p>
                         </div>
                     </li>
                     <li>

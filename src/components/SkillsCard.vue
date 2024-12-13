@@ -26,36 +26,36 @@
             <!-- progression bars -->
             <div class="skill-container">
                 <div class="skill">
-                    <div class="skill-name">HTML</div>
+                    <div class="skill-name">HTML • CSS • JavaScript • Vue</div>
                     <div class="skill-bar">
-                        <div class="skill-per" per="90%" style="max-width:90%"></div>
+                        <div class="skill-per" per="80%" style="max-width:80%"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name">CSS</div>
+                    <div class="skill-name">Springboot • Java • Express</div>
                     <div class="skill-bar">
-                        <div class="skill-per" per="85%" style="max-width:85%"></div>
+                        <div class="skill-per" per="75%" style="max-width:75%"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name">Javascript</div>
+                    <div class="skill-name">MySQL • MongoDB</div>
                     <div class="skill-bar">
-                        <div class="skill-per" per="69%" style="max-width:69%"></div>
+                        <div class="skill-per" per="70%" style="max-width:70%"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name">Vue.JS</div>
+                    <div class="skill-name">Figma • WordPress • More</div>
                     <div class="skill-bar">
-                        <div class="skill-per" per="78%" style="max-width:78%"></div>
+                        <div class="skill-per" per="70%" style="max-width:70%"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name">SPRINGBOOT</div>
+                    <div class="skill-name">Git Version Control • Adobe After Effects</div>
                     <div class="skill-bar">
-                        <div class="skill-per" per="77%" style="max-width:77%"></div>
+                        <div class="skill-per" per="80%" style="max-width:80%"></div>
                     </div>
                 </div>
-                <div class="skill">
+                <!-- <div class="skill">
                     <div class="skill-name">MYSQL</div>
                     <div class="skill-bar">
                             <div class="skill-per" per="70%" style="max-width:70%"></div>
@@ -72,7 +72,7 @@
                     <div class="skill-bar">
                         <div class="skill-per" per="90%" style="max-width:90%"></div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -215,8 +215,9 @@ export default {
         font-size: 15px;
         font-weight: 500;
         color: #f1f1f1;
-        text-transform: uppercase;
+        text-transform: none;
         margin: 20px 0;
+        opacity: 0.75;
     }
     .skill-bar {
         height: 18px;

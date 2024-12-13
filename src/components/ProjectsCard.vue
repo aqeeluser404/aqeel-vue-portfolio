@@ -6,9 +6,10 @@
         <div class="text-container">
             <h1 class="headline-large">Projects</h1>
             <p class="font-inter-medium-white"> 
-                <span class="opacity-full"><br> I've always been the kind of person who can spend hours designing stuff. </span>
-                <span class="opacity-half "><br> Solving the problem is the journey </span>  
-                <!-- <span class="opacity-quarter"><br> Trying to solve a problem is the real objective</span> -->
+                <!-- <span class="opacity-full"><br> I've always been the kind of person who can spend hours designing stuff. </span>
+                <span class="opacity-half "><br> Solving the problem is the journey </span>   -->
+                <span class="opacity-full"><br>Development and design are interdependent</span>
+                <span class="opacity-half "><br>Solving the problem is the journey. Here are some of my projects </span>  
             </p>
         </div>
 
@@ -57,39 +58,73 @@
         <!-- projects container -->
         <div class="card-row">
             <div class="card">
-                <img src="../assets/projects/first-portfolio.png" class="card-img" alt="#">
+                <img src="../assets/projects/shaded-eyewear-2.png" class="card-img" alt="#">
                 <div class="card-body">
-                    <h1 class="card-title headline-small-2 ">First Portfolio</h1>
-                    <p class="card-sub-title font-inter-medium">Static - HTML - CSS - JS <br><br> <b>(No Framework)</b></p>
-                    <p class="card-info font-inter-medium-white">This was my first portfolio, created using the fundamentals of HTML and CSS, complemented by some JavaScript. It is a single-page portfolio featuring a fixed navigation at the top.</p>
-                    <button class="button" @click="redirectToSource1">Source Code</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../assets/projects/animeapp.png" class="card-img" alt="#">
-                <div class="card-body">
-                    <h1 class="card-title headline-small-2 ">Anime Web App</h1>
-                    <p class="card-sub-title font-inter-medium">Java - Springboot - Workbench <br><br> <b>(Vue Framework)</b> </p>
-                    <p class="card-info font-inter-medium-white">I developed a small full-stack application implementing CRUD operations to store, retrieve, update and delete entries from the database.</p>
-                    <button class="button" @click="redirectToSource2">Source Code</button>
+                    <h1 class="card-title headline-small-2 ">Shaded Eyewear</h1>
+                    <p class="card-sub-title headline-xsmall-2">Quasar • Express • MongoDB • Node</p>
+                    <p class="card-info font-inter-medium-white">Web application for purchasing sunglasses, integrated with the YOCO API, featuring admin management and secure cookie JWT authentication. Use <span style="text-decoration: underline;">TestAdmin1</span> and <span style="text-decoration: underline;">TestPass1</span> for testing.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <button class="button" @click="viewDemo1">View Demo</button>
+                        <button class="button" @click="viewCode1">View Code</button>
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <img src="../assets/projects/jwt-login.png" class="card-img" alt="#">
                 <div class="card-body">
                     <h1 class="card-title headline-small-2 ">JWT Login System</h1>
-                    <p class="card-sub-title font-inter-medium">Express - MongoDB - NodeJS <br><br> <b>(Quasar Framework)</b> </p>
-                    <p class="card-info font-inter-medium-white">Json web token login system for standard and admin users, storing tokens in local storage. Currently Hosted on free server, 50s wait time. <br> <span style="font-size: 0.8rem;">User: AdminUser1, Pass: Adminpass1</span> </p>
-                    <button class="button" @click="redirectToSource4">View Demo</button>
+                    <p class="card-sub-title headline-xsmall-2">Quasar • Express • MongoDB • Node</p>
+                    <p class="card-info font-inter-medium-white">Json web token login system for standard and admin users, storing tokens in local storage. Currently Hosted on render's free tier. Use <span style="text-decoration: underline;">AdminUser1</span> and <span style="text-decoration: underline;">Adminpass1</span> for testing.</p>
+                    <!-- <button class="button" @click="viewDemo2">View Demo</button> -->
+                    <div style="display: flex; justify-content: space-between;">
+                        <button class="button" @click="viewDemo2">View Demo</button>
+                        <button class="button" @click="viewCode2">View Code</button>
+                    </div>
                 </div>
             </div>
+            <div class="card">
+                <img src="../assets/projects/animeapp.png" class="card-img" alt="#">
+                <div class="card-body">
+                    <h1 class="card-title headline-small-2 ">Anime Web App</h1>
+                    <p class="card-sub-title headline-xsmall-2">Java • VueJS • Springboot • MySQL</p>
+                    <p class="card-info font-inter-medium-white">I developed a small full-stack application implementing CRUD operations to store, retrieve, update and delete entries from the database.</p>
+                    <button class="button" @click="viewCode4">View Code</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/projects/otg.png" class="card-img" alt="#">
+                <div class="card-body">
+                    <h1 class="card-title headline-small-2 ">On The Go Rentals</h1>
+                    <p class="card-sub-title headline-xsmall-2">Java • VueJS • Springboot • MySQL</p>
+                    <p class="card-info font-inter-medium-white">Created a full-stack car rental application for a CPUT capstone group project using Spring Boot API, Java, Vue.js, and MySQL. Use email <span style="text-decoration: underline;">aqeel@gmail.com</span> and password <span style="text-decoration: underline;">aqeel</span> for testing.</p>
+                    <!-- <button class="button" @click="viewDemo2">View Demo</button> -->
+                    <div style="display: flex; justify-content: space-between;">
+                        <button class="button" @click="viewDemo4">View Demo</button>
+                        <button class="button" @click="viewCode6">View Code</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/projects/first-portfolio.png" class="card-img" alt="#">
+                <div class="card-body">
+                    <h1 class="card-title headline-small-2 ">First Portfolio</h1>
+                    <p class="card-sub-title headline-xsmall-2">Static • HTML • CSS • JAVASCRIPT</p>
+                    <p class="card-info font-inter-medium-white">This was my first portfolio, created using the fundamentals of HTML and CSS, complemented by some JavaScript. It is a single-page portfolio featuring a fixed navigation at the top.</p>
+                    <!-- <button class="button" @click="redirectToSource1">Source Code</button> -->
+                    <div style="display: flex; justify-content: space-between;">
+                        <button class="button" @click="viewDemo3">View Demo</button>
+                        <button class="button" @click="viewCode3">View Code</button>
+                    </div>
+                </div>
+            </div>
+
             <div class="card">
                 <img src="../assets/projects/bankapp2.png" class="card-img" alt="#">
                 <div class="card-body">
                     <h1 class="card-title headline-small-2 ">Python Bank App</h1>
-                    <p class="card-sub-title font-inter-medium">Python - Custom Tkinter - Gui <br><br> <b>(CapaCiTi Project)</b></p>
+                    <p class="card-sub-title headline-xsmall-2">Python • Custom Tkinter • Gui • CapaCiTi</p>
                     <p class="card-info font-inter-medium-white">A banking application that my team and I created during our learnership at CapaCiTi. We used Custom Tkinter and implemented various functions to perform banking operations.</p>
-                    <button class="button" @click="redirectToSource3">Source Code</button>
+                    <button class="button" @click="viewCode5">View Code</button>
                 </div>
             </div>
         </div>
@@ -169,21 +204,32 @@ import { mapState } from 'vuex';
                     setTimeout(this.typeText, this.typingSpeed + 1000);
                 }
             },
+            viewDemo1() { window.open("https://shaded-eyewear-frontend.onrender.com", "_blank") },
+            viewCode1() { window.open("https://github.com/aqeeluser404/shaded-eyewear-backend", "_blank") },
+
+            viewDemo2() { window.open("https://jwt-login-frontend.onrender.com", "_blank"); },
+            viewCode2() { window.open("https://github.com/aqeeluser404/jwt-login-backend", "_blank"); },
+
+            viewDemo3() { window.open("https://aqeel-hanslo-portfolio.netlify.app", "_blank"); },
+            viewCode3() { window.open("https://github.com/aqeeluser404/aqeel-portfolio", "_blank"); },
+
+            viewCode4() {
+                window.open("https://github.com/aqeeluser404/animeapp-backend", "_blank");
+            },
+
+            viewCode5() {
+                window.open("https://github.com/aqeeluser404/CodeX-Bank-GUI", "_blank");
+            },
+
+            viewDemo4() { window.open("https://otg.nemesisnet.co.za", "_blank") },
+            viewCode6() { window.open("https://github.com/aqeeluser404/OnTheGoRentalsFrontend", "_blank") },
+
             redirectToGitHub() {
                 window.open("https://github.com/aqeeluser404", "_blank");
             },
-            redirectToSource1() {
-                window.open("https://github.com/aqeeluser404/aqeel-portfolio", "_blank");
-            },
-            redirectToSource2() {
-                window.open("https://github.com/aqeeluser404/animeapp-frontend", "_blank");
-            },
-            redirectToSource3() {
-                window.open("https://github.com/aqeeluser404/CodeX-Bank-GUI", "_blank");
-            },
-            redirectToSource4() {
-                window.open("https://jwt-login-frontend.onrender.com/#/", "_blank");
-            }
+
+
+
         },
         mounted() {
             const scrollers = document.querySelectorAll(".scroller");
@@ -295,14 +341,16 @@ import { mapState } from 'vuex';
 
 
 
-    /* project cards */
+    
 
     .card-row { 
         display: flex;
+        justify-content: center;
         gap: 1rem; 
+        flex-wrap: wrap;
     }
     .card {
-        width: 320px;
+        width: 320px; /* 640px */
         border-radius: 1%;
         border: #242424 2px solid;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
@@ -347,7 +395,7 @@ import { mapState } from 'vuex';
     .card-sub-title {
         text-transform: uppercase;
         text-align: center;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 300;
     }
     .card-info {
