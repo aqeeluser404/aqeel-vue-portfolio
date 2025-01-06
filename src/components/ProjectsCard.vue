@@ -8,8 +8,9 @@
             <p class="font-inter-medium-white"> 
                 <!-- <span class="opacity-full"><br> I've always been the kind of person who can spend hours designing stuff. </span>
                 <span class="opacity-half "><br> Solving the problem is the journey </span>   -->
-                <span class="opacity-full"><br>Development and design are interdependent</span>
-                <span class="opacity-half "><br>Solving the problem is the journey. Here are some of my projects </span>  
+                <span class="opacity-full"><br>Development and design are interdependent. Here are some of my projects</span>
+                <!-- <span class="opacity-half "><br>Solving the problem is the journey. Here are some of my projects </span>   -->
+                <span class="opacity-half "><br>Render projects have a startup time of approximately 1 minute.</span>  
             </p>
         </div>
 
@@ -442,7 +443,7 @@ import { mapState } from 'vuex';
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 70vw;
+            width: 100%;
             padding-top: 75px;
             height: 100%;
         }
