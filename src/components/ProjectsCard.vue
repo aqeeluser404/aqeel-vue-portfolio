@@ -71,6 +71,19 @@
                 </div>
             </div>
             <div class="card">
+                <img src="../assets/projects/theweb.png" class="card-img" alt="#">
+                <div class="card-body">
+                    <h1 class="card-title headline-small-2 ">The Web</h1>
+                    <p class="card-sub-title headline-xsmall-2">Quasar • Express • MongoDB • Node</p>
+                    <p class="card-info font-inter-medium-white">
+                        A secure student flat rental platform featuring payer scoring, admin management, and JWT-based authentication for enhanced privacy and control. Use <span style="text-decoration: underline;">aqeeladmin</span> and <span style="text-decoration: underline;">TestPass2</span> for testing.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <button class="button" @click="viewDemoTheWeb">View Demo</button>
+                        <button class="button" @click="viewCodeTheWeb">View Code</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
                 <img src="../assets/projects/jwt-login.png" class="card-img" alt="#">
                 <div class="card-body">
                     <h1 class="card-title headline-small-2 ">JWT Login System</h1>
@@ -207,6 +220,9 @@ import { mapState } from 'vuex';
             },
             viewDemo1() { window.open("https://shaded-eyewear-frontend.onrender.com", "_blank") },
             viewCode1() { window.open("https://github.com/aqeeluser404/shaded-eyewear-backend", "_blank") },
+
+            viewDemoTheWeb() { window.open("https://the-web-mobile-app.onrender.com", "_blank") },
+            viewCodeTheWeb() { window.open("https://github.com/aqeeluser404/the-web-express", "_blank") },
 
             viewDemo2() { window.open("https://jwt-login-frontend.onrender.com", "_blank"); },
             viewCode2() { window.open("https://github.com/aqeeluser404/jwt-login-backend", "_blank"); },
