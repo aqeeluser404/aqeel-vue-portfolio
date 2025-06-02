@@ -10,7 +10,7 @@
                 <span class="opacity-half "><br> Solving the problem is the journey </span>   -->
                 <span class="opacity-full"><br>Development and design are interdependent. Here are some of my projects</span>
                 <!-- <span class="opacity-half "><br>Solving the problem is the journey. Here are some of my projects </span>   -->
-                <span class="opacity-half "><br>Render projects have a startup time of approximately 1 minute.</span>  
+                <span class="opacity-half"><br>Render projects have a startup time of approximately 30 to 40 seconds</span>
             </p>
         </div>
 
@@ -63,7 +63,7 @@
                 <div class="card-body">
                     <h1 class="card-title headline-small-2 ">Shaded Eyewear</h1>
                     <p class="card-sub-title headline-xsmall-2">Quasar • Express • MongoDB • Node</p>
-                    <p class="card-info font-inter-medium-white">Web application for purchasing sunglasses, integrated with the YOCO API, featuring admin management and secure cookie JWT authentication. Use <span style="text-decoration: underline;">TestAdmin1</span> and <span style="text-decoration: underline;">TestPass1</span> for testing.</p>
+                    <p class="card-info font-inter-medium-white">Web application for purchasing sunglasses, integrated with the YOCO API, featuring admin management and secure cookie JWT authentication. Use <span @click="copyToClipboard('TestAdmin1')" class="clickable-copy">TestAdmin1</span> and <span @click="copyToClipboard('TestPass1')" class="clickable-copy">TestPass1</span> for testing.</p>
                     <div style="display: flex; justify-content: space-between;">
                         <button class="button" @click="viewDemo1">View Demo</button>
                         <button class="button" @click="viewCode1">View Code</button>
@@ -76,7 +76,7 @@
                     <h1 class="card-title headline-small-2 ">The Web</h1>
                     <p class="card-sub-title headline-xsmall-2">Quasar • Express • MongoDB • Node</p>
                     <p class="card-info font-inter-medium-white">
-                        A secure student flat rental platform featuring payer scoring, admin management, and JWT-based authentication for enhanced privacy and control. Use <span style="text-decoration: underline;">aqeeladmin</span> and <span style="text-decoration: underline;">TestPass2</span> for testing.</p>
+                        A secure student flat rental platform featuring payer scoring, admin management, and JWT-based authentication for enhanced privacy and control. Use <span @click="copyToClipboard('aqeeladmin')" class="clickable-copy">aqeeladmin</span> and <span @click="copyToClipboard('TestPass2')" class="clickable-copy">TestPass2</span> for testing.</p>
                     <div style="display: flex; justify-content: space-between;">
                         <button class="button" @click="viewDemoTheWeb">View Demo</button>
                         <button class="button" @click="viewCodeTheWeb">View Code</button>
@@ -88,7 +88,7 @@
                 <div class="card-body">
                     <h1 class="card-title headline-small-2 ">JWT Login System</h1>
                     <p class="card-sub-title headline-xsmall-2">Quasar • Express • MongoDB • Node</p>
-                    <p class="card-info font-inter-medium-white">Json web token login system for standard and admin users, storing tokens in local storage. Currently Hosted on render's free tier. Use <span style="text-decoration: underline;">AdminUser1</span> and <span style="text-decoration: underline;">Adminpass1</span> for testing.</p>
+                    <p class="card-info font-inter-medium-white">Json web token login system for standard and admin users, storing tokens in local storage. Currently Hosted on render's free tier. Use <span @click="copyToClipboard('AdminUser1')" class="clickable-copy">AdminUser1</span> and <span @click="copyToClipboard('Adminpass1')" class="clickable-copy">Adminpass1</span> for testing.</p>
                     <!-- <button class="button" @click="viewDemo2">View Demo</button> -->
                     <div style="display: flex; justify-content: space-between;">
                         <button class="button" @click="viewDemo2">View Demo</button>
@@ -158,6 +158,11 @@
             Your browser does not support the video tag.
         </video>
     </div>
+    <!-- Toast Notification -->
+    <div class="custom-toast" v-if="showToast">
+        <span v-html="toastMessage"></span>
+    </div>
+
 </template>
 
 <script>
@@ -184,10 +189,30 @@ import { mapState } from 'vuex';
                 erasingSpeed: 100,
                 newTextDelay: 500,
                 typeArrayIndex: 0,
-                charIndex: 0
+                charIndex: 0,
+                showToast: false,
+                toastMessage: ''
             }
         },
         methods: {
+            showCustomToast(message) {
+                this.toastMessage = message;
+                this.showToast = true;
+                setTimeout(() => {
+                this.showToast = false;
+                }, 3000);
+            },
+
+            copyToClipboard(text) {
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                this.showCustomToast(`<span style='color: #4fc3f7; font-weight: bold;'>${text}</span> copied to clipboard`);
+                })
+                .catch(() => {
+                this.showCustomToast("Failed to copy.");
+                });
+            },
+
             typeText() {
                 if(this.charIndex < this.typeArray[this.typeArrayIndex].length) {
                     if(!this.typeStatus)
@@ -463,5 +488,41 @@ import { mapState } from 'vuex';
             padding-top: 75px;
             height: 100%;
         }
+    }
+
+    .clickable-copy {
+        text-decoration: underline;
+        cursor: pointer;
+        color: #5E9FFF;
+        transition: color 0.2s ease;
+    }
+    .clickable-copy:hover {
+        color: #81d4fa;
+    }
+    .custom-toast {
+        position: fixed;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #222;
+        color: #fff;
+        padding: 1rem 1.75rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        z-index: 9999;
+        opacity: 0.95;
+        font-size: 14px;
+        animation: fadeInOut 3s ease-in-out;
+        pointer-events: none;
+    }
+    .highlight-name {
+        color: #5E9FFF;
+        font-weight: 500;
+    }
+
+    @keyframes fadeInOut {
+        0% { opacity: 0; transform: translateY(20px); }
+        10% { opacity: 1; transform: translateY(0); }
+        90% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(20px); }
     }
 </style>
