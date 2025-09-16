@@ -49,6 +49,14 @@
                 <ul>
                     <li>
                         <div class="timeline-content">
+                            <h3 class="date">Jan 2025 - NOW</h3>
+                            <h1>WLV Solutions</h1>
+                            <br>
+                            <p>JUNIOR DEVELOPER</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
                             <h3 class="date">Mar 2024 - Jan 2025</h3>
                             <h1>WLV Solutions</h1>
                             <br>

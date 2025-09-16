@@ -14,9 +14,84 @@
             </p>
         </div>
 
+
+        <!-- icon scroller -->
+        <div class="text-container">
+            <h1 class="typing-text-animation font-inter-medium-white">
+                <span class="typed-text weight-bold">{{ typeValue }}</span>
+                <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
+            </h1>
+        </div>
+
+
+        <!-- key projects -->
+        <div class="card-row">
+            <div class="card">
+                <img src="../assets/projects/theweb-release.png" class="card-img" alt="#">
+                <div class="card-body">
+                    <h1 class="card-title headline-small-2 ">The Web</h1>
+                    <p class="card-sub-title headline-xsmall-2">Quasar • PHP • MongoDB</p>
+                    <p class="card-info font-inter-medium-white">
+                        The official student flat rental platform is now live, offering payer scoring, admin tools, and JWT-based authentication for secure, private access. Create your own account to explore; admin access remains restricted.</p>
+                    <div style="display: flex; justify-content: center;">
+                        <button class="button" @click="theWebSite">View Site</button>
+                        <!-- <button class="button" @click="theWebCode">View Code</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/projects/shaded-eyewear-release.png" class="card-img" alt="#">
+                <div class="card-body">
+                    <h1 class="card-title headline-small-2 ">Shaded Eyewear</h1>
+                    <p class="card-sub-title headline-xsmall-2">Quasar • Express • MongoDB • Node</p>
+                    <p class="card-info font-inter-medium-white">Web application for purchasing sunglasses, integrated with the YOCO API, featuring admin management and secure cookie JWT authentication. Create your own account to test; admin access isn’t available.</p>
+                    <div style="display: flex; justify-content: center;">
+                        <button class="button" @click="shadedEyewearSite">View Site</button>
+                        <!-- <button class="button" @click="shadedEyewearDemo">View Code</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- icon scroller -->
         <div class="scroller">
             <div class="icon-container">
+                <div class="icon-circle">
+                    <i class="devicon-spring-original icon"></i>
+                </div>
+                <div class="icon-circle">
+                    <i class="devicon-vuejs-plain icon"></i>
+                </div>
+                <div class="icon-circle">
+                    <i class="devicon-githubactions-plain icon"></i>
+                </div>
+                <div class="icon-circle">
+                    <i class="devicon-mysql-original icon"></i>
+                </div>
+                <div class="icon-circle">
+                    <i class="devicon-aftereffects-plain icon"></i>
+                </div>
+                <!-- <div class="icon-circle">
+                    <i class="devicon-npm-original-wordmark icon"></i>
+                </div> -->
+                <div class="icon-circle">
+                    <i class="devicon-spring-original icon"></i>
+                </div>
+                <div class="icon-circle">
+                    <i class="devicon-vuejs-plain icon"></i>
+                </div>
+                <div class="icon-circle">
+                    <i class="devicon-githubactions-plain icon"></i>
+                </div>
+                <div class="icon-circle">
+                    <i class="devicon-mysql-original icon"></i>
+                </div>
+                <div class="icon-circle">
+                    <i class="devicon-aftereffects-plain icon"></i>
+                </div>
+                <!-- <div class="icon-circle">
+                    <i class="devicon-npm-original-wordmark icon"></i>
+                </div> -->
                 <div class="icon-circle">
                     <i class="devicon-spring-original icon"></i>
                 </div>
@@ -59,27 +134,27 @@
         <!-- projects container -->
         <div class="card-row">
             <div class="card">
-                <img src="../assets/projects/shaded-eyewear-2.png" class="card-img" alt="#">
-                <div class="card-body">
-                    <h1 class="card-title headline-small-2 ">Shaded Eyewear</h1>
-                    <p class="card-sub-title headline-xsmall-2">Quasar • Express • MongoDB • Node</p>
-                    <p class="card-info font-inter-medium-white">Web application for purchasing sunglasses, integrated with the YOCO API, featuring admin management and secure cookie JWT authentication. Use <span @click="copyToClipboard('TestAdmin1')" class="clickable-copy">TestAdmin1</span> and <span @click="copyToClipboard('TestPass1')" class="clickable-copy">TestPass1</span> for testing.</p>
-                    <div style="display: flex; justify-content: space-between;">
-                        <button class="button" @click="viewDemo1">View Demo</button>
-                        <button class="button" @click="viewCode1">View Code</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
                 <img src="../assets/projects/theweb.png" class="card-img" alt="#">
                 <div class="card-body">
-                    <h1 class="card-title headline-small-2 ">The Web</h1>
+                    <h1 class="card-title headline-small-2 ">The Web (Demo)</h1>
                     <p class="card-sub-title headline-xsmall-2">Quasar • Express • MongoDB • Node</p>
                     <p class="card-info font-inter-medium-white">
                         A secure student flat rental platform featuring payer scoring, admin management, and JWT-based authentication for enhanced privacy and control. Use <span @click="copyToClipboard('aqeeladmin')" class="clickable-copy">aqeeladmin</span> and <span @click="copyToClipboard('TestPass2')" class="clickable-copy">TestPass2</span> for testing.</p>
                     <div style="display: flex; justify-content: space-between;">
                         <button class="button" @click="viewDemoTheWeb">View Demo</button>
                         <button class="button" @click="viewCodeTheWeb">View Code</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/projects/shaded-eyewear-2.png" class="card-img" alt="#">
+                <div class="card-body">
+                    <h1 class="card-title headline-small-2 ">Shaded Eyewear (Demo)</h1>
+                    <p class="card-sub-title headline-xsmall-2">Quasar • Express • MongoDB • Node</p>
+                    <p class="card-info font-inter-medium-white">Web application for purchasing sunglasses, integrated with the YOCO API, featuring admin management and secure cookie JWT authentication. Use <span @click="copyToClipboard('TestAdmin1')" class="clickable-copy">TestAdmin1</span> and <span @click="copyToClipboard('TestPass1')" class="clickable-copy">TestPass1</span> for testing.</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <button class="button" @click="viewDemo1">View Demo</button>
+                        <button class="button" @click="viewCode1">View Code</button>
                     </div>
                 </div>
             </div>
@@ -184,7 +259,7 @@ import { mapState } from 'vuex';
             return {
                 typeValue: '',
                 typeStatus: false,
-                typeArray: ['Willing to implement new ideas.', 'Learning new things.'],
+                typeArray: ['Key Projects.', 'Live Projects.'],
                 typingSpeed: 200,
                 erasingSpeed: 100,
                 newTextDelay: 500,
@@ -243,6 +318,13 @@ import { mapState } from 'vuex';
                     setTimeout(this.typeText, this.typingSpeed + 1000);
                 }
             },
+            // key projects
+            shadedEyewearSite() { window.open("https://za-shadedeyewear.onrender.com/#", "_blank") },
+            shadedEyewearCode() { window.open("https://github.com/aqeeluser404/shaded-eyewear-backend", "_blank") },
+
+            theWebSite() { window.open("https://the-web.co.za", "_blank") },
+            theWebCode() { window.open("https://github.com/aqeeluser404/the-web-express", "_blank") },
+
             viewDemo1() { window.open("https://shaded-eyewear-frontend.onrender.com", "_blank") },
             viewCode1() { window.open("https://github.com/aqeeluser404/shaded-eyewear-backend", "_blank") },
 
@@ -324,7 +406,12 @@ import { mapState } from 'vuex';
         gap: 2rem;
     }
     .scroller {
-        max-width: 400px;
+        max-width: 600px;
+    }
+    @media only screen and (max-width: 736px) {
+        .scroller {
+            max-width: 400px;
+        }
     }
     .icon-container {
         display: flex;
@@ -373,7 +460,7 @@ import { mapState } from 'vuex';
     .scroller[data-animated="true"] .icon-container {
         width: max-content;
         flex-wrap: nowrap;
-        animation: scroll 20s linear infinite;
+        animation: scroll 26s linear infinite;
     }
     @keyframes scroll {
         to {
@@ -408,6 +495,28 @@ import { mapState } from 'vuex';
     }
 
     /* card text body */
+
+    /* text animation styling */
+
+    span.typed-text {
+        color: #5E9FFF;
+    }
+    span.cursor {
+        display: inline-block;
+        margin-left: 3px;
+        width: 4px;
+        background-color: #5E9FFF;
+        animation: cursorBlink 1s infinite;
+    }
+    span.cursor.typing {
+        animation: none;
+    }
+    @keyframes cursorBlink {
+        49% { background-color: #fff; }
+        50% { background-color: transparent; }
+        99% { background-color: transparent; }
+    }
+
     
     .card-body {
         width: 100%;
@@ -485,7 +594,7 @@ import { mapState } from 'vuex';
             justify-content: center;
             align-items: center;
             width: 100%;
-            padding-top: 75px;
+            /* padding-top: 75px; */
             height: 100%;
         }
     }
